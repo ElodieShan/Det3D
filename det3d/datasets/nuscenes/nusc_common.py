@@ -227,7 +227,8 @@ def _second_det_to_nusc_box(detection):
     box_list = []
     for i in range(box3d.shape[0]):
         quat = Quaternion(axis=[0, 0, 1], radians=box3d[i, -1])
-        velocity = (*box3d[i, 6:8], 0.0)
+#         velocity = (*box3d[i, 6:8], 0.0)
+        velocity = (np.nan, np.nan, np.nan) #elodie
         box = Box(
             box3d[i, :3],
             box3d[i, 3:6],

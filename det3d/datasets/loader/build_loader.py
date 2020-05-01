@@ -46,10 +46,10 @@ def build_dataloader(
     data_loader = DataLoader(
         dataset,
         batch_size=batch_size,
-        sampler=sampler,
+        sampler=sampler, #自定义从数据集中取样本的策略
         shuffle=(sampler is None),
         num_workers=num_workers,
-        collate_fn=collate_kitti,
+        collate_fn=collate_kitti,#将一个list的sample组成一个mini-batch的函数
         # pin_memory=True,
         pin_memory=False,
     )

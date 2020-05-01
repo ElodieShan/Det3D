@@ -123,7 +123,9 @@ class NuScenesDataset(PointCloudDataset):
         for info in self._nusc_infos:
             gt_names = np.array(info["gt_names"])
             gt_boxes = info["gt_boxes"]
-            mask = np.array([n != "ignore" for n in gt_names], dtype=np.bool_)
+            mask_used = ['car', 'pedestrian', 'bicycle']
+            #mask = np.array([n != "ignore" for n in gt_names], dtype=np.bool_) #elodie
+            mask = np.array([n in mask_used for n in gt_names], dtype=np.bool_)#elodie
             gt_names = gt_names[mask]
             gt_boxes = gt_boxes[mask]
             # det_range = np.array([cls_range_map[n] for n in gt_names_mapped])
@@ -218,7 +220,7 @@ class NuScenesDataset(PointCloudDataset):
         for det in dets:
             annos = []
             boxes = _second_det_to_nusc_box(det)
-            boxes = _lidar_nusc_box_to_global(nusc, boxes, det["metadata"]["token"])
+            boxes = _lidar_nusc_box_to_global(nusc, boxes, det["metadata"]["token"]) #elodie
             for i, box in enumerate(boxes):
                 name = mapped_class_names[box.label]
                 if np.sqrt(box.velocity[0] ** 2 + box.velocity[1] ** 2) > 0.2:

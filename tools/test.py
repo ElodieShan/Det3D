@@ -201,9 +201,9 @@ def main():
                     fout.write(line + "\n")
 
         ap_result_str, ap_dict = kitti_evaluate(
-            "/data/Datasets/KITTI/Kitti/object/training/label_2",
+                "/home/elodie/KITTI_DATASET/object/training/label_2",
             res_dir,
-            label_split_file="/data/Datasets/KITTI/Kitti/ImageSets/val.txt",
+            label_split_file="/home/elodie/Det3D/det3d/datasets/ImageSets/val.txt",
             current_class=0,
         )
 

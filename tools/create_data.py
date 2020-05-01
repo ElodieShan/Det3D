@@ -19,11 +19,11 @@ def kitti_data_prep(root_path):
 
 
 def nuscenes_data_prep(root_path, version, nsweeps=10):
-    nu_ds.create_nuscenes_infos(root_path, version=version, nsweeps=nsweeps)
+    nu_ds.create_nuscenes_infos(root_path, version=version, nsweeps=nsweeps) #elodie
     create_groundtruth_database(
         "NUSC",
         root_path,
-        Path(root_path) / "infos_train_{:02d}sweeps_withvelo.pkl".format(nsweeps),
+        Path(root_path) / "pkl/infos_train_{:02d}sweeps_withvelo.pkl".format(nsweeps),
         nsweeps=nsweeps,
     )
     # nu_ds.get_sample_ground_plane(root_path, version=version)

@@ -163,24 +163,25 @@ def main():
     for k, v in result_dict["results"].items():
         print(f"Evaluation {k}: {v}")
 
-    if args.txt_result:
-        res_dir = os.path.join(os.getcwd(), "predictions")
-        for k, dt in predictions.items():
-            with open(
-                os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
-            ) as fout:
-                lines = kitti.annos_to_kitti_label(dt)
-                for line in lines:
-                    fout.write(line + "\n")
+#     if args.txt_result:
+#         res_dir = os.path.join(os.getcwd(), "predictions")
+#         for k, dt in predictions.items():
+#             with open(
+#                 os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
+#             ) as fout:
+#                 print("k:",k,"\ndt:",dt)
+#                 lines = kitti.annos_to_kitti_label(dt)
+#                 for line in lines:
+#                     fout.write(line + "\n")
 
-        ap_result_str, ap_dict = kitti_evaluate(
-            "/data/Datasets/KITTI/Kitti/object/training/label_2",
-            res_dir,
-            label_split_file="/data/Datasets/KITTI/Kitti/ImageSets/val.txt",
-            current_class=0,
-        )
+#         ap_result_str, ap_dict = kitti_evaluate(
+#             "/home/elodie/KITTI_DATASET/object/training/label_2",
+#             res_dir,
+#             label_split_file="/home/elodie/Det3D/det3d/datasets/ImageSets/val.txt",
+#             current_class=0,
+#         )
 
-        print(ap_result_str)
+#         print(ap_result_str)
 
 
 if __name__ == "__main__":

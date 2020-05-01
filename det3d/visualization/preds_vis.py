@@ -38,6 +38,7 @@ def draw_box(pyplot_axis, vertices, axes=[0, 1, 2], color="black"):
     axes        : Axes to use. Defaults to `[0, 1, 2]`, e.g. x, y and z axes.
     color       : Drawing color. Defaults to `black`.
     """
+    print("draw_box!")
     vertices = np.transpose(vertices)[axes, :]
     connections = [
         [0, 1],
@@ -61,7 +62,7 @@ def display_single_lidar(
     data, gt_boxes=None, dt_boxes=None, points=0.2, view=False, idx=0
 ):
     # points          : Fraction of lidar points to use. Defaults to `0.2`, e.g. 20%.
-
+    print("display_single_lidar")
     points_step = int(1.0 / points)
     point_size = 0.01 * (1.0 / points)
     velo_range = range(0, data.shape[0], points_step)
@@ -116,7 +117,7 @@ def display_single_lidar(
 
     draw_point_cloud(ax2, "Velodyne scan", xlim3d=axes_limits[0])
     # plt.show()
-    plt.savefig("/home/zhubenjin/data/Outputs/figs/" + str(idx) + ".png")
+    plt.savefig("/home/elodie/det3D_Output/figs/" + str(idx) + ".png")
 
     if view:
         # Draw point cloud data as plane projections
@@ -138,7 +139,7 @@ def display_single_lidar(
             axes=[1, 2],  # Y and Z axes
         )
         # plt.show()
-        plt.savefig("/home/zhubenjin/data/Outputs/figs/" + str(idx) + "_3V.png")
+        plt.savefig("/home/elodie/det3D_Output/figs/" + str(idx) + "_3V.png")
 
 
 def project_velo2camera(vel_data, Trv2c):

@@ -207,7 +207,11 @@ class VoxelFeatureExtractorV3(nn.Module):
         points_mean = features[:, :, : self.num_input_features].sum(
             dim=1, keepdim=False
         ) / num_voxels.type_as(features).view(-1, 1)
-
+        #feature一开始是一个[[1*4]*4]*n,按列取平局之后变为[1*4]*n
+#         print("len(features):",len(features),len(len(features)[0]))
+#         print("features:",features)
+#         print("features[:, :, : self.num_input_features]:",features[:, :, : self.num_input_features])
+#         print("points_mean:",points_mean)
         return points_mean.contiguous()
 
 

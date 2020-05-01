@@ -184,6 +184,7 @@ class SpMiddleFHD(nn.Module):
     def forward(self, voxel_features, coors, batch_size, input_shape):
 
         # input: # [41, 1600, 1408]
+        # print("input_shape:",input_shape)
         sparse_shape = np.array(input_shape[::-1]) + [1, 0, 0]
         coors = coors.int()
 

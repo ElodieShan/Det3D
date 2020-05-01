@@ -19,11 +19,12 @@ class VoxelNet(SingleStageDetector):
         )
 
     def extract_feat(self, data):
+#         print("Voxelnet: \ndata[features]:",data["features"],"\ndata[num_voxels]:", data["num_voxels"])
         input_features = self.reader(data["features"], data["num_voxels"])
         x = self.backbone(
             input_features, data["coors"], data["batch_size"], data["input_shape"]
         )
-        if self.with_neck:
+        if self.with_neck: #如果有neck特征处理的话，将提取处的特征，进行对应的特征处理
             x = self.neck(x)
         return x
 

@@ -286,8 +286,11 @@ class Voxelization(object):
         voxels, coordinates, num_points = self.voxel_generator.generate(
             res["lidar"]["points"]
         )
+#         print("\n\nvoxels:",voxels)
+#         print("voxels.shape[0]",voxels.shape[0],"\n\n\n\n\n\n")
         num_voxels = np.array([voxels.shape[0]], dtype=np.int64)
-
+        
+#         print("num_voxels:",num_voxels)
         res["lidar"]["voxels"] = dict(
             voxels=voxels,
             coordinates=coordinates,
@@ -356,6 +359,10 @@ class AssignTarget(object):
         reshaped_anchors_by_task = [
             t["anchors"].reshape([-1, t["anchors"].shape[-1]]) for t in anchors_by_task
         ]
+        
+#         print("anchors_by_task:",np.array(anchors_by_task).shape)
+#         print("reshaped_anchors_by_task:",np.array(reshaped_anchors_by_task).shape)
+        
         matched_by_task = [t["matched_thresholds"] for t in anchors_by_task]
         unmatched_by_task = [t["unmatched_thresholds"] for t in anchors_by_task]
 

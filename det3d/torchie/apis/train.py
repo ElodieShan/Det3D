@@ -81,7 +81,8 @@ def example_convert_to_torch(example, dtype=torch.float32, device=None) -> dict:
 
 def example_to_device(example, device=None, non_blocking=False) -> dict:
     assert device is not None
-
+    
+    #函数后面 ->str 是函数返回值的注释。
     example_torch = {}
     float_names = ["voxels", "bev_map"]
     for k, v in example.items():
@@ -141,9 +142,9 @@ def parse_second_losses(losses):
 
 
 def batch_processor(model, data, train_mode, **kwargs):
-
     if "local_rank" in kwargs:
         device = torch.device(kwargs["local_rank"])
+        # print("local_rank in kwargs:")
     else:
         device = None
 

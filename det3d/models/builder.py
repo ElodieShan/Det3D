@@ -16,7 +16,11 @@ from .registry import (
 def build(cfg, registry, default_args=None):
     if isinstance(cfg, list):
         modules = [build_from_cfg(cfg_, registry, default_args) for cfg_ in cfg]
+        #build_from_cfg()返回值是一个带形参的类，返回时也就完成了实例化的过程。
+        #所以modules就是一个class类的列表
         return nn.Sequential(*modules)
+    #nn.Sequential 一个有序的容器，神经网络模块将按照在传入构造器的顺序依次被添加到计算图中执行
+    #同时以神经网络模块为元素的有序字典也可以作为传入参数
     else:
         return build_from_cfg(cfg, registry, default_args)
 

@@ -91,7 +91,11 @@ class LoadPointCloudFromFile(object):
             points = np.fromfile(str(velo_path), dtype=np.float32, count=-1).reshape(
                 [-1, res["metadata"]["num_point_features"]]
             )
-
+            #for features xyz,r=0 elodie
+#             point_features =  np.zeros(shape=[points.shape[0],1],dtype=np.float32)
+#             points = np.delete(points, -1, axis=1)
+#             points = np.hstack((points, point_features))
+            
             res["lidar"]["points"] = points
 
         elif self.type == "NuScenesDataset":
@@ -99,8 +103,19 @@ class LoadPointCloudFromFile(object):
             nsweeps = res["lidar"]["nsweeps"]
 
             lidar_path = Path(info["lidar_path"])
-            points = read_file(str(lidar_path))
+            #elodie start
+            if "data_type" in info:
+                if (info["data_type"] == "kitti"): 
+                    points = np.fromfile(info["lidar_path"],dtype=np.float32).reshape([-1, 4])
+                elif (info["data_type"] == "nuscenes"):
+                    points = read_file(info["lidar_path"])
+            else:
+                points = read_file(info["lidar_path"])
+            
+#             points = read_file(str(lidar_path)) #elodie 
 
+            #elodie end
+    
             # points[:, 3] /= 255
             sweep_points_list = [points]
             sweep_times_list = [np.zeros((points.shape[0], 1))]
@@ -170,12 +185,16 @@ class LoadPointCloudAnnotations(object):
     def __call__(self, res, info):
 
         if res["type"] in ["NuScenesDataset", "LyftDataset"] and "gt_boxes" in info:
-
+            #Delete velocity in boxes
+#             gt_boxes = info["gt_boxes"].astype(np.float32) #elodie
+#             gt_boxes = np.delete(gt_boxes,6,axis=1) #elodie
+#             gt_boxes = np.delete(gt_boxes,6,axis=1) #elodie
             res["lidar"]["annotations"] = {
                 "boxes": info["gt_boxes"].astype(np.float32),
+#                 "boxes": gt_boxes, #elodie
                 "names": info["gt_names"],
                 "tokens": info["gt_boxes_token"],
-                "velocities": info["gt_boxes_velocity"].astype(np.float32),
+#                 "velocities": info["gt_boxes_velocity"].astype(np.float32), #elodie
             }
 
         elif res["type"] == "KittiDataset":

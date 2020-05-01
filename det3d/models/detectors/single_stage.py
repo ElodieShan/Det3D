@@ -18,6 +18,7 @@ class SingleStageDetector(BaseDetector):
         pretrained=None,
     ):
         super(SingleStageDetector, self).__init__()
+        #创建模型，对各个组件（比如backbone、neck、bbox_head等字典数据，构建成module类）分别创建module类模型
         self.reader = builder.build_reader(reader)
         self.backbone = builder.build_backbone(backbone)
         if neck is not None:
@@ -41,14 +42,14 @@ class SingleStageDetector(BaseDetector):
 
     def extract_feat(self, data):
         input_features = self.reader(data)
-        x = self.backbone(input_features)
-        if self.with_neck:
+        x = self.backbone(input_features)# 经过backbone的前向计算，提取特征
+        if self.with_neck:#如果有neck特征处理的话，将提取处的特征，进行对应的特征处理
             x = self.neck(x)
         return x
 
     def forward_dummy(self, example):
-        x = self.extract_feat(example)
-        outs = self.bbox_head(x)
+        x = self.extract_feat(example) 
+        outs = self.bbox_head(x) #在bbox_head中进行特征处理，输出特征
         return outs
 
     """

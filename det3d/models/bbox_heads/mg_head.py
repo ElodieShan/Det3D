@@ -703,10 +703,14 @@ class MultiGroupHead(nn.Module):
         num_points = example["num_points"]
         coors = example["coordinates"]
         batch_anchors = example["anchors"]
+#         print("batch_anchors:",batch_anchors)
         batch_size_device = batch_anchors[0].shape[0]
+        # print("batch_size_device:",batch_size_device)
+        # print("batch_anchors[0].shape",batch_anchors[0].shape)
         rets = []
         for task_id, preds_dict in enumerate(preds_dicts):
             batch_size = batch_anchors[task_id].shape[0]
+            # print("task_id:",task_id,"batch_size:",batch_size)
 
             if "metadata" not in example or len(example["metadata"]) == 0:
                 meta_list = [None] * batch_size
@@ -726,12 +730,16 @@ class MultiGroupHead(nn.Module):
 
             batch_box_preds = preds_dict["box_preds"]
             batch_cls_preds = preds_dict["cls_preds"]
-
+            
+#             print("batch_box_preds:",batch_box_preds)
+            
             if self.bev_only:
                 box_ndim = self.box_n_dim - 2
             else:
                 box_ndim = self.box_n_dim
-
+                
+#             print("batch:",batch_size,batch_anchors[task_id].shape[0])
+#             print("\nbox_ndim:", box_ndim, self.box_n_dim)
             if kwargs.get("mode", False):
                 batch_box_preds_base = batch_box_preds.view(batch_size, -1, box_ndim)
                 batch_box_preds = batch_task_anchors.clone()
@@ -746,6 +754,10 @@ class MultiGroupHead(nn.Module):
 
             batch_cls_preds = batch_cls_preds.view(batch_size, -1, num_class_with_bg)
 
+#             print("self.box_coder.code_size:",self.box_coder.code_size)
+#             print("batch_task_anchors:",batch_task_anchors.shape,"\n",batch_task_anchors)
+#             print("batch_box_preds:",batch_box_preds.shape,'\n',batch_box_preds)
+            
             batch_reg_preds = self.box_coder.decode_torch(
                 batch_box_preds[:, :, : self.box_coder.code_size], batch_task_anchors
             )

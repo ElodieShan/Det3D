@@ -76,4 +76,4 @@ if __name__ == "__main__":
     d = np.load(sys.argv[1])
     print(d["X"].shape, d["annos"])
     X = np.squeeze(d["X"])
-    visualize_feature_maps(X, d["annos"], axes=[2, 0], save_filename="/tmp/lidar.png")
+    visualize_feature_maps(X, d["annos"], axes=[2, 0], save_filename="/home/elodie/lidar202002.png")

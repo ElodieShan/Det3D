@@ -17,7 +17,7 @@ from det3d.torchie.apis import (
     set_random_seed,
     train_detector,
 )
-
+from det3d.torchie.trainer import get_dist_info, load_checkpoint
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Train a detector")
@@ -47,6 +47,11 @@ def parse_args():
         "--autoscale-lr",
         action="store_true",
         help="automatically scale lr with the number of gpus",
+    )
+    parser.add_argument(
+        "--checkpoint",
+        default=None,
+        help="the dir to checkpoint which the model read from",
     )
     args = parser.parse_args()
     if "LOCAL_RANK" not in os.environ:
@@ -82,6 +87,7 @@ def main():
         torch.distributed.init_process_group(backend="nccl", init_method="env://")
 
         cfg.gpus = torch.distributed.get_world_size()
+        print("cfg.gpus:",cfg.gpus)
 
     if args.autoscale_lr:
         cfg.lr_config.lr_max = cfg.lr_config.lr_max * cfg.gpus
@@ -102,8 +108,11 @@ def main():
     if args.seed is not None:
         logger.info("Set random seed to {}".format(args.seed))
         set_random_seed(args.seed)
-
+    
     model = build_detector(cfg.model, train_cfg=cfg.train_cfg, test_cfg=cfg.test_cfg)
+    
+    if args.checkpoint is not None:
+        checkpoint = load_checkpoint(model, args.checkpoint, map_location="cpu")
 
     datasets = [build_dataset(cfg.data.train)]
 

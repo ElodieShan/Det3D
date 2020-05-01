@@ -83,6 +83,7 @@ class KittiDataset(PointCloudDataset):
         # print(f"gt_image_idxes: {gt_image_idxes[:10]}")
         annos = []
         # for i in range(len(detection)):
+        # for det_idx in det_image_idxes:
         for det_idx in gt_image_idxes:
             det = detection[det_idx]
             info = self._kitti_infos[gt_image_idxes.index(det_idx)]
@@ -194,7 +195,8 @@ class KittiDataset(PointCloudDataset):
         return results, dt_annos
 
     def __getitem__(self, idx):
-        return self.get_sensor_data(idx, with_gp=True)
+        # return self.get_sensor_data(idx, with_gp=True)
+        return self.get_sensor_data(idx, with_gp=False) #change elodie
 
     def get_sensor_data(self, idx, with_image=False, with_gp=False):
 

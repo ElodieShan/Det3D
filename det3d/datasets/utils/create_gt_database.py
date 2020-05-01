@@ -60,7 +60,7 @@ def create_groundtruth_database(
         if db_path is None:
             db_path = root_path / f"gt_database_{nsweeps}sweeps_withvelo"
         if dbinfo_path is None:
-            dbinfo_path = root_path / f"dbinfos_train_{nsweeps}sweeps_withvelo.pkl"
+            dbinfo_path = root_path / f"dbinfos_train_{nsweeps}sweeps_withvelo.pkl" 
     else:
         if db_path is None:
             db_path = root_path / "gt_database"
@@ -95,6 +95,7 @@ def create_groundtruth_database(
         print(points.shape)
         annos = sensor_data["lidar"]["annotations"]
         gt_boxes = annos["boxes"]
+        
         names = annos["names"]
         group_dict = {}
         group_ids = np.full([gt_boxes.shape[0]], -1, dtype=np.int64)
@@ -113,8 +114,8 @@ def create_groundtruth_database(
             filepath = db_path / filename
             gt_points = points[point_indices[:, i]]
             gt_points[:, :3] -= gt_boxes[i, :3]
-            with open(filepath, "w") as f:
-                gt_points[:, :point_features].tofile(f)
+            with open(filepath, "w") as f: 
+                gt_points[:, :point_features].tofile(f)  
 
             if (used_classes is None) or names[i] in used_classes:
                 if relative_path:

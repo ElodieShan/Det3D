@@ -39,6 +39,7 @@ class BatchSampler:
         else:
             ret = self._indices[self._idx : self._idx + num]
             self._idx += num
+
         return ret
 
     def _reset(self):
