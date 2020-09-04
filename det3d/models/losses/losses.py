@@ -163,14 +163,14 @@ class WeightedSmoothL1Loss(nn.Module):
     ):
         super(WeightedSmoothL1Loss, self).__init__()
         self._sigma = sigma
+        # fix code bugs as github issues mentioned - elodie 20200904 
+        if code_weights is not None:
+            self._code_weights = torch.tensor(code_weights,
+                                              dtype=torch.float32)
+        else:
+            self._code_weights = None
 
-        # if code_weights is not None:
-        #     self._code_weights = torch.tensor(code_weights,
-        #                                       dtype=torch.float32)
-        # else:
-        #     self._code_weights = None
-
-        self._code_weights = None
+        # self._code_weights = None
 
         self._codewise = codewise
         self._reduction = reduction

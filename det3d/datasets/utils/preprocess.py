@@ -598,7 +598,7 @@ def prep_sequence_pointcloud(
         # boxes_lidar = gt_dict["gt_boxes"]
         # cv2.imshow('pre-noise', bev_map)
         selected = kitti.drop_arrays_by_name(
-            gt_dict["gt_names"], ["DontCare", "ignore"]
+            gt_dict["gt_names"], ["DontCare", "dontcare", "ignore"]
         )
         _dict_select(gt_dict, selected)
         if remove_unknown:
@@ -977,7 +977,7 @@ def prep_pointcloud_rpn(
 
     if training:
         selected = kitti.drop_arrays_by_name(
-            gt_dict["gt_names"], ["DontCare", "ignore"]
+            gt_dict["gt_names"], ["DontCare", "ignore", "dontcare"]
         )
         _dict_select(gt_dict, selected)
         if remove_unknown:

@@ -58,6 +58,16 @@ def parse_args():
 
     return args
 
+def lidar_box_nusc2kitti(gt_boxes):
+    gt_boxes = gt_boxes.detach().cpu().numpy()
+    R = np.array([[ 0, 1 ,0],
+            [ -1,0,0],
+            [ 0,0,1]])
+    gt_boxes_theta = np.dot(R, gt_boxes[:, :3].T).T
+    gt_boxes = np.hstack((gt_boxes_theta, gt_boxes[:, 3:]))
+
+    gt_boxes[:, 6] = gt_boxes[:, 6] + np.sign(gt_boxes[:, 6]) * np.pi / 2
+    return gt_boxes
 
 def main():
 
@@ -144,44 +154,64 @@ def main():
             detections.update(
                 {token: output,}
             )
+            
             if args.local_rank == 0:
                 prog_bar.update()
 
     synchronize()
 
     all_predictions = all_gather(detections)
-
     if args.local_rank != 0:
         return
 
     predictions = {}
     for p in all_predictions:
+        for k,v in p.items():
+            new_box3d_lidar = lidar_box_nusc2kitti(v['box3d_lidar'])
+            p[k]['box3d_lidar']=new_box3d_lidar
         predictions.update(p)
 
-    result_dict, _ = dataset.evaluation(predictions, output_dir=args.work_dir)
+    result_dict, dt_annos = dataset.evaluation(predictions, output_dir=args.work_dir)
 
     for k, v in result_dict["results"].items():
         print(f"Evaluation {k}: {v}")
 
-#     if args.txt_result:
-#         res_dir = os.path.join(os.getcwd(), "predictions")
-#         for k, dt in predictions.items():
-#             with open(
-#                 os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
-#             ) as fout:
-#                 print("k:",k,"\ndt:",dt)
-#                 lines = kitti.annos_to_kitti_label(dt)
-#                 for line in lines:
-#                     fout.write(line + "\n")
+    # if args.txt_result:
+    #     # res_dir = os.path.join(os.getcwd(), "predictions")
+    #     res_dir = "/home/elodie/Dataset_Pred/" + cfg.dataset_type + "-" + args.work_dir.split('/')[-1].strip()
+    #     if not os.path.exists(res_dir):
+    #         os.makedirs(res_dir)
+    #         print("Create dir: ", res_dir)
+    #     for k, dt in predictions.items():
+    #         with open(
+    #             os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
+    #         ) as fout:
+    #             print("k:",k,"\ndt:",dt)
+    #             lines = kitti.annos_to_kitti_label(dt)
+    #             for line in lines:
+    #                 fout.write(line + "\n")
+    if args.txt_result:
+        res_dir = "/home/elodie/Dataset_Pred/" + cfg.dataset_type + "-" + args.work_dir.split('/')[-1].strip()
+        if not os.path.exists(res_dir):
+            os.makedirs(res_dir)
+            print("Create dir: ", res_dir)
+        for i in range(len(dt_annos)): #elodie
+            dt = dt_annos[i]
+            with open(
+                os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
+            ) as fout:
+                # print(dt)
+                lines = kitti.annos_to_kitti_label(dt)
+                for line in lines:
+                    fout.write(line + "\n")
+        # ap_result_str, ap_dict = kitti_evaluate(
+        #     "/home/elodie/KITTI_DATASET/object/training/label_2",
+        #     res_dir,
+        #     label_split_file="/home/elodie/Det3D/det3d/datasets/ImageSets/val.txt",
+        #     current_class=0,
+        # )
 
-#         ap_result_str, ap_dict = kitti_evaluate(
-#             "/home/elodie/KITTI_DATASET/object/training/label_2",
-#             res_dir,
-#             label_split_file="/home/elodie/Det3D/det3d/datasets/ImageSets/val.txt",
-#             current_class=0,
-#         )
-
-#         print(ap_result_str)
+        # print(ap_result_str)
 
 
 if __name__ == "__main__":

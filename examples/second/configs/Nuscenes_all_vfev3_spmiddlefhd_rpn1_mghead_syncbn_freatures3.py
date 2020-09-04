@@ -8,8 +8,10 @@ norm_cfg = None
 
 tasks = [
     dict(num_class=1, class_names=["car"]),
-    dict(num_class=1, class_names=["pedestrian"]),
-    dict(num_class=1, class_names=["bicycle"]),
+    dict(num_class=1, class_names=["truck"]),
+    dict(num_class=2, class_names=["bus", "trailer"]),
+    dict(num_class=2, class_names=["motorcycle", "bicycle"]),
+    dict(num_class=2, class_names=["pedestrian", "traffic_cone"]),
 ]
 
 class_names = list(itertools.chain(*[t["class_names"] for t in tasks]))
@@ -20,10 +22,8 @@ target_assigner = dict(
     anchor_generators=[
         dict(
             type="anchor_generator_range",
-            #sizes=[1.6, 3.9, 1.56],
-            #anchor_ranges=[0, -40.0, -1.0, 70.4, 40.0, -1.0],
-            sizes=[1.97, 4.63, 1.74],
-            anchor_ranges=[-50.4, 0, -0.95, 50.4, 50.4, -0.95],
+            sizes=[1.96, 4.62, 1.73],
+            anchor_ranges=[-50.4,0, -0.95, 50.4, 50.4, -0.95],
             rotations=[0, 1.57],
             matched_threshold=0.6,
             unmatched_threshold=0.45,
@@ -31,25 +31,71 @@ target_assigner = dict(
         ),
         dict(
             type="anchor_generator_range",
-            #sizes=[0.6, 0.8, 1.73],
-            #anchor_ranges=[0, -40.0, -0.6, 70.4, 40.0, -0.6],
-            sizes=[0.67, 0.73, 1.77],
-            anchor_ranges=[-50.4, 0, -0.935, 50.4, 50.4, -0.935],
+            # sizes=[2.51, 6.93, 2.84], #Ori
+            sizes=[2.10,5.80,2.02],
+            anchor_ranges=[-50.4,0, -0.40, 50.4, 50.4, -0.40],
             rotations=[0, 1.57],
-            matched_threshold=0.6,
+            matched_threshold=0.55,
             unmatched_threshold=0.4,
-            class_name="pedestrian",
+            class_name="truck",
         ),
         dict(
             type="anchor_generator_range",
-#             sizes=[0.6, 1.76, 1.73],
-#             anchor_ranges=[0, -40.0, -0.6, 70.4, 40.0, -0.6],
-            sizes=[0.60, 1.70, 1.28],
+            #sizes=[2.94, 10.5, 3.47],#Ori
+            sizes=[2.98,12.18,3.59],
+            anchor_ranges=[-50.4,0, -0.085, 50.4, 50.4, -0.085],
+            rotations=[0, 1.57],
+            matched_threshold=0.55,
+            unmatched_threshold=0.4,
+            class_name="bus",
+        ),
+        dict(
+            type="anchor_generator_range",
+            #sizes=[2.90, 12.29, 3.87],#Ori
+            sizes=[2.92,12.27,4.14],
+            anchor_ranges=[-50.4,0, 0.115, 50.4, 50.4, 0.115],
+            rotations=[0, 1.57],
+            matched_threshold=0.5,
+            unmatched_threshold=0.35,
+            class_name="trailer",
+        ),
+        dict(
+            type="anchor_generator_range",
+            #sizes=[0.77, 2.11, 1.47], #Ori
+            sizes=[0.80,1.96,1.31],
+            anchor_ranges=[-50.4,0, -1.085, 50.4, 50.4, -1.085],
+            rotations=[0, 1.57],
+            matched_threshold=0.5,
+            unmatched_threshold=0.3,
+            class_name="motorcycle",
+        ),
+        dict(
+            type="anchor_generator_range",
+            #sizes=[0.60, 1.70, 1.28], #Ori
+            sizes=[0.70,1.59,1.11],
             anchor_ranges=[-50.4,0, -1.18, 50.4, 50.4, -1.18],
             rotations=[0, 1.57],
             matched_threshold=0.5,
             unmatched_threshold=0.35,
             class_name="bicycle",
+        ),
+        dict(
+            type="anchor_generator_range",
+            sizes=[0.61,0.63,1.77],
+            anchor_ranges=[-50.4,0, -0.935, 50.4, 50.4, -0.935],
+            rotations=[0, 1.57],
+            matched_threshold=0.6,
+            unmatched_threshold=0.4,
+            class_name="pedestrian",
+        ),
+        dict( 
+            type="anchor_generator_range",
+            sizes=[0.41, 0.41, 1.07],
+            anchor_ranges=[-50.4,0, -1.285, 50.4, 50.4, -1.285],
+            rotations=[0, 1.57],
+            matched_threshold=0.6,
+            unmatched_threshold=0.4,
+            class_name="traffic_cone",
         ),
     ],
     sample_positive_fraction=-1,
@@ -66,14 +112,15 @@ box_coder = dict(
 # model settings
 model = dict(
     type="VoxelNet",
-    pretrained="/home/elodie/det3D_Output/NUSC_SECOND_3_20200428-124425/epoch_5.pth",
+    # pretrained="/home/elodie/det3D_Output/NUSC_SECOND_3_20200430-161319/epoch_20.pth",
+    pretrained="/home/elodie/det3D_Output/NUSC_SECOND_3_20200526-144105/epoch_1.pth",
+
     reader=dict(
         type="VoxelFeatureExtractorV3",
         num_input_features=3,
         norm_cfg=norm_cfg,
     ),
     backbone=dict(
-        #type="SpMiddleFHD", num_input_features=4, ds_factor=8, norm_cfg=norm_cfg,
         type="SpMiddleFHD", num_input_features=3, ds_factor=8, norm_cfg=norm_cfg,
     ),
     neck=dict(
@@ -98,7 +145,7 @@ model = dict(
         box_coder=build_box_coder(box_coder),
         encode_background_as_zeros=True,
         loss_norm=dict(
-            type="NormByNumPositives", pos_cls_weight=1.0, neg_cls_weight=1.0,
+            type="NormByNumPositives", pos_cls_weight=1.0, neg_cls_weight=2.0,
         ),
         loss_cls=dict(type="SigmoidFocalLoss", alpha=0.25, gamma=2.0, loss_weight=1.0,),
         use_sigmoid_score=True,
@@ -137,7 +184,7 @@ test_cfg = dict(
         nms_post_max_size=100,
         nms_iou_threshold=0.01,
     ),
-    score_threshold=0.3,
+    score_threshold=0.2,
     post_center_limit_range=[-61.2, 0, -10.0, 61.2, 61.2, 10.0],
     max_per_img=100,
 )
@@ -146,18 +193,38 @@ test_cfg = dict(
 dataset_type = "NuScenesDataset"
 n_sweeps = 1
 data_root = "/home/elodie/nuScenes_DATASET"
-
+# dataset_type = "KittiDataset"
+# # data_root = "/data/Datasets/KITTI/Kitti/object"
+# data_root = "/home/elodie/KITTI_DATASET/object"
 
 db_sampler = dict(
     type="GT-AUG",
     enable=False,
-    #db_info_path = "/home/elodie/nuScenes_DATASET/kitti_dbinfos_train.pkl", #(Without velo)
     db_info_path="/home/elodie/nuScenes_DATASET/pkl/dbinfos_train_10sweeps_withoutvelo.pkl",
-    #db_info_path="/data/Datasets/KITTI/Kitti/object/dbinfos_train.pkl",
-    #db_info_path="/home/elodie/KITTI_DATASET/object/dbinfos_train.pkl",
-    sample_groups=[dict(car=2), dict(pedestrian=6), dict(bicycle=2),],
+    #db_info_path = "/home/elodie/nuScenes_DATASET/pkl/dbinfos_train_10sweeps_withoutvelo_forward.pkl",
+    sample_groups=[
+        dict(car=10),
+        dict(truck=2),
+        dict(bus=2),
+        dict(trailer=2),
+        dict(motorcycle=6),
+        dict(bicycle=6),
+        dict(pedestrian=10),
+        dict(traffic_cone=2),
+    ],
     db_prep_steps=[
-        dict(filter_by_min_num_points=dict(car=5, pedestrian=5, bicycle=5)),
+        dict(
+            filter_by_min_num_points=dict(
+                car=5,
+                truck=5,
+                bus=10,
+                trailer=10,
+                motorcycle=5,
+                bicycle=5,
+                pedestrian=5,
+                traffic_cone=5,
+            )
+        ),
         dict(filter_by_difficulty=[-1],),
     ],
     global_random_rotation_range_per_object=[0, 0],
@@ -196,7 +263,7 @@ val_preprocessor = dict(
 #     max_voxel_num=40000,
 # )
 voxel_generator = dict(
-    range=[-50.4, 0, -5.0, 50.4, 50.4, 3.0],
+    range=[-50.4,0, -5.0, 50.4, 50.4, 3.0],
     voxel_size=[0.1, 0.1, 0.2],
     max_points_in_voxel=10,
     max_voxel_num=60000,
@@ -225,7 +292,7 @@ test_pipeline = [
 # train_anno = "/home/elodie/nuScenes_DATASET/pkl/infos_train_10sweeps_withvelo.pkl"
 val_anno = "/home/elodie/nuScenes_DATASET/pkl/infos_val_10sweeps_withvelo.pkl"
 train_anno = "/home/elodie/DATASET_INFO/infos_train.pkl"
-#val_anno = "/home/elodie/DATASET_INFO/infos_val.pkl"
+#val_anno = "/home/elodie/DATASET_INFO/infos_train.pkl"
 
 test_anno = None
 
@@ -289,8 +356,7 @@ total_epochs = 20
 device_ids = range(8)
 dist_params = dict(backend="nccl", init_method="env://")
 log_level = "INFO"
-work_dir = "/home/elodie/det3D_Output/MegDet3D_Outputs/SECOND_NUSC"
+work_dir = "/home/elodie/det3D_Output/SECOND_NUSC"
 load_from = None
 resume_from = None
 workflow = [("train", 1), ("val", 1)]
-# workflow = [('train', 1)]

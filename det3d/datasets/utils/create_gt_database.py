@@ -63,13 +63,13 @@ def create_groundtruth_database(
             dbinfo_path = root_path / f"dbinfos_train_{nsweeps}sweeps_withvelo.pkl" 
     else:
         if db_path is None:
-            db_path = root_path / "gt_database"
+            db_path = root_path / "gt_database_feature_temp"
         if dbinfo_path is None:
-            dbinfo_path = root_path / "dbinfos_train.pkl"
+            dbinfo_path = root_path / "dbinfos_train_temp.pkl"
     if dataset_class_name == "NUSC" or dataset_class_name == "LYFT":
         point_features = 5
     elif dataset_class_name == "KITTI":
-        point_features = 4
+        point_features = 5 # change by elodie- add ring feature 
 
     db_path.mkdir(parents=True, exist_ok=True)
 
@@ -77,7 +77,8 @@ def create_groundtruth_database(
     group_counter = 0
 
     # def prepare_single_data(index):
-    for index in tqdm(range(len(dataset))):
+    for index in tqdm(range(5)):
+    # for index in tqdm(range(len(dataset))):
         image_idx = index
         # modified to nuscenes
         sensor_data = dataset.get_sensor_data(index)
@@ -115,7 +116,10 @@ def create_groundtruth_database(
             gt_points = points[point_indices[:, i]]
             gt_points[:, :3] -= gt_boxes[i, :3]
             with open(filepath, "w") as f: 
-                gt_points[:, :point_features].tofile(f)  
+                gt_points = gt_points[:, :point_features]
+                gt_points.astype(np.float32)
+                gt_points.tofile(f)  
+                # gt_points[:, :point_features].tofile(f)  
 
             if (used_classes is None) or names[i] in used_classes:
                 if relative_path:

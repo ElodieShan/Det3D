@@ -552,8 +552,8 @@ def filter_infos_by_used_classes(infos, used_classes):
 def remove_dontcare(image_anno):
     img_filtered_annotations = {}
     relevant_annotation_indices = [
-        i for i, x in enumerate(image_anno["name"]) if x != "DontCare"
-    ]
+        i for i, x in enumerate(image_anno["name"]) if x.lower() != "dontcare"
+    ] #elodie change for new dataset
     for key in image_anno.keys():
         img_filtered_annotations[key] = image_anno[key][relevant_annotation_indices]
     return img_filtered_annotations

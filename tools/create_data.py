@@ -11,19 +11,20 @@ from det3d.datasets.utils.create_gt_database import create_groundtruth_database
 
 
 def kitti_data_prep(root_path):
-    kitti_ds.create_kitti_info_file(root_path)
-    kitti_ds.create_reduced_point_cloud(root_path)
+    # kitti_ds.create_kitti_info_file(root_path)
+    # kitti_ds.create_reduced_point_cloud(root_path)
     create_groundtruth_database(
         "KITTI", root_path, Path(root_path) / "kitti_infos_train.pkl"
     )
 
 
 def nuscenes_data_prep(root_path, version, nsweeps=10):
-    nu_ds.create_nuscenes_infos(root_path, version=version, nsweeps=nsweeps) #elodie
+    # nu_ds.create_nuscenes_infos(root_path, version=version, nsweeps=nsweeps) #elodie
     create_groundtruth_database(
         "NUSC",
         root_path,
-        Path(root_path) / "pkl/infos_train_{:02d}sweeps_withvelo.pkl".format(nsweeps),
+        Path(root_path) / "pkl/infos_train_10sweeps_withvelo.pkl",
+        # Path(root_path) / "pkl/infos_train_{:02d}sweeps_withoutvelo.pkl".format(nsweeps),
         nsweeps=nsweeps,
     )
     # nu_ds.get_sample_ground_plane(root_path, version=version)

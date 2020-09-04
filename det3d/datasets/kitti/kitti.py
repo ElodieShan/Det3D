@@ -87,12 +87,14 @@ class KittiDataset(PointCloudDataset):
         for det_idx in gt_image_idxes:
             det = detection[det_idx]
             info = self._kitti_infos[gt_image_idxes.index(det_idx)]
-            # info = self._kitti_infos[i]
             calib = info["calib"]
             rect = calib["R0_rect"]
             Trv2c = calib["Tr_velo_to_cam"]
             P2 = calib["P2"]
-            final_box_preds = det["box3d_lidar"].detach().cpu().numpy()
+            if type(det["box3d_lidar"]) != np.ndarray:
+                final_box_preds = det["box3d_lidar"].detach().cpu().numpy()
+            else:
+                final_box_preds = det["box3d_lidar"]
             label_preds = det["label_preds"].detach().cpu().numpy()
             scores = det["scores"].detach().cpu().numpy()
 
@@ -126,10 +128,12 @@ class KittiDataset(PointCloudDataset):
 
                 for j in range(box3d_camera.shape[0]):
                     image_shape = info["image"]["image_shape"]
-                    if bbox[j, 0] > image_shape[1] or bbox[j, 1] > image_shape[0]:
-                        continue
-                    if bbox[j, 2] < 0 or bbox[j, 3] < 0:
-                        continue
+                    if "data_type" not in info: #elodie - change for new dataset 20200801
+                        print("data_type not in info")
+                        if bbox[j, 0] > image_shape[1] or bbox[j, 1] > image_shape[0]:
+                            continue
+                        if bbox[j, 2] < 0 or bbox[j, 3] < 0:
+                            continue
                     bbox[j, 2:] = np.minimum(bbox[j, 2:], image_shape[::-1])
                     bbox[j, :2] = np.maximum(bbox[j, :2], [0, 0])
                     anno["bbox"].append(bbox[j])
@@ -148,7 +152,6 @@ class KittiDataset(PointCloudDataset):
                     anno["score"].append(scores[j])
 
                     num_example += 1
-
             if num_example != 0:
                 anno = {n: np.stack(v) for n, v in anno.items()}
                 annos.append(anno)

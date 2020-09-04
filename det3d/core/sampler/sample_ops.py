@@ -104,6 +104,10 @@ class DataBaseSamplerV2:
         gt_group_ids=None,
         calib=None,
     ):
+        if gt_boxes.shape[1] == 9:#elodie
+            gt_boxes = np.delete(gt_boxes,6,axis=1)#elodie
+            gt_boxes = np.delete(gt_boxes,6,axis=1)#elodie
+
         sampled_num_dict = {}
         sample_num_per_class = []
         for class_name, max_sample_num in zip(
@@ -176,9 +180,31 @@ class DataBaseSamplerV2:
             for info in sampled:
                 try:
                     # TODO fix point read error
-                    s_points = np.fromfile(
-                        str(pathlib.Path(root_path) / info["path"]), dtype=np.float32
-                    ).reshape(-1, num_point_features)
+                    # elodie - change for mix db info 20200805
+                    if "data_type" in info:
+                        if "point_feature_num" in info:
+                            num_point_features_in_file = info["point_feature_num"]
+                        else:
+                            num_point_features_in_file = num_point_features
+                        if info["path"][0] == '/':
+                            db_file_path = info["path"]
+                        else:
+                            db_file_path = str(pathlib.Path(root_path) / info["path"])
+
+                        if (info["data_type"] == "kitti"):
+                            try:
+                                s_points = np.fromfile(db_file_path,dtype=np.float32).reshape([-1, num_point_features_in_file])
+                            except:
+                                s_points = np.fromfile(db_file_path,dtype=np.float32).reshape([-1, 4])
+                            if s_points.shape[1] < num_point_features_in_file:
+                                diff_shape = num_point_features_in_file - s_points.shape[1]
+                                s_points = np.hstack((s_points, np.zeros((s_points.shape[0],diff_shape), dtype=np.float32)))
+                        elif (info["data_type"] == "nuscenes"):
+                            s_points = np.fromfile(db_file_path,dtype=np.float32).reshape([-1, num_point_features_in_file])
+                    else:
+                        s_points = np.fromfile(
+                            str(pathlib.Path(root_path) / info["path"]), dtype=np.float32
+                        ).reshape(-1, num_point_features)
                     # if not add_rgb_to_points:
                     #     s_points = s_points[:, :4]
                     if "rot_transform" in info:

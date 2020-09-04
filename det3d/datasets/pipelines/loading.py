@@ -86,16 +86,40 @@ class LoadPointCloudFromFile(object):
                 / (velo_path.parent.stem + "_reduced")
                 / velo_path.name
             )
-            if velo_reduced_path.exists():
-                velo_path = velo_reduced_path
-            points = np.fromfile(str(velo_path), dtype=np.float32, count=-1).reshape(
+            # if velo_reduced_path.exists():
+                # velo_path = velo_reduced_path
+
+            if "data_type" in info:
+                if "point_feature_num" in info:
+                    num_point_features_in_file = info["point_feature_num"]
+                else:
+                    num_point_features_in_file = 4
+                if (info["data_type"] == "kitti"): 
+                    points = np.fromfile(info["lidar_path"],dtype=np.float32).reshape([-1, num_point_features_in_file])
+                elif (info["data_type"] == "nuscenes"):
+                    points = read_file(info["lidar_path"])
+            else:
+                points = np.fromfile(str(velo_path), dtype=np.float32, count=-1).reshape(
                 [-1, res["metadata"]["num_point_features"]]
-            )
+                )
+            # points = np.fromfile(str(velo_path),dtype=np.float32).reshape([-1, 4])
             #for features xyz,r=0 elodie
 #             point_features =  np.zeros(shape=[points.shape[0],1],dtype=np.float32)
 #             points = np.delete(points, -1, axis=1)
 #             points = np.hstack((points, point_features))
-            
+            # add feature ring - elodie 20200825 
+            # elodie start 
+            # horizontal_angles = np.arctan2(points[:,1],points[:,0])/np.pi*180
+            # ring = 1
+            # ring_list = [ring]
+            # for i in range(1,points.shape[0]):
+            #     if horizontal_angles[i-1]<0 and horizontal_angles[i]>0:
+            #         ring += 1
+            #     ring_list.append(ring)
+            # points = np.hstack((points, np.array(ring_list,dtype=np.float32).reshape(-1,1)))
+            # elodie end 
+            # print(points.shape[1])
+            # print(points[0])
             res["lidar"]["points"] = points
 
         elif self.type == "NuScenesDataset":
@@ -103,19 +127,25 @@ class LoadPointCloudFromFile(object):
             nsweeps = res["lidar"]["nsweeps"]
 
             lidar_path = Path(info["lidar_path"])
-            #elodie start
+            # elodie start
             if "data_type" in info:
+                if "point_feature_num" in info:
+                    num_point_features_in_file = info["point_feature_num"]
+                else:
+                    num_point_features_in_file = 4
                 if (info["data_type"] == "kitti"): 
-                    points = np.fromfile(info["lidar_path"],dtype=np.float32).reshape([-1, 4])
+                    points = np.fromfile(info["lidar_path"],dtype=np.float32).reshape([-1, num_point_features_in_file])
+                    points = points[:,:4]
                 elif (info["data_type"] == "nuscenes"):
                     points = read_file(info["lidar_path"])
             else:
                 points = read_file(info["lidar_path"])
-            
-#             points = read_file(str(lidar_path)) #elodie 
+
+            # points = read_file(str(lidar_path)) #elodie 
 
             #elodie end
-    
+            
+            # points = np.fromfile(info["lidar_path"],dtype=np.float32).reshape([-1, 4]) #elodie     
             # points[:, 3] /= 255
             sweep_points_list = [points]
             sweep_times_list = [np.zeros((points.shape[0], 1))]
@@ -186,12 +216,13 @@ class LoadPointCloudAnnotations(object):
 
         if res["type"] in ["NuScenesDataset", "LyftDataset"] and "gt_boxes" in info:
             #Delete velocity in boxes
-#             gt_boxes = info["gt_boxes"].astype(np.float32) #elodie
-#             gt_boxes = np.delete(gt_boxes,6,axis=1) #elodie
-#             gt_boxes = np.delete(gt_boxes,6,axis=1) #elodie
+            gt_boxes = info["gt_boxes"].astype(np.float32) #elodie
+            if gt_boxes.shape[1] == 9:#elodie
+                gt_boxes = np.delete(gt_boxes,6,axis=1)#elodie
+                gt_boxes = np.delete(gt_boxes,6,axis=1)#elodie
             res["lidar"]["annotations"] = {
-                "boxes": info["gt_boxes"].astype(np.float32),
-#                 "boxes": gt_boxes, #elodie
+                # "boxes": info["gt_boxes"].astype(np.float32),
+                "boxes": gt_boxes, #elodie
                 "names": info["gt_names"],
                 "tokens": info["gt_boxes_token"],
 #                 "velocities": info["gt_boxes_velocity"].astype(np.float32), #elodie

@@ -27,7 +27,8 @@ def _dict_select(dict_, inds):
 
 @PIPELINES.register_module
 class Preprocess(object):
-    def __init__(self, cfg=None, **kwargs):
+    def __init__(self, cfg=None, view_sampled_points=False, random_flip_switch=False, **kwargs):
+        self.view_sampled_points = view_sampled_points #elodie - change for sampled points visualization
         self.remove_environment = cfg.remove_environment
         self.shuffle_points = cfg.shuffle_points
         self.remove_unknown = cfg.remove_unknown_examples
@@ -36,6 +37,7 @@ class Preprocess(object):
         self.reference_detections = cfg.get("reference_detections", None)
         self.remove_outside_points = cfg.get("remove_outside_points", False)
         self.random_crop = cfg.get("random_crop", False)
+        self.random_flip_switch = random_flip_switch
 
         self.mode = cfg.mode
         if self.mode == "train":
@@ -122,8 +124,8 @@ class Preprocess(object):
 
         if self.mode == "train":
             selected = kitti.drop_arrays_by_name(
-                gt_dict["gt_names"], ["DontCare", "ignore"]
-            )
+                gt_dict["gt_names"], ["DontCare", "dontcare", "ignore"]
+            ) #elodie change - add dontcare 20200803
 
             _dict_select(gt_dict, selected)
             if self.remove_unknown:
@@ -164,6 +166,8 @@ class Preprocess(object):
                     sampled_gt_names = sampled_dict["gt_names"]
                     sampled_gt_boxes = sampled_dict["gt_boxes"]
                     sampled_points = sampled_dict["points"]
+                    if self.view_sampled_points: #elodie - change for sampled points visualization
+                        sampled_points[:,3] = 500
                     sampled_gt_masks = sampled_dict["gt_masks"]
                     gt_dict["gt_names"] = np.concatenate(
                         [gt_dict["gt_names"], sampled_gt_names], axis=0
@@ -199,7 +203,9 @@ class Preprocess(object):
             )
             gt_dict["gt_classes"] = gt_classes
 
-            gt_dict["gt_boxes"], points = prep.random_flip(gt_dict["gt_boxes"], points)
+            if self.random_flip_switch: # elodie -change for keeping front side of data 20200805
+                gt_dict["gt_boxes"], points = prep.random_flip(gt_dict["gt_boxes"], points)
+            
             gt_dict["gt_boxes"], points = prep.global_rotation(
                 gt_dict["gt_boxes"], points, rotation=self.global_rotation_noise
             )
@@ -245,7 +251,10 @@ class Preprocess(object):
         res["lidar"]["points"] = points
 
         if self.mode == "train":
-
+            # if self.view_sampled_points: #elodie - change for sample box visualization
+            #     gt_dict["anno_boxes"] = np.array(anno_dict["boxes"])
+            #     gt_dict["anno_names"] = np.array(anno_dict["names"]).reshape(-1)
+            
             res["lidar"]["annotations"] = gt_dict
 
         return res, info

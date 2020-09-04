@@ -123,9 +123,9 @@ class NuScenesDataset(PointCloudDataset):
         for info in self._nusc_infos:
             gt_names = np.array(info["gt_names"])
             gt_boxes = info["gt_boxes"]
-            mask_used = ['car', 'pedestrian', 'bicycle']
-            #mask = np.array([n != "ignore" for n in gt_names], dtype=np.bool_) #elodie
-            mask = np.array([n in mask_used for n in gt_names], dtype=np.bool_)#elodie
+            # mask_used = ['car', 'pedestrian', 'bicycle'] #elodie
+            mask = np.array([n != "ignore" for n in gt_names], dtype=np.bool_) #elodie
+            # mask = np.array([n in mask_used for n in gt_names], dtype=np.bool_)#elodie
             gt_names = gt_names[mask]
             gt_boxes = gt_boxes[mask]
             # det_range = np.array([cls_range_map[n] for n in gt_names_mapped])
@@ -165,6 +165,7 @@ class NuScenesDataset(PointCloudDataset):
                 "image_prefix": self._root_path,
                 "num_point_features": self._num_point_features,
                 "token": info["token"],
+                "lidar_path":info["lidar_path"],
             },
             "calib": None,
             "cam": {},
