@@ -76,6 +76,7 @@ def main():
     if args.work_dir is not None:
         cfg.work_dir = args.work_dir
     if args.resume_from is not None:
+        print("find resume_from: ",args.resume_from)
         cfg.resume_from = args.resume_from
 
     distributed = False

@@ -97,7 +97,7 @@ def second_box_encode(
             vyt = vyg - vya
         ret.extend([vxt, vyt])
 
-    if encode_angle_to_vector:
+    if encode_angle_to_vector: #将角度编码为gt与anchor在x/y方向上的偏移
         rgx = np.cos(rg)
         rgy = np.sin(rg)
         rax = np.cos(ra)

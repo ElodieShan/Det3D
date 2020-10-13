@@ -326,6 +326,7 @@ class Trainer(object):
 
     def load_checkpoint(self, filename, map_location="cpu", strict=False):
         self.logger.info("load checkpoint from %s", filename)
+        print("map_location:",map_location)
         return load_checkpoint(self.model, filename, map_location, strict, self.logger)
 
     def save_checkpoint(
@@ -375,7 +376,7 @@ class Trainer(object):
 
     def train(self, data_loader, epoch, **kwargs):
 
-        self.model.train()
+        self.model.train() #启用 BatchNormalization 和 Dropout
         self.mode = "train"
         self.data_loader = data_loader
         self.length = len(data_loader)
@@ -474,8 +475,11 @@ class Trainer(object):
 
     def resume(self, checkpoint, resume_optimizer=True, map_location="default"):
         if map_location == "default":
+            # checkpoint = self.load_checkpoint(
+            #     checkpoint, map_location=torch.cuda.current_device()
+            # ) #elodie 20200915
             checkpoint = self.load_checkpoint(
-                checkpoint, map_location=torch.cuda.current_device()
+                checkpoint, map_location=None
             )
         else:
             checkpoint = self.load_checkpoint(checkpoint, map_location=map_location)
@@ -519,7 +523,7 @@ class Trainer(object):
                             )
                         )
                     epoch_runner = getattr(self, mode)
-                elif callable(mode):
+                elif callable(mode): # callable 检查一个对象是否可调用
                     epoch_runner = mode
                 else:
                     raise TypeError(

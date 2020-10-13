@@ -191,29 +191,19 @@ test_cfg = dict(
     post_center_limit_range=[-61.2, 0, -10.0, 61.2, 61.2, 10.0],
     max_per_img=200,
 )
-# test_cfg = dict(
-#     nms=dict(
-#         use_rotate_nms=True,
-#         use_multi_class_nms=False,
-#         nms_pre_max_size=1000,
-#         nms_post_max_size=80,
-#         nms_iou_threshold=0.2,
-#     ),
-#     score_threshold=0.1,
-#     post_center_limit_range=[-61.2, 0, -10.0, 61.2, 61.2, 10.0],
-#     max_per_img=200,
-# )
-# dataset settings
-n_sweeps = 1
-# dataset_type = "NuScenesDataset"
-# data_root = "/home/elodie/nuScenes_DATASET_NEW"
-dataset_type = "KittiDataset"
-data_root = "/home/elodie/KITTI_DATASET/object"
 
+nsweeps = 1
+# dataset_type = "NuScenesDataset"
+# data_root = "/home/dataset/nuScenes_DATASET"
+# dataset_type = "KittiDataset"
+# data_root = "/home/elodie/KITTI_DATASET/object"
+dataset_type = "KittiDataset"
+data_root = "/home/dataset/KITTI_DATASET_NEW/object"
 db_sampler = dict(
     type="GT-AUG",
     enable=False,
-    db_info_path="/home/elodie/DATASET_INFO/pkl/dbinfos_mix_sample.pkl",
+    # db_info_path="/home/elodie/DATASET_INFO/pkl/dbinfos_mix_sample.pkl",
+    db_info_path="/home/elodie/nuScenes_DATASET/pkl_mix/dbinfos_train_v2.pkl",
     sample_groups=[
         dict(car=2),
         dict(truck=3),
@@ -292,15 +282,22 @@ train_pipeline = [
 test_pipeline = [
     dict(type="LoadPointCloudFromFile", dataset=dataset_type),
     dict(type="LoadPointCloudAnnotations", with_bbox=True),
-    dict(type="Preprocess", cfg=val_preprocessor),
+    dict(type="Preprocess", cfg=val_preprocessor, pc_range=voxel_generator["range"]),
     dict(type="Voxelization", cfg=voxel_generator),
     dict(type="AssignTarget", cfg=train_cfg["assigner"]),
     dict(type="Reformat"),
 ]
 
+
 train_anno = "/home/elodie/DATASET_INFO/infos_train_sample.pkl"
-val_anno = "/home/elodie/KITTI_DATASET_NEW/object/kitti_infos_val_kitti.pkl"
-# val_anno = "/home/elodie/nuScenes_DATASET/pkl/infos_val_10sweeps_withvelo.pkl"
+# val_anno = "/home/dataset/nuScenes_DATASET/pkl/infos_val_10sweeps_withvelo.pkl"
+
+# val_anno = "/home/elodie/KITTI_DATASET_NEW/object/kitti_infos_val_kitti.pkl"
+# val_anno = "/home/dataset/nuScenes_DATASET/pkl/infos_val_10sweeps_withvelo.pkl"
+
+val_anno = "/home/dataset/KITTI_DATASET_NEW/object/pkl/kitti_infos_val_formatnusc_feature5.pkl"
+# train_anno = "/home/dataset/KITTI_DATASET_NEW/object/pkl/kitti_infos_train_formatnusc_feature5.pkl"
+# db_info_path = "/home/dataset/KITTI_DATASET_NEW/object/pkl/dbinfos_train_axisnusc_feature5.pkl"
 
 test_anno = None
 
@@ -312,7 +309,7 @@ data = dict(
         root_path=data_root,
         info_path=train_anno,
         ann_file=train_anno,
-        n_sweeps=n_sweeps,
+        nsweeps=nsweeps,
         class_names=class_names,
         pipeline=train_pipeline,
     ),
@@ -322,7 +319,7 @@ data = dict(
         info_path=val_anno,
         test_mode=True,
         ann_file=val_anno,
-        n_sweeps=n_sweeps,
+        nsweeps=nsweeps,
         class_names=class_names,
         pipeline=test_pipeline,
     ),
@@ -331,7 +328,7 @@ data = dict(
         root_path=data_root,
         info_path=test_anno,
         ann_file=test_anno,
-        n_sweeps=n_sweeps,
+        nsweeps=nsweeps,
         class_names=class_names,
         pipeline=test_pipeline,
     ),

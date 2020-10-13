@@ -995,3 +995,30 @@ def anno_to_rbboxes(anno):
     rots = anno["rotation_y"]
     rbboxes = np.concatenate([loc, dims, rots[..., np.newaxis]], axis=1)
     return rbboxes
+
+# elodie 20200917
+def kitti_anno_to_box_corner(annos, calib): #calib = kitti_info["calib"]
+    locs = annos["location"]
+    dims = annos["dimensions"]
+    rots = annos["rotation_y"]
+    labels = annos["name"]
+    boxes = np.concatenate(
+            [locs, dims, rots[..., np.newaxis]], axis=1
+        ).astype(np.float32)
+            
+    #box_camera_to_lidar [xyz_lidar, l, h, w, r] - > [xyz_lidar, w, l, h, r]
+    boxes = box_np_ops.box_camera_to_lidar(
+            boxes, calib["R0_rect"], calib["Tr_velo_to_cam"]
+        )
+
+    # only center format is allowed. so we need to convert
+    # kitti [0.5, 0.5, 0] center to [0.5, 0.5, 0.5]
+    box_np_ops.change_box3d_center_(
+            boxes, [0.5, 0.5, 0], [0.5, 0.5, 0.5]
+        )
+    
+    # boxes[:, 6] = boxes[:, 6] + np.sign(boxes[:, 6]) * np.pi / 2
+    
+    boxes_corner = box_np_ops.center_to_corner_box3d(boxes[:,:3],boxes[:,3:6],boxes[:,6])
+    scores = annos["score"]
+    return boxes_corner, labels, scores

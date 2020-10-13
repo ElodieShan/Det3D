@@ -1,0 +1,216 @@
+data_pipeline:
+{'type': 'LoadPointCloudFromFile', 'dataset': 'NuScenesDataset'} 
+------------
+
+{'type': 'LoadPointCloudAnnotations', 'with_bbox': True} 
+------------
+
+{'type': 'Preprocess', 'cfg': {'mode': 'train', 'shuffle_points': True, 'min_points_in_gt': 3, 'gt_loc_noise': [0.0, 0.0, 0.0], 'gt_rot_noise': [0.0, 0.0], 'global_rot_noise': [-0.3925, 0.3925], 'global_rotation_noise_kitti': [-0.1745, 0.1745], 'global_scale_noise': [0.95, 1.05], 'global_rot_per_obj_range': [0, 0], 'global_trans_noise': [0.2, 0.2, 0.2], 'remove_points_after_sample': True, 'gt_drop_percentage': 0.0, 'gt_drop_max_keep_points': 15, 'remove_unknown_examples': False, 'remove_environment': False, 'db_sampler': {'type': 'GT-AUG', 'enable': False, 'db_info_path': '/home/elodie/nuScenes_DATASET/pkl_mix/dbinfos_train_v2.pkl', 'sample_groups': [{'car': 2}, {'truck': 1}, {'bus': 1}, {'trailer': 1}, {'bicycle': 3}, {'motorcycle': 3}, {'pedestrian': 1}, {'traffic_cone': 1}], 'db_prep_steps': [{'filter_by_min_num_points': {'car': 8, 'truck': 10, 'bus': 10, 'trailer': 10, 'bicycle': 10, 'motorcycle': 10, 'pedestrian': 5, 'traffic_cone': 5}}, {'filter_by_difficulty': [-1]}], 'global_random_rotation_range_per_object': [0, 0], 'rate': 1.0}, 'class_names': ['car', 'truck', 'bus', 'trailer', 'bicycle', 'motorcycle', 'pedestrian', 'traffic_cone']}, 'pc_range': [-51.2, 0, -5.0, 51.2, 51.2, 3.0], 'view_sampled_points': True} 
+------------
+
+{'type': 'Voxelization', 'cfg': {'range': [-51.2, 0, -5.0, 51.2, 51.2, 3.0], 'voxel_size': [0.1, 0.1, 0.1], 'max_points_in_voxel': 10, 'max_voxel_num': 60000}} 
+------------
+
+{'type': 'NuScenesDataset', 'root_path': '/home/dataset/nuScenes_DATASET', 'info_path': '/home/elodie/nuScenes_DATASET/pkl_mix/infos_train_v3.pkl', 'ann_file': '/home/elodie/nuScenes_DATASET/pkl_mix/infos_train_v3.pkl', 'nsweeps': 1, 'class_names': ['car', 'truck', 'bus', 'trailer', 'bicycle', 'motorcycle', 'pedestrian', 'traffic_cone'], 'pipeline': [{'type': 'LoadPointCloudFromFile', 'dataset': 'NuScenesDataset'}, {'type': 'LoadPointCloudAnnotations', 'with_bbox': True}, {'type': 'Preprocess', 'cfg': {'mode': 'train', 'shuffle_points': True, 'min_points_in_gt': 3, 'gt_loc_noise': [0.0, 0.0, 0.0], 'gt_rot_noise': [0.0, 0.0], 'global_rot_noise': [-0.3925, 0.3925], 'global_rotation_noise_kitti': [-0.1745, 0.1745], 'global_scale_noise': [0.95, 1.05], 'global_rot_per_obj_range': [0, 0], 'global_trans_noise': [0.2, 0.2, 0.2], 'remove_points_after_sample': True, 'gt_drop_percentage': 0.0, 'gt_drop_max_keep_points': 15, 'remove_unknown_examples': False, 'remove_environment': False, 'db_sampler': {'type': 'GT-AUG', 'enable': False, 'db_info_path': '/home/elodie/nuScenes_DATASET/pkl_mix/dbinfos_train_v2.pkl', 'sample_groups': [{'car': 2}, {'truck': 1}, {'bus': 1}, {'trailer': 1}, {'bicycle': 3}, {'motorcycle': 3}, {'pedestrian': 1}, {'traffic_cone': 1}], 'db_prep_steps': [{'filter_by_min_num_points': {'car': 8, 'truck': 10, 'bus': 10, 'trailer': 10, 'bicycle': 10, 'motorcycle': 10, 'pedestrian': 5, 'traffic_cone': 5}}, {'filter_by_difficulty': [-1]}], 'global_random_rotation_range_per_object': [0, 0], 'rate': 1.0}, 'class_names': ['car', 'truck', 'bus', 'trailer', 'bicycle', 'motorcycle', 'pedestrian', 'traffic_cone']}, 'pc_range': [-51.2, 0, -5.0, 51.2, 51.2, 3.0], 'view_sampled_points': True}, {'type': 'Voxelization', 'cfg': {'range': [-51.2, 0, -5.0, 51.2, 51.2, 3.0], 'voxel_size': [0.1, 0.1, 0.1], 'max_points_in_voxel': 10, 'max_voxel_num': 60000}}]}
+duplicated_samples: 211041
+_cls_dist: {'car': 0.30141062637117905, 'truck': 0.19161679484081293, 'bus': 0.07578622163465867, 'trailer': 0.062139584251401384, 'bicycle': 0.044522154462876884, 'motorcycle': 0.04133793907345018, 'pedestrian': 0.199032415502201, 'traffic_cone': 0.0841542638634199}
+t_start: 1601104514.137164
+start to min_points_in_gt: 4.4345855712890625e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 0.0001621246337890625
+sample duration time: 8.592896938323975
+rot&scal duration time: 0.008936166763305664
+
+points_upsample.shape[0]: 0 
+
+downsample duration time: 0.011816978454589844
+filter_outrange duration time: 2.166842460632324
+shuffle duration time: 6.826932668685913
+random_select duration time: 1.4781951904296875e-05
+data preprocess time: 15.4290030002594 
+===
+
+{'lidar': {'type': 'lidar', 'points': array([[-3.8345263e+00,  3.6448455e+00, -4.9361405e-01,  7.2000000e+01,
+         1.9000000e+01],
+       [-1.9541918e+00,  1.0903455e+01, -8.2444012e-01,  5.0000000e+02,
+         2.0000000e+01],
+       [-8.9057827e+00,  2.8400028e+00, -1.3138224e+00,  1.0000000e+02,
+         1.7000000e+01],
+       ...,
+       [ 4.4222760e+00,  2.1397285e+01, -5.0767004e-01,  7.0000000e+00,
+         2.2000000e+01],
+       [ 1.3412254e+01,  8.5126276e+00, -1.4823052e+00,  3.0000000e+00,
+         1.9000000e+01],
+       [ 1.7805519e+01,  1.2980634e+01, -1.0279313e+00,  2.0000000e+00,
+         2.1000000e+01]], dtype=float32), 'nsweeps': 1, 'annotations': {'gt_boxes': array([[-13.853563  ,  22.326244  ,   1.3788937 ,   2.8839505 ,
+         13.144339  ,   4.5070157 ,   8.388606  ],
+       [  3.9071326 ,  -1.121745  ,  -0.9125982 ,   2.0765686 ,
+          4.717682  ,   2.0309072 ,   9.946109  ],
+       [ 15.711741  ,   3.0811458 ,  -0.2985227 ,   3.3021698 ,
+         12.611964  ,   3.035464  ,   6.4645104 ],
+       [  1.0384549 ,  31.7794    ,   1.470132  ,   2.4678063 ,
+          5.699408  ,   2.505166  ,   5.250902  ],
+       [ 11.169868  ,  19.698     ,   0.32204083,   2.003925  ,
+          4.8090053 ,   1.6998599 ,   5.6118608 ],
+       [ 29.33982   ,  41.782932  ,   1.9850734 ,   1.8669401 ,
+          4.419843  ,   2.0153406 ,   9.935907  ],
+       [-20.493868  ,  26.363657  ,   1.2584975 ,   2.8528175 ,
+          8.3944845 ,   3.7982218 ,   8.388606  ],
+       [ 28.181376  ,  10.533244  ,   0.12156659,   2.2343092 ,
+          4.925235  ,   2.075531  ,   8.48614   ],
+       [-28.528517  ,  20.491827  ,   0.08888429,   1.7942965 ,
+          4.129269  ,   1.6676892 ,   9.962265  ],
+       [ -3.7126822 ,  30.10523   ,   1.0717665 ,   2.185534  ,
+          4.9958034 ,   2.075531  ,   5.189063  ],
+       [  5.006293  ,  39.364613  ,   1.5004312 ,   0.74615335,
+          0.93295115,   1.8046741 ,   9.565353  ],
+       [ -5.935193  ,  13.392422  ,  -0.2711729 ,   0.89974266,
+          1.9406215 ,   1.929206  ,   9.495353  ],
+       [ -1.7891396 ,  11.667261  ,  -0.7777408 ,   0.801155  ,
+          2.6722462 ,   1.3158866 ,   0.14646636],
+       [ -8.337187  ,  15.526866  ,  -2.341762  ,   0.69115186,
+          2.1668544 ,   1.3044713 ,  -1.6257036 ],
+       [ 12.872904  ,   6.3356533 ,  -0.53938484,   0.45869234,
+          0.4742588 ,   1.8046741 ,  -2.8344002 ]], dtype=float32), 'gt_names': array(['trailer', 'car', 'truck', 'car', 'car', 'car', 'truck', 'car',
+       'car', 'car', 'pedestrian', 'bicycle', 'motorcycle', 'motorcycle',
+       'traffic_cone'], dtype='<U12'), 'gt_classes': array([4, 1, 2, 1, 1, 1, 2, 1, 1, 1, 7, 5, 6, 6, 8], dtype=int32)}, 'times': array([[0.],
+       [0.],
+       [0.],
+       ...,
+       [0.],
+       [0.],
+       [0.]], dtype=float32), 'combined': array([[-3.0912619e+00,  1.0241383e-02, -1.8332647e+00,  4.0000000e+00,
+         0.0000000e+00,  0.0000000e+00],
+       [-3.2500830e+00,  1.1930928e-02, -1.8261075e+00,  4.0000000e+00,
+         1.0000000e+00,  0.0000000e+00],
+       [-3.4628806e+00,  1.3317454e-02, -1.8412517e+00,  4.0000000e+00,
+         2.0000000e+00,  0.0000000e+00],
+       ...,
+       [-7.0872475e-06, -1.1426074e-05, -5.9747367e-07,  5.0000000e+00,
+         2.9000000e+01,  0.0000000e+00],
+       [-7.0872475e-06, -1.1426074e-05, -5.9747367e-07,  1.8000000e+01,
+         3.0000000e+01,  0.0000000e+00],
+       [-7.0872475e-06, -1.1426074e-05, -5.9747367e-07,  3.0000000e+01,
+         3.1000000e+01,  0.0000000e+00]], dtype=float32), 'voxels': {'voxels': array([[[-3.8345263e+00,  3.6448455e+00, -4.9361405e-01,  7.2000000e+01,
+          1.9000000e+01],
+        [-3.8743949e+00,  3.6417620e+00, -4.9612105e-01,  6.4000000e+01,
+          1.9000000e+01],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        ...,
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00]],
+
+       [[-1.9541918e+00,  1.0903455e+01, -8.2444012e-01,  5.0000000e+02,
+          2.0000000e+01],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        ...,
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00]],
+
+       [[-8.9057827e+00,  2.8400028e+00, -1.3138224e+00,  1.0000000e+02,
+          1.7000000e+01],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        ...,
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00]],
+
+       ...,
+
+       [[ 4.4222760e+00,  2.1397285e+01, -5.0767004e-01,  7.0000000e+00,
+          2.2000000e+01],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        ...,
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00]],
+
+       [[ 1.3412254e+01,  8.5126276e+00, -1.4823052e+00,  3.0000000e+00,
+          1.9000000e+01],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        ...,
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00]],
+
+       [[ 1.7805519e+01,  1.2980634e+01, -1.0279313e+00,  2.0000000e+00,
+          2.1000000e+01],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        ...,
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00],
+        [ 0.0000000e+00,  0.0000000e+00,  0.0000000e+00,  0.0000000e+00,
+          0.0000000e+00]]], dtype=float32), 'coordinates': array([[ 45,  36, 473],
+       [ 41, 109, 492],
+       [ 36,  28, 422],
+       ...,
+       [ 44, 213, 556],
+       [ 35,  85, 646],
+       [ 39, 129, 690]], dtype=int32), 'num_points': array([2, 1, 1, ..., 1, 1, 1], dtype=int32), 'num_voxels': array([3462]), 'shape': array([1024,  512,   80])}}, 'metadata': {'image_prefix': PosixPath('/home/dataset/nuScenes_DATASET'), 'num_point_features': 5, 'token': '37edb3480a3a4dff890d9b2081cd5a7b', 'lidar_path': '/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-21-11-53-44-0400__LIDAR_TOP__1534867048449251.pcd.bin'}, 'calib': None, 'cam': {}, 'mode': 'train', 'type': 'NuScenesDataset'}
+... logging to /root/.ros/log/ced4c472-fe5d-11ea-acc5-b42e99a9b026/roslaunch-2ada5494020f-11335.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/elodie/det3d_ros/src/det3d_pcl/launch/display_data_pipeline.launch
+[1mstarted roslaunch server http://172.17.0.2:38377/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+ * /view_data_pipeline/config_file: 0926Nuscenes_all_...
+ * /view_data_pipeline/config_root: /home/elodie/Det3...
+ * /view_data_pipeline/rate: 2.0
+ * /view_data_pipeline/val: False
+ * /view_data_pipeline/view_voxel: False
+ * /view_data_pipeline/view_voxel_points: False
+ * /view_data_pipeline/voxel_features: False
+
+NODES
+  /
+    view_data_pipeline (det3d_pcl/view_data_pipeline.py)
+
+[1mROS_MASTER_URI=http://192.168.1.101:11311[0m
+]2;/home/elodie/det3d_ros/src/det3d_pcl/launch/display_data_pipeline.launch http://192.168.1.101:11311
+[1mprocess[view_data_pipeline-1]: started with pid [11344][0m
+[view_data_pipeline-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

@@ -1,5 +1,7 @@
 import numpy as np
 import pickle
+import json
+
 import os
 
 from copy import deepcopy
@@ -7,6 +9,8 @@ from copy import deepcopy
 from det3d.core import box_np_ops
 from det3d.datasets.custom import PointCloudDataset
 from det3d.datasets.registry import DATASETS
+from det3d.datasets.utils.draw_results import *
+from det3d.datasets.kitti.kitti_common import kitti_anno_to_box_corner
 
 from .kitti_common import *
 from .eval import get_official_eval_result, get_coco_eval_result
@@ -95,6 +99,15 @@ class KittiDataset(PointCloudDataset):
                 final_box_preds = det["box3d_lidar"].detach().cpu().numpy()
             else:
                 final_box_preds = det["box3d_lidar"]
+
+            if "data_type" in info: # elodie
+                R = np.array([[ 0, 1 ,0],
+                    [ -1,0,0],
+                    [ 0,0,1]])
+                gt_boxes_theta = np.dot(R, final_box_preds[:, :3].T).T
+                final_box_preds = np.hstack((gt_boxes_theta, final_box_preds[:, 3:]))
+                final_box_preds[:, 6] = final_box_preds[:, 6] + np.sign(final_box_preds[:, 6]) * np.pi / 2 + np.pi
+
             label_preds = det["label_preds"].detach().cpu().numpy()
             scores = det["scores"].detach().cpu().numpy()
 
@@ -161,7 +174,7 @@ class KittiDataset(PointCloudDataset):
             annos[-1]["metadata"] = det["metadata"]
         return annos
 
-    def evaluation(self, detections, output_dir=None):
+    def evaluation(self, detections, output_dir=None, plot_num=20):
         """
         detection
         When you want to eval your own dataset, you MUST set correct
@@ -169,6 +182,43 @@ class KittiDataset(PointCloudDataset):
         """
         gt_annos = self.ground_truth_annotations
         dt_annos = self.convert_detection_to_kitti_annos(detections)
+
+        # elodie plot kitti val result
+        res_name = self._info_path.split("/")[-1].split(".")[0]
+        if res_name.find("val") != -1:
+            plot_dir = "example_kitti_val"
+        elif res_name.find("train") != -1:
+            plot_dir = "example_kitti_train"
+        else:
+            plot_dir = "example_kitti"
+        res_path = str(Path(output_dir) / Path(res_name + "_detection.pkl"))
+
+        with open(res_path, "wb") as f:
+            pickle.dump(dt_annos, f)
+
+        if plot_num>0:
+            np.random.seed(43)
+            example_idxs = np.random.randint(1800, size=plot_num)
+            fig_root = str(Path(output_dir)/ Path(plot_dir))
+            init_data_dir(fig_root)
+            R_nusc2kitti = np.array([[ 0, 1 ,0],
+                [ -1,0,0],
+                [ 0,0,1]])
+            for example_idx in example_idxs:
+                info = self._kitti_infos[example_idx]
+                # idx = info["image"]["image_idx"]
+                example_data = self.get_sensor_data(example_idx)
+                points = example_data["points"]
+                points_theta = np.dot(R_nusc2kitti,points[:,:3].T).T
+                points = np.hstack((points_theta,points[:,3:]))
+
+                boxes_corner_gt,_,_ = kitti_anno_to_box_corner(gt_annos[example_idx], info["calib"])
+                boxes_corner_dt,_,_ = kitti_anno_to_box_corner(dt_annos[example_idx], info["calib"])
+
+                save_path = str(Path(fig_root) / Path( str(example_data["metadata"]["image_idx"]) + ".png"))
+                init_data_dir(save_path)
+                display_pred_and_gt(save_path, points, \
+                boxes_dt=boxes_corner_dt, boxes_gt=boxes_corner_gt, coordinates="kitti")
 
         # firstly convert standard detection to kitti-format dt annos
         z_axis = 1  # KITTI camera format use y as regular "z" axis.
@@ -194,6 +244,8 @@ class KittiDataset(PointCloudDataset):
                 }
             },
         }
+
+
 
         return results, dt_annos
 
@@ -225,7 +277,7 @@ class KittiDataset(PointCloudDataset):
             "cam": {},
             "mode": "val" if self.test_mode else "train",
         }
-
+            
         data, _ = self.pipeline(res, info)
 
         # objgraph.show_growth(limit=3)

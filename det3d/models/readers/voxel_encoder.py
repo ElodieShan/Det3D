@@ -30,7 +30,7 @@ class VFELayer(nn.Module):
         voxel_count = inputs.shape[1]
         x = self.linear(inputs)
         x = self.norm(x.permute(0, 2, 1).contiguous()).permute(0, 2, 1).contiguous()
-        pointwise = F.relu(x)
+        pointwise = F.relu(x) #存储model时，在forward中的F.X函数中的参数是无法保存的
         # [K, T, units]
 
         aggregated = torch.max(pointwise, dim=1, keepdim=True)[0]

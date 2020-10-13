@@ -1,0 +1,4129 @@
+t_start: 1600172137.8354163
+start to min_points_in_gt: 4.7206878662109375e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.6743621826171875e-05
+sample duration time: 11.502880573272705
+rot&scal duration time: 0.0017576217651367188
+shape before: 21078
+shape after: 6018
+downsample duration time: 0.0013475418090820312
+shuffle duration time: 0.01653599739074707
+range crop duration time: 1.413529872894287
+data preprocess time: 12.934823989868164 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-16-03-24+0800__LIDAR_TOP__1538985902947174.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['truck' 'car' 'traffic_cone' 'bus' 'trailer' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172151.8650463
+start to min_points_in_gt: 3.886222839355469e-05
+min_points_in_gt duration time: 1.5497207641601562e-05
+flip duration time: 5.9604644775390625e-06
+sample duration time: 5.306148290634155
+rot&scal duration time: 0.001495361328125
+shape before: 15871
+shape after: 4599
+downsample duration time: 0.0011136531829833984
+shuffle duration time: 0.012552976608276367
+range crop duration time: 1.6710855960845947
+data preprocess time: 6.991342544555664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-02-10-56-37+0800__LIDAR_TOP__1538449254546903.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172158.8962426
+start to min_points_in_gt: 4.7206878662109375e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 5.817413330078125e-05
+sample duration time: 0.03381633758544922
+rot&scal duration time: 0.0014719963073730469
+shape before: 19356
+shape after: 5749
+downsample duration time: 0.0012278556823730469
+shuffle duration time: 0.01762247085571289
+range crop duration time: 0.0017576217651367188
+data preprocess time: 0.05479025840759277 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-11-29+0800__LIDAR_TOP__1542799169797526.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172159.397438
+start to min_points_in_gt: 8.893013000488281e-05
+min_points_in_gt duration time: 6.842613220214844e-05
+flip duration time: 0.0001933574676513672
+sample duration time: 0.014354228973388672
+rot&scal duration time: 0.0023233890533447266
+shape before: 22495
+shape after: 6898
+downsample duration time: 0.002185344696044922
+shuffle duration time: 0.026183128356933594
+range crop duration time: 0.0018498897552490234
+data preprocess time: 0.045061349868774414 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573088447809.pcd.bin
+bbox3d_after_sample: 7
+bbox3d_label_after_sample: ['car' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172159.8903718
+start to min_points_in_gt: 6.008148193359375e-05
+min_points_in_gt duration time: 2.3365020751953125e-05
+flip duration time: 0.0001609325408935547
+sample duration time: 0.06331944465637207
+rot&scal duration time: 0.0015177726745605469
+shape before: 22813
+shape after: 6441
+downsample duration time: 0.0013651847839355469
+shuffle duration time: 0.017877817153930664
+range crop duration time: 0.0018663406372070312
+data preprocess time: 0.08482575416564941 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-24-11-03-52+0800__LIDAR_TOP__1532401556046058.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'car' 'truck' 'bus' 'trailer' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172160.4037287
+start to min_points_in_gt: 4.57763671875e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 6.4849853515625e-05
+sample duration time: 0.029968976974487305
+rot&scal duration time: 0.0014586448669433594
+shape before: 20885
+shape after: 6519
+downsample duration time: 0.001308441162109375
+shuffle duration time: 0.018435001373291016
+range crop duration time: 0.0020513534545898438
+data preprocess time: 0.05204057693481445 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-14-19-09-14+0800__LIDAR_TOP__1542194184397722.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172160.8773336
+start to min_points_in_gt: 4.029273986816406e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 5.984306335449219e-05
+sample duration time: 0.05486464500427246
+rot&scal duration time: 0.0012505054473876953
+shape before: 19571
+shape after: 5986
+downsample duration time: 0.0009751319885253906
+shuffle duration time: 0.011569499969482422
+range crop duration time: 0.0011487007141113281
+data preprocess time: 0.06894969940185547 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033860897120.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172161.3960228
+start to min_points_in_gt: 4.9591064453125e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.8650970458984375e-05
+sample duration time: 0.0494236946105957
+rot&scal duration time: 0.0015206336975097656
+shape before: 20317
+shape after: 5588
+downsample duration time: 0.0013377666473388672
+shuffle duration time: 0.01591205596923828
+range crop duration time: 0.0025377273559570312
+data preprocess time: 0.0695183277130127 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-14-18-57-54+0800__LIDAR_TOP__1542193467548851.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'truck' 'bus' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172161.9076717
+start to min_points_in_gt: 4.7206878662109375e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 5.91278076171875e-05
+sample duration time: 0.012280941009521484
+rot&scal duration time: 0.007041454315185547
+shape before: 19580
+shape after: 5661
+downsample duration time: 0.0012903213500976562
+shuffle duration time: 0.015775680541992188
+range crop duration time: 0.002499818801879883
+data preprocess time: 0.037720441818237305 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-24-11-13-19+0800__LIDAR_TOP__1532402191800473.pcd.bin
+bbox3d_after_sample: 18
+bbox3d_label_after_sample: ['car' 'pedestrian' 'pedestrian' 'car' 'car' 'pedestrian' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172162.3781621
+start to min_points_in_gt: 4.2438507080078125e-05
+min_points_in_gt duration time: 2.4318695068359375e-05
+flip duration time: 5.0067901611328125e-06
+sample duration time: 0.06328296661376953
+rot&scal duration time: 0.012665987014770508
+shape before: 63042
+shape after: 11269
+downsample duration time: 0.004178524017333984
+shuffle duration time: 0.03218555450439453
+range crop duration time: 0.0024111270904541016
+data preprocess time: 0.11061739921569824 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/006327.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172162.8776543
+start to min_points_in_gt: 0.00010347366333007812
+min_points_in_gt duration time: 3.170967102050781e-05
+flip duration time: 0.0002067089080810547
+sample duration time: 0.0245513916015625
+rot&scal duration time: 0.0016698837280273438
+shape before: 19449
+shape after: 5871
+downsample duration time: 0.0014772415161132812
+shuffle duration time: 0.016780614852905273
+range crop duration time: 0.0026025772094726562
+data preprocess time: 0.045946359634399414 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573490548446.pcd.bin
+bbox3d_after_sample: 18
+bbox3d_label_after_sample: ['pedestrian' 'car' 'traffic_cone' 'traffic_cone' 'traffic_cone' 'car'
+ 'pedestrian' 'traffic_cone' 'car' 'truck' 'traffic_cone' 'car' 'trailer'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172163.4020188
+start to min_points_in_gt: 4.935264587402344e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 6.508827209472656e-05
+sample duration time: 0.03992009162902832
+rot&scal duration time: 0.001707315444946289
+shape before: 15806
+shape after: 5341
+downsample duration time: 0.0011143684387207031
+shuffle duration time: 0.01412343978881836
+range crop duration time: 0.0016810894012451172
+data preprocess time: 0.05756235122680664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573342948975.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'bicycle' 'traffic_cone' 'traffic_cone' 'traffic_cone' 'truck'
+ 'bus' 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172163.8983798
+start to min_points_in_gt: 4.887580871582031e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 0.00010848045349121094
+sample duration time: 0.040544748306274414
+rot&scal duration time: 0.0014939308166503906
+shape before: 21250
+shape after: 6499
+downsample duration time: 0.0013172626495361328
+shuffle duration time: 0.017321109771728516
+range crop duration time: 0.0019865036010742188
+data preprocess time: 0.06152009963989258 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800795797853.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['pedestrian' 'car' 'pedestrian' 'car' 'pedestrian' 'truck' 'bus'
+ 'trailer' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172164.4137847
+start to min_points_in_gt: 4.887580871582031e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 4.76837158203125e-06
+sample duration time: 0.045121192932128906
+rot&scal duration time: 0.00404667854309082
+shape before: 58269
+shape after: 8406
+downsample duration time: 0.003764629364013672
+shuffle duration time: 0.024266958236694336
+range crop duration time: 0.002507925033569336
+data preprocess time: 0.07601428031921387 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/001779.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'car' 'pedestrian' 'car' 'car' 'truck' 'bus' 'trailer'
+ 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172164.90132
+start to min_points_in_gt: 4.8160552978515625e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.0067901611328125e-06
+sample duration time: 0.009440422058105469
+rot&scal duration time: 0.0013713836669921875
+shape before: 15127
+shape after: 4172
+downsample duration time: 0.0010166168212890625
+shuffle duration time: 0.011794567108154297
+range crop duration time: 0.0016193389892578125
+data preprocess time: 0.02429485321044922 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-15-52-24+0800__LIDAR_TOP__1538985590296783.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['motorcycle' 'car' 'car' 'car' 'car' 'car' 'bus' 'bicycle' 'motorcycle'
+ 'traffic_cone']
+Publish!
+t_start: 1600172165.3966684
+start to min_points_in_gt: 4.5299530029296875e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 5.435943603515625e-05
+sample duration time: 0.0558168888092041
+rot&scal duration time: 0.006738901138305664
+shape before: 20367
+shape after: 5971
+downsample duration time: 0.0012068748474121094
+shuffle duration time: 0.015854358673095703
+range crop duration time: 0.0017666816711425781
+data preprocess time: 0.0802927017211914 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-17-04-15+0800__LIDAR_TOP__1533114385696873.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'car' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172165.8775666
+start to min_points_in_gt: 0.0001270771026611328
+min_points_in_gt duration time: 3.9577484130859375e-05
+flip duration time: 7.867813110351562e-06
+sample duration time: 0.04409027099609375
+rot&scal duration time: 0.0011446475982666016
+shape before: 15320
+shape after: 3986
+downsample duration time: 0.0007724761962890625
+shuffle duration time: 0.007203102111816406
+range crop duration time: 0.001993417739868164
+data preprocess time: 0.054605960845947266 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-21-11-53-44-0400__LIDAR_TOP__1534867404449695.pcd.bin
+bbox3d_after_sample: 22
+bbox3d_label_after_sample: ['car' 'car' 'pedestrian' 'car' 'pedestrian' 'car' 'car' 'car' 'car' 'car'
+ 'pedestrian' 'truck' 'car' 'car' 'car' 'car' 'car' 'pedestrian' 'trailer'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172166.4043324
+start to min_points_in_gt: 0.0002124309539794922
+min_points_in_gt duration time: 6.890296936035156e-05
+flip duration time: 2.5987625122070312e-05
+sample duration time: 0.05524873733520508
+rot&scal duration time: 0.0021321773529052734
+shape before: 21544
+shape after: 6772
+downsample duration time: 0.0018908977508544922
+shuffle duration time: 0.022483348846435547
+range crop duration time: 0.0036163330078125
+data preprocess time: 0.08378791809082031 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-27-12-07-38-0400__LIDAR_TOP__1532708238399001.pcd.bin
+bbox3d_after_sample: 27
+bbox3d_label_after_sample: ['traffic_cone' 'traffic_cone' 'pedestrian' 'traffic_cone' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'traffic_cone' 'traffic_cone' 'traffic_cone'
+ 'car' 'pedestrian' 'traffic_cone' 'car' 'traffic_cone' 'pedestrian'
+ 'traffic_cone' 'traffic_cone' 'pedestrian' 'traffic_cone' 'truck' 'bus'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172166.90184
+start to min_points_in_gt: 4.9114227294921875e-05
+min_points_in_gt duration time: 2.4080276489257812e-05
+flip duration time: 6.461143493652344e-05
+sample duration time: 0.03278398513793945
+rot&scal duration time: 0.003791332244873047
+shape before: 15268
+shape after: 4094
+downsample duration time: 0.001455068588256836
+shuffle duration time: 0.015548229217529297
+range crop duration time: 0.0019915103912353516
+data preprocess time: 0.05425286293029785 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800561698240.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'motorcycle' 'car' 'pedestrian' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172167.3773322
+start to min_points_in_gt: 5.817413330078125e-05
+min_points_in_gt duration time: 2.193450927734375e-05
+flip duration time: 0.00011181831359863281
+sample duration time: 0.01858234405517578
+rot&scal duration time: 0.0014674663543701172
+shape before: 23193
+shape after: 7170
+downsample duration time: 0.0014019012451171875
+shuffle duration time: 0.0200955867767334
+range crop duration time: 0.002499103546142578
+data preprocess time: 0.04283642768859863 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297559450850.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'truck' 'car' 'pedestrian' 'pedestrian'
+ 'pedestrian' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172167.8773935
+start to min_points_in_gt: 4.76837158203125e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 6.413459777832031e-05
+sample duration time: 0.010400533676147461
+rot&scal duration time: 0.0015311241149902344
+shape before: 15550
+shape after: 4333
+downsample duration time: 0.0010983943939208984
+shuffle duration time: 0.012101888656616211
+range crop duration time: 0.0016093254089355469
+data preprocess time: 0.025771617889404297 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-02-17-28-51+0800__LIDAR_TOP__1533202259549577.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['pedestrian' 'truck' 'pedestrian' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172168.3986728
+start to min_points_in_gt: 4.9591064453125e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 0.00011229515075683594
+sample duration time: 0.04738783836364746
+rot&scal duration time: 0.0015048980712890625
+shape before: 20679
+shape after: 5938
+downsample duration time: 0.0012927055358886719
+shuffle duration time: 0.015464305877685547
+range crop duration time: 0.0022242069244384766
+data preprocess time: 0.06675934791564941 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535658955048497.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'pedestrian' 'car' 'car' 'car' 'car' 'car' 'car' 'truck'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172168.8772428
+start to min_points_in_gt: 6.246566772460938e-05
+min_points_in_gt duration time: 1.8596649169921875e-05
+flip duration time: 0.0001068115234375
+sample duration time: 0.023732662200927734
+rot&scal duration time: 0.001481771469116211
+shape before: 20463
+shape after: 6178
+downsample duration time: 0.0013477802276611328
+shuffle duration time: 0.01758289337158203
+range crop duration time: 0.002764463424682617
+data preprocess time: 0.045749664306640625 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-03-15-00-36+0800__LIDAR_TOP__1533279655049940.pcd.bin
+bbox3d_after_sample: 18
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'pedestrian' 'car' 'car' 'car'
+ 'car' 'car' 'car' 'trailer' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172169.3928037
+start to min_points_in_gt: 4.673004150390625e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.91278076171875e-05
+sample duration time: 0.009115934371948242
+rot&scal duration time: 0.0014274120330810547
+shape before: 23358
+shape after: 7409
+downsample duration time: 0.0014138221740722656
+shuffle duration time: 0.020129680633544922
+range crop duration time: 0.0018489360809326172
+data preprocess time: 0.032643795013427734 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-53-31-0400__LIDAR_TOP__1537290197449483.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'trailer'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172169.886039
+start to min_points_in_gt: 7.319450378417969e-05
+min_points_in_gt duration time: 2.1457672119140625e-05
+flip duration time: 0.00020456314086914062
+sample duration time: 0.01564168930053711
+rot&scal duration time: 0.001476287841796875
+shape before: 23545
+shape after: 7434
+downsample duration time: 0.0015006065368652344
+shuffle duration time: 0.020276308059692383
+range crop duration time: 0.0028302669525146484
+data preprocess time: 0.04052376747131348 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-07-26-0400__LIDAR_TOP__1537287217200469.pcd.bin
+bbox3d_after_sample: 20
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'truck' 'car' 'car' 'truck' 'truck' 'car'
+ 'pedestrian' 'truck' 'car' 'pedestrian' 'pedestrian' 'bus' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172170.4086218
+start to min_points_in_gt: 5.555152893066406e-05
+min_points_in_gt duration time: 2.09808349609375e-05
+flip duration time: 0.00010895729064941406
+sample duration time: 0.00923776626586914
+rot&scal duration time: 0.0014736652374267578
+shape before: 18669
+shape after: 5382
+downsample duration time: 0.0013060569763183594
+shuffle duration time: 0.015592575073242188
+range crop duration time: 0.0017232894897460938
+data preprocess time: 0.028212785720825195 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535656816302402.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['trailer' 'pedestrian' 'trailer' 'car' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172170.8786836
+start to min_points_in_gt: 5.53131103515625e-05
+min_points_in_gt duration time: 2.384185791015625e-05
+flip duration time: 6.9141387939453125e-06
+sample duration time: 0.0855250358581543
+rot&scal duration time: 0.005266427993774414
+shape before: 66201
+shape after: 12430
+downsample duration time: 0.004593849182128906
+shuffle duration time: 0.03619861602783203
+range crop duration time: 0.002887725830078125
+data preprocess time: 0.12996387481689453 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/007461.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172171.4008756
+start to min_points_in_gt: 5.817413330078125e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 5.698204040527344e-05
+sample duration time: 0.03424811363220215
+rot&scal duration time: 0.0014798641204833984
+shape before: 22164
+shape after: 7591
+downsample duration time: 0.0014193058013916016
+shuffle duration time: 0.019799232482910156
+range crop duration time: 0.0030269622802734375
+data preprocess time: 0.05868673324584961 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297519449118.pcd.bin
+bbox3d_after_sample: 23
+bbox3d_label_after_sample: ['car' 'car' 'pedestrian' 'car' 'truck' 'truck' 'truck' 'car' 'car'
+ 'truck' 'truck' 'car' 'pedestrian' 'pedestrian' 'car' 'truck' 'bus'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172171.8773673
+start to min_points_in_gt: 5.1975250244140625e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 0.00010395050048828125
+sample duration time: 0.012898683547973633
+rot&scal duration time: 0.0014195442199707031
+shape before: 21136
+shape after: 6576
+downsample duration time: 0.0013263225555419922
+shuffle duration time: 0.016277313232421875
+range crop duration time: 0.0018601417541503906
+data preprocess time: 0.03262948989868164 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535729177697986.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['car' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172172.4030533
+start to min_points_in_gt: 5.14984130859375e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 6.461143493652344e-05
+sample duration time: 0.026383399963378906
+rot&scal duration time: 0.0014584064483642578
+shape before: 13022
+shape after: 3211
+downsample duration time: 0.0009510517120361328
+shuffle duration time: 0.009129762649536133
+range crop duration time: 0.0016438961029052734
+data preprocess time: 0.03874826431274414 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535659485549241.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'car' 'car' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172172.8775454
+start to min_points_in_gt: 4.863739013671875e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 0.00012612342834472656
+sample duration time: 0.02306985855102539
+rot&scal duration time: 0.0014576911926269531
+shape before: 19965
+shape after: 5797
+downsample duration time: 0.0013003349304199219
+shuffle duration time: 0.015718460083007812
+range crop duration time: 0.001939535140991211
+data preprocess time: 0.042377471923828125 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-03-15-00-36+0800__LIDAR_TOP__1533280204450289.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172173.3915608
+start to min_points_in_gt: 6.699562072753906e-05
+min_points_in_gt duration time: 1.8596649169921875e-05
+flip duration time: 0.00011014938354492188
+sample duration time: 0.01641106605529785
+rot&scal duration time: 0.001506805419921875
+shape before: 15905
+shape after: 4342
+downsample duration time: 0.001135110855102539
+shuffle duration time: 0.0120697021484375
+range crop duration time: 0.002514362335205078
+data preprocess time: 0.03269767761230469 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-27-12-07-38-0400__LIDAR_TOP__1532708335449079.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['car' 'traffic_cone' 'traffic_cone' 'traffic_cone' 'car' 'traffic_cone'
+ 'car' 'pedestrian' 'car' 'pedestrian' 'traffic_cone' 'traffic_cone' 'bus'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172173.8779247
+start to min_points_in_gt: 8.797645568847656e-05
+min_points_in_gt duration time: 3.5762786865234375e-05
+flip duration time: 1.049041748046875e-05
+sample duration time: 0.01645803451538086
+rot&scal duration time: 0.009859800338745117
+shape before: 15469
+shape after: 4280
+downsample duration time: 0.0014255046844482422
+shuffle duration time: 0.013372421264648438
+range crop duration time: 0.0015671253204345703
+data preprocess time: 0.041391611099243164 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-15-52-24+0800__LIDAR_TOP__1538985267698095.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['bus' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172174.3773918
+start to min_points_in_gt: 4.9114227294921875e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 6.67572021484375e-05
+sample duration time: 0.03639554977416992
+rot&scal duration time: 0.004243612289428711
+shape before: 17271
+shape after: 4702
+downsample duration time: 0.0014972686767578125
+shuffle duration time: 0.013084888458251953
+range crop duration time: 0.001661539077758789
+data preprocess time: 0.05551910400390625 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-06-15-06-32-0400__LIDAR_TOP__1533582602296200.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'trailer' 'trailer' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172174.900107
+start to min_points_in_gt: 5.125999450683594e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 6.008148193359375e-05
+sample duration time: 0.0560452938079834
+rot&scal duration time: 0.008623361587524414
+shape before: 15121
+shape after: 4420
+downsample duration time: 0.0010986328125
+shuffle duration time: 0.01180267333984375
+range crop duration time: 0.001745462417602539
+data preprocess time: 0.07834482192993164 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-06-15-06-32-0400__LIDAR_TOP__1533583337197147.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'bus' 'bicycle' 'motorcycle' 'motorcycle'
+ 'pedestrian']
+Publish!
+t_start: 1600172175.394016
+start to min_points_in_gt: 5.650520324707031e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 6.29425048828125e-05
+sample duration time: 0.03267312049865723
+rot&scal duration time: 0.00822591781616211
+shape before: 15490
+shape after: 4128
+downsample duration time: 0.0010955333709716797
+shuffle duration time: 0.01137852668762207
+range crop duration time: 0.002425670623779297
+data preprocess time: 0.0548405647277832 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573126799483.pcd.bin
+bbox3d_after_sample: 20
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car' 'car' 'car'
+ 'truck' 'car' 'pedestrian' 'trailer' 'car' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172175.9047875
+start to min_points_in_gt: 5.078315734863281e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 0.00021314620971679688
+sample duration time: 0.04466509819030762
+rot&scal duration time: 0.004484891891479492
+shape before: 61090
+shape after: 8816
+downsample duration time: 0.003997087478637695
+shuffle duration time: 0.02577686309814453
+range crop duration time: 0.0030562877655029297
+data preprocess time: 0.07826471328735352 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/005983.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car' 'car' 'car'
+ 'truck' 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172176.4049368
+start to min_points_in_gt: 5.125999450683594e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 5.888938903808594e-05
+sample duration time: 0.053896188735961914
+rot&scal duration time: 0.005645036697387695
+shape before: 20322
+shape after: 5645
+downsample duration time: 0.001270294189453125
+shuffle duration time: 0.01514434814453125
+range crop duration time: 0.0026428699493408203
+data preprocess time: 0.07745528221130371 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573222447834.pcd.bin
+bbox3d_after_sample: 22
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car'
+ 'car' 'car' 'car' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172176.9029102
+start to min_points_in_gt: 4.5299530029296875e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 0.00010180473327636719
+sample duration time: 0.04315972328186035
+rot&scal duration time: 0.0013968944549560547
+shape before: 20957
+shape after: 6057
+downsample duration time: 0.0012714862823486328
+shuffle duration time: 0.016544580459594727
+range crop duration time: 0.0018608570098876953
+data preprocess time: 0.0631251335144043 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-11-29+0800__LIDAR_TOP__1542798966948461.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172177.378105
+start to min_points_in_gt: 4.38690185546875e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 0.00017309188842773438
+sample duration time: 0.04549121856689453
+rot&scal duration time: 0.004315376281738281
+shape before: 57582
+shape after: 8465
+downsample duration time: 0.0037093162536621094
+shuffle duration time: 0.024753093719482422
+range crop duration time: 0.0025811195373535156
+data preprocess time: 0.07737541198730469 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/005932.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'bus' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172177.8772926
+start to min_points_in_gt: 5.1975250244140625e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 5.4836273193359375e-05
+sample duration time: 0.015803098678588867
+rot&scal duration time: 0.0010616779327392578
+shape before: 19535
+shape after: 5524
+downsample duration time: 0.0012166500091552734
+shuffle duration time: 0.014462947845458984
+range crop duration time: 0.0024836063385009766
+data preprocess time: 0.0339360237121582 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-01-15-52-19-0400__LIDAR_TOP__1533153555399048.pcd.bin
+bbox3d_after_sample: 20
+bbox3d_label_after_sample: ['trailer' 'trailer' 'truck' 'bus' 'trailer' 'truck' 'bus' 'truck'
+ 'trailer' 'trailer' 'truck' 'car' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172178.4062288
+start to min_points_in_gt: 8.249282836914062e-05
+min_points_in_gt duration time: 2.86102294921875e-05
+flip duration time: 7.867813110351562e-06
+sample duration time: 0.05182671546936035
+rot&scal duration time: 0.0018427371978759766
+shape before: 16803
+shape after: 4504
+downsample duration time: 0.0013949871063232422
+shuffle duration time: 0.011530876159667969
+range crop duration time: 0.0014469623565673828
+data preprocess time: 0.06676626205444336 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535657476798557.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'car' 'car' 'car' 'bus' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172178.8771172
+start to min_points_in_gt: 4.792213439941406e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 0.0001087188720703125
+sample duration time: 0.010904788970947266
+rot&scal duration time: 0.0013990402221679688
+shape before: 20702
+shape after: 6044
+downsample duration time: 0.0012514591217041016
+shuffle duration time: 0.016384124755859375
+range crop duration time: 0.0019354820251464844
+data preprocess time: 0.03079700469970703 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-27-12-07-38-0400__LIDAR_TOP__1532708182548329.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'trailer' 'bicycle' 'pedestrian' 'car' 'car' 'car' 'bus' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172179.3773584
+start to min_points_in_gt: 4.172325134277344e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 5.53131103515625e-05
+sample duration time: 0.048587799072265625
+rot&scal duration time: 0.005986928939819336
+shape before: 16055
+shape after: 4737
+downsample duration time: 0.0011131763458251953
+shuffle duration time: 0.013148069381713867
+range crop duration time: 0.0013842582702636719
+data preprocess time: 0.06922173500061035 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033994797567.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172179.9003065
+start to min_points_in_gt: 4.1961669921875e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 7.3909759521484375e-06
+sample duration time: 0.09789276123046875
+rot&scal duration time: 0.0016813278198242188
+shape before: 16244
+shape after: 4633
+downsample duration time: 0.0008938312530517578
+shuffle duration time: 0.010726213455200195
+range crop duration time: 0.0013737678527832031
+data preprocess time: 0.1117393970489502 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-11-29+0800__LIDAR_TOP__1542799058697837.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172180.3772528
+start to min_points_in_gt: 4.2438507080078125e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 6.318092346191406e-05
+sample duration time: 0.012663602828979492
+rot&scal duration time: 0.0017969608306884766
+shape before: 15504
+shape after: 4637
+downsample duration time: 0.0010747909545898438
+shuffle duration time: 0.012470245361328125
+range crop duration time: 0.0018541812896728516
+data preprocess time: 0.02890634536743164 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800453449637.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172180.895266
+start to min_points_in_gt: 5.14984130859375e-05
+min_points_in_gt duration time: 1.5497207641601562e-05
+flip duration time: 6.651878356933594e-05
+sample duration time: 0.04006481170654297
+rot&scal duration time: 0.0016765594482421875
+shape before: 15359
+shape after: 4329
+downsample duration time: 0.0010700225830078125
+shuffle duration time: 0.011718988418579102
+range crop duration time: 0.0017821788787841797
+data preprocess time: 0.05537605285644531 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-01-15-52-19-0400__LIDAR_TOP__1533153476947773.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['bus' 'bus' 'bus' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172181.3773665
+start to min_points_in_gt: 7.05718994140625e-05
+min_points_in_gt duration time: 2.1457672119140625e-05
+flip duration time: 5.7220458984375e-06
+sample duration time: 0.015948772430419922
+rot&scal duration time: 0.0014560222625732422
+shape before: 16324
+shape after: 4700
+downsample duration time: 0.0010786056518554688
+shuffle duration time: 0.012563705444335938
+range crop duration time: 0.0019223690032958984
+data preprocess time: 0.03198862075805664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-01-15-52-19-0400__LIDAR_TOP__1533153557397992.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['trailer' 'pedestrian' 'pedestrian' 'car' 'car' 'truck' 'trailer' 'car'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172181.8774862
+start to min_points_in_gt: 6.914138793945312e-05
+min_points_in_gt duration time: 2.3126602172851562e-05
+flip duration time: 0.00010776519775390625
+sample duration time: 0.029714584350585938
+rot&scal duration time: 0.001840353012084961
+shape before: 19555
+shape after: 5849
+downsample duration time: 0.0016303062438964844
+shuffle duration time: 0.01680469512939453
+range crop duration time: 0.002256155014038086
+data preprocess time: 0.05081582069396973 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800974448875.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['pedestrian' 'bus' 'bicycle' 'car' 'car' 'car' 'pedestrian' 'car' 'car'
+ 'truck' 'trailer' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172182.4086888
+start to min_points_in_gt: 4.863739013671875e-05
+min_points_in_gt duration time: 1.5497207641601562e-05
+flip duration time: 5.936622619628906e-05
+sample duration time: 0.04276418685913086
+rot&scal duration time: 0.0014543533325195312
+shape before: 19404
+shape after: 5461
+downsample duration time: 0.001230001449584961
+shuffle duration time: 0.016081571578979492
+range crop duration time: 0.003670215606689453
+data preprocess time: 0.06409382820129395 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-16-03-24+0800__LIDAR_TOP__1538986251798208.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'bus' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172182.877303
+start to min_points_in_gt: 5.0067901611328125e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 0.00010204315185546875
+sample duration time: 0.013777017593383789
+rot&scal duration time: 0.0015578269958496094
+shape before: 22829
+shape after: 7242
+downsample duration time: 0.0013933181762695312
+shuffle duration time: 0.01938629150390625
+range crop duration time: 0.002255678176879883
+data preprocess time: 0.037145137786865234 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297799450003.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'bicycle' 'car' 'pedestrian' 'car' 'bus'
+ 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172183.4081922
+start to min_points_in_gt: 5.5789947509765625e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 0.00010418891906738281
+sample duration time: 0.04723072052001953
+rot&scal duration time: 0.0014557838439941406
+shape before: 19665
+shape after: 5772
+downsample duration time: 0.001239776611328125
+shuffle duration time: 0.015580415725708008
+range crop duration time: 0.0017871856689453125
+data preprocess time: 0.06623053550720215 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-01-15-52-19-0400__LIDAR_TOP__1533153247297811.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172183.8773263
+start to min_points_in_gt: 5.14984130859375e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 5.9604644775390625e-06
+sample duration time: 0.012947320938110352
+rot&scal duration time: 0.0015017986297607422
+shape before: 15478
+shape after: 4414
+downsample duration time: 0.0010693073272705078
+shuffle duration time: 0.011262655258178711
+range crop duration time: 0.001752614974975586
+data preprocess time: 0.027538537979125977 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-21-11-53-44-0400__LIDAR_TOP__1534867096898093.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['truck' 'trailer' 'car' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172184.3774626
+start to min_points_in_gt: 5.888938903808594e-05
+min_points_in_gt duration time: 2.2172927856445312e-05
+flip duration time: 0.00019025802612304688
+sample duration time: 0.020213603973388672
+rot&scal duration time: 0.0011055469512939453
+shape before: 22859
+shape after: 6414
+downsample duration time: 0.0009875297546386719
+shuffle duration time: 0.01205587387084961
+range crop duration time: 0.0018260478973388672
+data preprocess time: 0.03547239303588867 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535659488049162.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'pedestrian' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'bus'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172184.8775184
+start to min_points_in_gt: 6.222724914550781e-05
+min_points_in_gt duration time: 2.193450927734375e-05
+flip duration time: 0.0001494884490966797
+sample duration time: 0.013586997985839844
+rot&scal duration time: 0.0014781951904296875
+shape before: 15038
+shape after: 3831
+downsample duration time: 0.0010709762573242188
+shuffle duration time: 0.011640310287475586
+range crop duration time: 0.0019414424896240234
+data preprocess time: 0.028880596160888672 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535657454948898.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'pedestrian' 'car' 'car' 'car' 'car' 'bus' 'car' 'trailer'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172185.3773592
+start to min_points_in_gt: 4.172325134277344e-05
+min_points_in_gt duration time: 1.5497207641601562e-05
+flip duration time: 6.4373016357421875e-06
+sample duration time: 0.0324406623840332
+rot&scal duration time: 0.001447916030883789
+shape before: 13376
+shape after: 3958
+downsample duration time: 0.0009827613830566406
+shuffle duration time: 0.011164665222167969
+range crop duration time: 0.001306295394897461
+data preprocess time: 0.04642319679260254 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-41-50-0400__LIDAR_TOP__1537292695699518.pcd.bin
+bbox3d_after_sample: 6
+bbox3d_label_after_sample: ['bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172185.8774505
+start to min_points_in_gt: 5.6743621826171875e-05
+min_points_in_gt duration time: 1.9788742065429688e-05
+flip duration time: 6.29425048828125e-05
+sample duration time: 0.010825395584106445
+rot&scal duration time: 0.0015988349914550781
+shape before: 15308
+shape after: 4410
+downsample duration time: 0.0011806488037109375
+shuffle duration time: 0.012510299682617188
+range crop duration time: 0.001772165298461914
+data preprocess time: 0.02684617042541504 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-17-04-15+0800__LIDAR_TOP__1533114340298284.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['bicycle' 'pedestrian' 'car' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172186.3783133
+start to min_points_in_gt: 5.7697296142578125e-05
+min_points_in_gt duration time: 2.2411346435546875e-05
+flip duration time: 0.00023555755615234375
+sample duration time: 0.0380396842956543
+rot&scal duration time: 0.003962039947509766
+shape before: 62641
+shape after: 9844
+downsample duration time: 0.0035026073455810547
+shuffle duration time: 0.026101112365722656
+range crop duration time: 0.002026796340942383
+data preprocess time: 0.07044529914855957 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/003049.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172186.9036844
+start to min_points_in_gt: 7.557868957519531e-05
+min_points_in_gt duration time: 2.1219253540039062e-05
+flip duration time: 0.0002579689025878906
+sample duration time: 0.029546260833740234
+rot&scal duration time: 0.0033512115478515625
+shape before: 51169
+shape after: 8885
+downsample duration time: 0.0030341148376464844
+shuffle duration time: 0.021799802780151367
+range crop duration time: 0.0019702911376953125
+data preprocess time: 0.0570223331451416 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/002973.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['pedestrian' 'bicycle' 'car' 'car' 'truck' 'car' 'bus' 'trailer'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172187.4026537
+start to min_points_in_gt: 5.125999450683594e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 0.0001957416534423828
+sample duration time: 0.038016319274902344
+rot&scal duration time: 0.012403249740600586
+shape before: 58726
+shape after: 8262
+downsample duration time: 0.0036725997924804688
+shuffle duration time: 0.04384613037109375
+range crop duration time: 0.002340078353881836
+data preprocess time: 0.09687089920043945 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/002821.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172187.8772707
+start to min_points_in_gt: 4.6253204345703125e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 0.00010156631469726562
+sample duration time: 0.01921868324279785
+rot&scal duration time: 0.004796028137207031
+shape before: 23581
+shape after: 7125
+downsample duration time: 0.0009202957153320312
+shuffle duration time: 0.012448787689208984
+range crop duration time: 0.001684427261352539
+data preprocess time: 0.038312435150146484 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-15-26-58-0400__LIDAR_TOP__1537299526898718.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172188.410903
+start to min_points_in_gt: 5.841255187988281e-05
+min_points_in_gt duration time: 1.9788742065429688e-05
+flip duration time: 0.00032258033752441406
+sample duration time: 0.04941439628601074
+rot&scal duration time: 0.007962465286254883
+shape before: 60848
+shape after: 8731
+downsample duration time: 0.004279613494873047
+shuffle duration time: 0.026274442672729492
+range crop duration time: 0.0029888153076171875
+data preprocess time: 0.08704090118408203 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/006598.bin
+bbox3d_after_sample: 20
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'car' 'car' 'truck' 'car' 'truck' 'truck' 'car' 'car'
+ 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172188.8774037
+start to min_points_in_gt: 6.580352783203125e-05
+min_points_in_gt duration time: 2.47955322265625e-05
+flip duration time: 0.00019812583923339844
+sample duration time: 0.015876054763793945
+rot&scal duration time: 0.0015053749084472656
+shape before: 22452
+shape after: 6251
+downsample duration time: 0.0013582706451416016
+shuffle duration time: 0.0186159610748291
+range crop duration time: 0.002034425735473633
+data preprocess time: 0.03832054138183594 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-56-46-0400__LIDAR_TOP__1535731118647423.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'car' 'car' 'truck' 'truck' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172189.3773177
+start to min_points_in_gt: 5.221366882324219e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 9.751319885253906e-05
+sample duration time: 0.02021622657775879
+rot&scal duration time: 0.0014796257019042969
+shape before: 21284
+shape after: 6389
+downsample duration time: 0.0013172626495361328
+shuffle duration time: 0.0171816349029541
+range crop duration time: 0.0022575855255126953
+data preprocess time: 0.041301727294921875 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573578947462.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['bus' 'pedestrian' 'pedestrian' 'pedestrian' 'car' 'pedestrian'
+ 'pedestrian' 'truck' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'traffic_cone']
+Publish!
+t_start: 1600172189.9067488
+start to min_points_in_gt: 8.559226989746094e-05
+min_points_in_gt duration time: 2.0742416381835938e-05
+flip duration time: 7.772445678710938e-05
+sample duration time: 0.03655600547790527
+rot&scal duration time: 0.002566099166870117
+shape before: 20970
+shape after: 6564
+downsample duration time: 0.0031480789184570312
+shuffle duration time: 0.01806783676147461
+range crop duration time: 0.002157926559448242
+data preprocess time: 0.05953192710876465 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800697448350.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172190.3775804
+start to min_points_in_gt: 9.202957153320312e-05
+min_points_in_gt duration time: 3.0279159545898438e-05
+flip duration time: 0.0001628398895263672
+sample duration time: 0.01620316505432129
+rot&scal duration time: 0.0020537376403808594
+shape before: 23978
+shape after: 7837
+downsample duration time: 0.0021333694458007812
+shuffle duration time: 0.025332212448120117
+range crop duration time: 0.0019378662109375
+data preprocess time: 0.045812129974365234 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297162199705.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['traffic_cone' 'car' 'car' 'car' 'traffic_cone' 'car' 'bus' 'bicycle'
+ 'bicycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172190.8774908
+start to min_points_in_gt: 5.030632019042969e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 0.0001480579376220703
+sample duration time: 0.03792572021484375
+rot&scal duration time: 0.001434326171875
+shape before: 19457
+shape after: 5784
+downsample duration time: 0.0012276172637939453
+shuffle duration time: 0.015429496765136719
+range crop duration time: 0.0019180774688720703
+data preprocess time: 0.056923627853393555 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-16-03-24+0800__LIDAR_TOP__1538986165897489.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'pedestrian' 'pedestrian' 'car' 'truck' 'bus' 'trailer' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172191.377325
+start to min_points_in_gt: 5.91278076171875e-05
+min_points_in_gt duration time: 1.8835067749023438e-05
+flip duration time: 5.698204040527344e-05
+sample duration time: 0.016862869262695312
+rot&scal duration time: 0.0014836788177490234
+shape before: 14562
+shape after: 4159
+downsample duration time: 0.0010287761688232422
+shuffle duration time: 0.010363340377807617
+range crop duration time: 0.002483367919921875
+data preprocess time: 0.03132820129394531 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-26-12-13-50-0400__LIDAR_TOP__1532622234197309.pcd.bin
+bbox3d_after_sample: 29
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car' 'pedestrian'
+ 'car' 'car' 'pedestrian' 'car' 'car' 'truck' 'pedestrian' 'car' 'car'
+ 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172191.89046
+start to min_points_in_gt: 4.863739013671875e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 5.4836273193359375e-06
+sample duration time: 0.010701179504394531
+rot&scal duration time: 0.0014412403106689453
+shape before: 16381
+shape after: 4744
+downsample duration time: 0.001094818115234375
+shuffle duration time: 0.012941122055053711
+range crop duration time: 0.001626729965209961
+data preprocess time: 0.026780128479003906 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-18-11-07-57+0800__LIDAR_TOP__1531883727450310.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'motorcycle' 'bus' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172192.3903773
+start to min_points_in_gt: 5.602836608886719e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 9.584426879882812e-05
+sample duration time: 0.014432668685913086
+rot&scal duration time: 0.0011525154113769531
+shape before: 17115
+shape after: 4597
+downsample duration time: 0.0008873939514160156
+shuffle duration time: 0.009508848190307617
+range crop duration time: 0.0011622905731201172
+data preprocess time: 0.026426076889038086 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-16-16-48-0400__LIDAR_TOP__1535488160047156.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'traffic_cone' 'traffic_cone' 'car' 'traffic_cone' 'pedestrian'
+ 'car' 'traffic_cone' 'truck' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172192.9081974
+start to min_points_in_gt: 4.4345855712890625e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 6.604194641113281e-05
+sample duration time: 0.026773929595947266
+rot&scal duration time: 0.0014274120330810547
+shape before: 23404
+shape after: 7245
+downsample duration time: 0.0013823509216308594
+shuffle duration time: 0.01811528205871582
+range crop duration time: 0.0012669563293457031
+data preprocess time: 0.047710418701171875 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-15-26-58-0400__LIDAR_TOP__1537299529948856.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'pedestrian' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172193.4016402
+start to min_points_in_gt: 6.079673767089844e-05
+min_points_in_gt duration time: 2.1457672119140625e-05
+flip duration time: 8.296966552734375e-05
+sample duration time: 0.035623788833618164
+rot&scal duration time: 0.002304553985595703
+shape before: 21960
+shape after: 6840
+downsample duration time: 0.002173185348510742
+shuffle duration time: 0.020201921463012695
+range crop duration time: 0.0017473697662353516
+data preprocess time: 0.0600428581237793 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-14-18-57-54+0800__LIDAR_TOP__1542193390447935.pcd.bin
+bbox3d_after_sample: 7
+bbox3d_label_after_sample: ['car' 'pedestrian' 'truck' 'trailer' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172193.8773108
+start to min_points_in_gt: 4.649162292480469e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 9.894371032714844e-05
+sample duration time: 0.016968965530395508
+rot&scal duration time: 0.0013730525970458984
+shape before: 20693
+shape after: 5736
+downsample duration time: 0.001194000244140625
+shuffle duration time: 0.014310598373413086
+range crop duration time: 0.001882791519165039
+data preprocess time: 0.03469681739807129 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535659346448742.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'car' 'car' 'car' 'pedestrian' 'bus' 'trailer'
+ 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172194.4050307
+start to min_points_in_gt: 5.364418029785156e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 6.794929504394531e-05
+sample duration time: 0.04061007499694824
+rot&scal duration time: 0.0015246868133544922
+shape before: 14751
+shape after: 3471
+downsample duration time: 0.001024484634399414
+shuffle duration time: 0.009341716766357422
+range crop duration time: 0.0019173622131347656
+data preprocess time: 0.05353212356567383 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-41-50-0400__LIDAR_TOP__1537293206149909.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'car' 'car'
+ 'pedestrian' 'car' 'truck' 'trailer' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172194.877371
+start to min_points_in_gt: 6.103515625e-05
+min_points_in_gt duration time: 1.9073486328125e-05
+flip duration time: 6.246566772460938e-05
+sample duration time: 0.02039933204650879
+rot&scal duration time: 0.00144195556640625
+shape before: 21094
+shape after: 6121
+downsample duration time: 0.0012960433959960938
+shuffle duration time: 0.016567707061767578
+range crop duration time: 0.003000020980834961
+data preprocess time: 0.04155158996582031 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-13-40-50-0400__LIDAR_TOP__1535478125696550.pcd.bin
+bbox3d_after_sample: 21
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'car' 'car' 'pedestrian' 'truck' 'car' 'car' 'car'
+ 'car' 'truck' 'car' 'pedestrian' 'motorcycle' 'pedestrian' 'bus'
+ 'trailer' 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172195.405559
+start to min_points_in_gt: 4.38690185546875e-05
+min_points_in_gt duration time: 1.5497207641601562e-05
+flip duration time: 5.7220458984375e-06
+sample duration time: 0.03164219856262207
+rot&scal duration time: 0.0014793872833251953
+shape before: 16217
+shape after: 4923
+downsample duration time: 0.0011262893676757812
+shuffle duration time: 0.022748947143554688
+range crop duration time: 0.001638650894165039
+data preprocess time: 0.05757427215576172 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-16-32-59+0800__LIDAR_TOP__1533112772797524.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172195.9133892
+start to min_points_in_gt: 4.7206878662109375e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.1530780792236328
+rot&scal duration time: 0.004533529281616211
+shape before: 62665
+shape after: 9183
+downsample duration time: 0.004197359085083008
+shuffle duration time: 0.027977466583251953
+range crop duration time: 0.0027015209197998047
+data preprocess time: 0.18836069107055664 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/005645.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172196.3771849
+start to min_points_in_gt: 5.316734313964844e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 5.91278076171875e-05
+sample duration time: 0.02177286148071289
+rot&scal duration time: 0.0014619827270507812
+shape before: 21435
+shape after: 6253
+downsample duration time: 0.0013279914855957031
+shuffle duration time: 0.017905712127685547
+range crop duration time: 0.002823352813720703
+data preprocess time: 0.04409313201904297 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573057399085.pcd.bin
+bbox3d_after_sample: 18
+bbox3d_label_after_sample: ['car' 'truck' 'car' 'car' 'car' 'pedestrian' 'pedestrian' 'car' 'car'
+ 'truck' 'car' 'bus' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172196.9025133
+start to min_points_in_gt: 5.340576171875e-05
+min_points_in_gt duration time: 2.574920654296875e-05
+flip duration time: 0.0002465248107910156
+sample duration time: 0.0314943790435791
+rot&scal duration time: 0.011914253234863281
+shape before: 54832
+shape after: 8208
+downsample duration time: 0.003686189651489258
+shuffle duration time: 0.02366781234741211
+range crop duration time: 0.0022857189178466797
+data preprocess time: 0.0696878433227539 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/003238.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'car' 'pedestrian'
+ 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'traffic_cone']
+Publish!
+t_start: 1600172197.3773174
+start to min_points_in_gt: 5.1975250244140625e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 5.6743621826171875e-05
+sample duration time: 0.015893220901489258
+rot&scal duration time: 0.001491546630859375
+shape before: 16302
+shape after: 4476
+downsample duration time: 0.001116037368774414
+shuffle duration time: 0.016330718994140625
+range crop duration time: 0.0022974014282226562
+data preprocess time: 0.03613853454589844 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800974948715.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['pedestrian' 'bus' 'bicycle' 'car' 'car' 'car' 'pedestrian' 'car' 'car'
+ 'truck' 'trailer' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172197.8774862
+start to min_points_in_gt: 6.198883056640625e-05
+min_points_in_gt duration time: 2.3365020751953125e-05
+flip duration time: 6.67572021484375e-06
+sample duration time: 0.029446840286254883
+rot&scal duration time: 0.0012564659118652344
+shape before: 16394
+shape after: 4388
+downsample duration time: 0.0009562969207763672
+shuffle duration time: 0.01091623306274414
+range crop duration time: 0.0013921260833740234
+data preprocess time: 0.043103694915771484 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-18-11-07-57+0800__LIDAR_TOP__1531883732048768.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'car' 'motorcycle' 'bus' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172198.3998456
+start to min_points_in_gt: 7.867813110351562e-05
+min_points_in_gt duration time: 2.6464462280273438e-05
+flip duration time: 9.703636169433594e-05
+sample duration time: 0.016810178756713867
+rot&scal duration time: 0.001251220703125
+shape before: 15748
+shape after: 4517
+downsample duration time: 0.0009377002716064453
+shuffle duration time: 0.010276317596435547
+range crop duration time: 0.002023458480834961
+data preprocess time: 0.0305633544921875 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-15-52-24+0800__LIDAR_TOP__1538985220197700.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['car' 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'car'
+ 'car' 'car' 'car' 'car' 'pedestrian' 'pedestrian' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172198.9125955
+start to min_points_in_gt: 6.318092346191406e-05
+min_points_in_gt duration time: 2.6464462280273438e-05
+flip duration time: 0.0002689361572265625
+sample duration time: 0.06436300277709961
+rot&scal duration time: 0.0028057098388671875
+shape before: 64499
+shape after: 9877
+downsample duration time: 0.0028679370880126953
+shuffle duration time: 0.0191495418548584
+range crop duration time: 0.0021305084228515625
+data preprocess time: 0.08880734443664551 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/006457.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian'
+ 'traffic_cone']
+Publish!
+t_start: 1600172199.406355
+start to min_points_in_gt: 7.176399230957031e-05
+min_points_in_gt duration time: 2.4080276489257812e-05
+flip duration time: 8.869171142578125e-05
+sample duration time: 0.03379249572753906
+rot&scal duration time: 0.0015411376953125
+shape before: 19534
+shape after: 5969
+downsample duration time: 0.0014164447784423828
+shuffle duration time: 0.017084836959838867
+range crop duration time: 0.001955747604370117
+data preprocess time: 0.054558753967285156 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-41-50-0400__LIDAR_TOP__1537292714300550.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'traffic_cone' 'car' 'bus' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172199.90689
+start to min_points_in_gt: 5.888938903808594e-05
+min_points_in_gt duration time: 1.8835067749023438e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.04247856140136719
+rot&scal duration time: 0.001477956771850586
+shape before: 14029
+shape after: 3871
+downsample duration time: 0.0010383129119873047
+shuffle duration time: 0.011020183563232422
+range crop duration time: 0.0022623538970947266
+data preprocess time: 0.057322025299072266 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-56-46-0400__LIDAR_TOP__1535731321297468.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'pedestrian' 'car' 'car'
+ 'pedestrian' 'car' 'bus' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172200.3772404
+start to min_points_in_gt: 5.53131103515625e-05
+min_points_in_gt duration time: 1.8358230590820312e-05
+flip duration time: 6.580352783203125e-05
+sample duration time: 0.009029388427734375
+rot&scal duration time: 0.001247406005859375
+shape before: 13670
+shape after: 3776
+downsample duration time: 0.0008537769317626953
+shuffle duration time: 0.009059429168701172
+range crop duration time: 0.0014908313751220703
+data preprocess time: 0.020966529846191406 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-16-57-39-0400__LIDAR_TOP__1535489983898111.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['traffic_cone' 'car' 'bicycle' 'pedestrian' 'car' 'pedestrian' 'bicycle'
+ 'traffic_cone' 'pedestrian' 'car' 'truck' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172200.898057
+start to min_points_in_gt: 5.14984130859375e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 6.67572021484375e-06
+sample duration time: 0.013569831848144531
+rot&scal duration time: 0.0012476444244384766
+shape before: 14067
+shape after: 4084
+downsample duration time: 0.0008714199066162109
+shuffle duration time: 0.010170698165893555
+range crop duration time: 0.001592874526977539
+data preprocess time: 0.02665543556213379 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-05-21-11-06-59-0400__LIDAR_TOP__1526915778147226.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['bus' 'car' 'car' 'car' 'car' 'truck' 'truck' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172201.3966389
+start to min_points_in_gt: 6.0558319091796875e-05
+min_points_in_gt duration time: 1.9788742065429688e-05
+flip duration time: 0.00010180473327636719
+sample duration time: 0.023053646087646484
+rot&scal duration time: 0.00139617919921875
+shape before: 26439
+shape after: 8826
+downsample duration time: 0.0014336109161376953
+shuffle duration time: 0.02041792869567871
+range crop duration time: 0.0029325485229492188
+data preprocess time: 0.04798245429992676 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-05-21-11-06-59-0400__LIDAR_TOP__1526915257948006.pcd.bin
+bbox3d_after_sample: 23
+bbox3d_label_after_sample: ['car' 'car' 'pedestrian' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car'
+ 'truck' 'car' 'car' 'car' 'car' 'car' 'car' 'bus' 'trailer' 'bicycle'
+ 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172201.893261
+start to min_points_in_gt: 5.3882598876953125e-05
+min_points_in_gt duration time: 2.1219253540039062e-05
+flip duration time: 0.00013947486877441406
+sample duration time: 0.04467511177062988
+rot&scal duration time: 0.0019042491912841797
+shape before: 20453
+shape after: 5937
+downsample duration time: 0.0017497539520263672
+shuffle duration time: 0.038832902908325195
+range crop duration time: 0.0017952919006347656
+data preprocess time: 0.08742213249206543 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-16-32-59+0800__LIDAR_TOP__1533112549647605.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172202.3772347
+start to min_points_in_gt: 5.698204040527344e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 5.5789947509765625e-05
+sample duration time: 0.016052722930908203
+rot&scal duration time: 0.0016903877258300781
+shape before: 23182
+shape after: 7687
+downsample duration time: 0.0014684200286865234
+shuffle duration time: 0.02126336097717285
+range crop duration time: 0.0028791427612304688
+data preprocess time: 0.04201650619506836 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385140649031.pcd.bin
+bbox3d_after_sample: 18
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'traffic_cone' 'traffic_cone' 'car'
+ 'car' 'trailer' 'car' 'car' 'bus' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172202.8774283
+start to min_points_in_gt: 5.888938903808594e-05
+min_points_in_gt duration time: 1.8596649169921875e-05
+flip duration time: 5.4836273193359375e-06
+sample duration time: 0.025526762008666992
+rot&scal duration time: 0.0014925003051757812
+shape before: 23104
+shape after: 7859
+downsample duration time: 0.0014216899871826172
+shuffle duration time: 0.02058100700378418
+range crop duration time: 0.002707242965698242
+data preprocess time: 0.05039048194885254 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535729217446402.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'bus' 'car' 'pedestrian' 'bicycle' 'car' 'car'
+ 'pedestrian' 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'pedestrian'
+ 'truck' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172203.3774674
+start to min_points_in_gt: 4.267692565917969e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 5.5789947509765625e-05
+sample duration time: 0.02852940559387207
+rot&scal duration time: 0.0014846324920654297
+shape before: 16472
+shape after: 4729
+downsample duration time: 0.0010883808135986328
+shuffle duration time: 0.012916326522827148
+range crop duration time: 0.0016219615936279297
+data preprocess time: 0.04466748237609863 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-27-11-36-48+0800__LIDAR_TOP__1532662895448576.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['motorcycle' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172203.8773673
+start to min_points_in_gt: 4.744529724121094e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 9.679794311523438e-05
+sample duration time: 0.021265268325805664
+rot&scal duration time: 0.0014734268188476562
+shape before: 20159
+shape after: 6087
+downsample duration time: 0.001299142837524414
+shuffle duration time: 0.016813039779663086
+range crop duration time: 0.002956867218017578
+data preprocess time: 0.04267001152038574 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535659148449131.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['trailer' 'truck' 'trailer' 'car' 'car' 'car' 'trailer' 'truck' 'car'
+ 'bus' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle'
+ 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172204.3774428
+start to min_points_in_gt: 8.082389831542969e-05
+min_points_in_gt duration time: 1.9550323486328125e-05
+flip duration time: 0.00018310546875
+sample duration time: 0.014444589614868164
+rot&scal duration time: 0.001493692398071289
+shape before: 20214
+shape after: 6217
+downsample duration time: 0.0013051033020019531
+shuffle duration time: 0.017467021942138672
+range crop duration time: 0.003030538558959961
+data preprocess time: 0.036719322204589844 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-16-32-59+0800__LIDAR_TOP__1533112869147018.pcd.bin
+bbox3d_after_sample: 22
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car'
+ 'pedestrian' 'car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172204.9006164
+start to min_points_in_gt: 6.270408630371094e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 5.4836273193359375e-06
+sample duration time: 0.03580355644226074
+rot&scal duration time: 0.004258632659912109
+shape before: 13909
+shape after: 3700
+downsample duration time: 0.0010635852813720703
+shuffle duration time: 0.010380029678344727
+range crop duration time: 0.002386331558227539
+data preprocess time: 0.05291438102722168 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-56-46-0400__LIDAR_TOP__1535731293199331.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['car' 'car' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'car'
+ 'pedestrian' 'car' 'pedestrian' 'car' 'car' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172205.4053922
+start to min_points_in_gt: 5.4836273193359375e-05
+min_points_in_gt duration time: 2.1696090698242188e-05
+flip duration time: 5.4836273193359375e-06
+sample duration time: 0.03740358352661133
+rot&scal duration time: 0.0053234100341796875
+shape before: 63178
+shape after: 10044
+downsample duration time: 0.0043179988861083984
+shuffle duration time: 0.029354095458984375
+range crop duration time: 0.002242565155029297
+data preprocess time: 0.07440567016601562 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/006657.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'car' 'pedestrian' 'bicycle' 'bicycle' 'car' 'bus' 'trailer'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172205.8774273
+start to min_points_in_gt: 7.009506225585938e-05
+min_points_in_gt duration time: 2.09808349609375e-05
+flip duration time: 5.7220458984375e-06
+sample duration time: 0.010572433471679688
+rot&scal duration time: 0.0014748573303222656
+shape before: 15577
+shape after: 4580
+downsample duration time: 0.0010972023010253906
+shuffle duration time: 0.01262664794921875
+range crop duration time: 0.0018105506896972656
+data preprocess time: 0.026581287384033203 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-17-04-15+0800__LIDAR_TOP__1533114340298284.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['bicycle' 'pedestrian' 'car' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172206.3975632
+start to min_points_in_gt: 5.626678466796875e-05
+min_points_in_gt duration time: 2.4080276489257812e-05
+flip duration time: 6.103515625e-05
+sample duration time: 0.01216268539428711
+rot&scal duration time: 0.0014853477478027344
+shape before: 15220
+shape after: 3896
+downsample duration time: 0.0010766983032226562
+shuffle duration time: 0.010740280151367188
+range crop duration time: 0.0018436908721923828
+data preprocess time: 0.02637338638305664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573961949792.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'bicycle' 'motorcycle' 'pedestrian' 'car' 'car' 'car'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172206.8961275
+start to min_points_in_gt: 4.601478576660156e-05
+min_points_in_gt duration time: 1.8358230590820312e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.0529780387878418
+rot&scal duration time: 0.003926992416381836
+shape before: 64262
+shape after: 10251
+downsample duration time: 0.003677845001220703
+shuffle duration time: 0.02550983428955078
+range crop duration time: 0.002161264419555664
+data preprocess time: 0.08464574813842773 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/006996.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172207.377296
+start to min_points_in_gt: 5.626678466796875e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 9.846687316894531e-05
+sample duration time: 0.016942501068115234
+rot&scal duration time: 0.0015761852264404297
+shape before: 24651
+shape after: 6170
+downsample duration time: 0.0013887882232666016
+shuffle duration time: 0.016360998153686523
+range crop duration time: 0.0024840831756591797
+data preprocess time: 0.03753662109375 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535659476048827.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'truck' 'pedestrian' 'bus'
+ 'trailer' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172207.8774998
+start to min_points_in_gt: 5.0067901611328125e-05
+min_points_in_gt duration time: 2.4080276489257812e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.009803295135498047
+rot&scal duration time: 0.0016222000122070312
+shape before: 15560
+shape after: 4453
+downsample duration time: 0.0010991096496582031
+shuffle duration time: 0.011963129043579102
+range crop duration time: 0.0016417503356933594
+data preprocess time: 0.02510976791381836 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385148948947.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['pedestrian' 'truck' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172208.3974004
+start to min_points_in_gt: 5.2928924560546875e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.3882598876953125e-05
+sample duration time: 0.011991262435913086
+rot&scal duration time: 0.00950312614440918
+shape before: 20623
+shape after: 6201
+downsample duration time: 0.0013728141784667969
+shuffle duration time: 0.028717994689941406
+range crop duration time: 0.01021122932434082
+data preprocess time: 0.0605463981628418 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-27-11-24-31+0800__LIDAR_TOP__1532662218948135.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'bus' 'car' 'car' 'pedestrian' 'pedestrian' 'pedestrian'
+ 'pedestrian' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172208.8942451
+start to min_points_in_gt: 5.245208740234375e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 5.936622619628906e-05
+sample duration time: 0.0312962532043457
+rot&scal duration time: 0.0012664794921875
+shape before: 21407
+shape after: 6098
+downsample duration time: 0.001119375228881836
+shuffle duration time: 0.01369023323059082
+range crop duration time: 0.0019063949584960938
+data preprocess time: 0.04828786849975586 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-16-16-48-0400__LIDAR_TOP__1535487654447283.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'trailer'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172209.3774097
+start to min_points_in_gt: 5.0067901611328125e-05
+min_points_in_gt duration time: 1.8358230590820312e-05
+flip duration time: 6.651878356933594e-05
+sample duration time: 0.023980140686035156
+rot&scal duration time: 0.0014295578002929688
+shape before: 16197
+shape after: 4605
+downsample duration time: 0.0010814666748046875
+shuffle duration time: 0.012482404708862305
+range crop duration time: 0.001486063003540039
+data preprocess time: 0.03951311111450195 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297340949118.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['car' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172209.9001815
+start to min_points_in_gt: 5.745887756347656e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 6.127357482910156e-05
+sample duration time: 0.012520313262939453
+rot&scal duration time: 0.001506805419921875
+shape before: 11657
+shape after: 2687
+downsample duration time: 0.0009586811065673828
+shuffle duration time: 0.008028268814086914
+range crop duration time: 0.0017943382263183594
+data preprocess time: 0.023985624313354492 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-53-31-0400__LIDAR_TOP__1537290162050092.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'car' 'pedestrian' 'car' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172210.408265
+start to min_points_in_gt: 4.673004150390625e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 5.316734313964844e-05
+sample duration time: 0.04075479507446289
+rot&scal duration time: 0.0014958381652832031
+shape before: 20029
+shape after: 5598
+downsample duration time: 0.001249074935913086
+shuffle duration time: 0.015571117401123047
+range crop duration time: 0.0016143321990966797
+data preprocess time: 0.059552669525146484 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-13-40-50-0400__LIDAR_TOP__1535478555449599.pcd.bin
+bbox3d_after_sample: 7
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172210.8772948
+start to min_points_in_gt: 4.76837158203125e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 4.76837158203125e-06
+sample duration time: 0.028919219970703125
+rot&scal duration time: 0.0015721321105957031
+shape before: 16787
+shape after: 4959
+downsample duration time: 0.0011551380157470703
+shuffle duration time: 0.014144659042358398
+range crop duration time: 0.0021734237670898438
+data preprocess time: 0.04687786102294922 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-14-19-09-14+0800__LIDAR_TOP__1542194062897975.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'truck' 'trailer' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian'
+ 'traffic_cone']
+Publish!
+t_start: 1600172211.3920934
+start to min_points_in_gt: 4.887580871582031e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 4.5299530029296875e-06
+sample duration time: 0.012379169464111328
+rot&scal duration time: 0.0014400482177734375
+shape before: 15540
+shape after: 4104
+downsample duration time: 0.0010673999786376953
+shuffle duration time: 0.012246847152709961
+range crop duration time: 0.0017535686492919922
+data preprocess time: 0.02789020538330078 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-41-50-0400__LIDAR_TOP__1537293202648561.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['pedestrian' 'car' 'pedestrian' 'car' 'truck' 'bus' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172211.896236
+start to min_points_in_gt: 5.125999450683594e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 0.00011444091796875
+sample duration time: 0.1454153060913086
+rot&scal duration time: 0.0013206005096435547
+shape before: 19345
+shape after: 5400
+downsample duration time: 0.0010218620300292969
+shuffle duration time: 0.01275014877319336
+range crop duration time: 0.0016293525695800781
+data preprocess time: 0.16129755973815918 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385236698053.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'trailer' 'trailer' 'trailer' 'trailer' 'car' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172212.3772032
+start to min_points_in_gt: 5.0067901611328125e-05
+min_points_in_gt duration time: 1.8358230590820312e-05
+flip duration time: 5.626678466796875e-05
+sample duration time: 0.011200904846191406
+rot&scal duration time: 0.0024728775024414062
+shape before: 18191
+shape after: 4769
+downsample duration time: 0.0011477470397949219
+shuffle duration time: 0.013008594512939453
+range crop duration time: 0.001692056655883789
+data preprocess time: 0.028499126434326172 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-25-11-10-38+0800__LIDAR_TOP__1537845381698666.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['pedestrian' 'motorcycle' 'traffic_cone' 'car' 'truck' 'bus' 'trailer'
+ 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172212.894246
+start to min_points_in_gt: 5.435943603515625e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 0.00010776519775390625
+sample duration time: 0.04257011413574219
+rot&scal duration time: 0.00995016098022461
+shape before: 22879
+shape after: 7221
+downsample duration time: 0.0014128684997558594
+shuffle duration time: 0.039794206619262695
+range crop duration time: 0.0026197433471679688
+data preprocess time: 0.09511375427246094 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-15-26-58-0400__LIDAR_TOP__1537299516950410.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['trailer' 'trailer' 'trailer' 'trailer' 'trailer' 'car' 'car' 'trailer'
+ 'trailer' 'trailer' 'car' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172213.4049807
+start to min_points_in_gt: 0.00020575523376464844
+min_points_in_gt duration time: 7.390975952148438e-05
+flip duration time: 0.00033974647521972656
+sample duration time: 0.04324960708618164
+rot&scal duration time: 0.0014603137969970703
+shape before: 15609
+shape after: 4426
+downsample duration time: 0.001085042953491211
+shuffle duration time: 0.012233257293701172
+range crop duration time: 0.0018463134765625
+data preprocess time: 0.05940890312194824 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-02-10-56-37+0800__LIDAR_TOP__1538449252397503.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['bus' 'car' 'car' 'car' 'car' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172213.9024062
+start to min_points_in_gt: 4.76837158203125e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 0.00010061264038085938
+sample duration time: 0.03622841835021973
+rot&scal duration time: 0.0014774799346923828
+shape before: 22355
+shape after: 6260
+downsample duration time: 0.0013375282287597656
+shuffle duration time: 0.01655864715576172
+range crop duration time: 0.0022971630096435547
+data preprocess time: 0.05672597885131836 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-02-10-56-37+0800__LIDAR_TOP__1538449168447181.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'pedestrian'
+ 'traffic_cone' 'truck' 'bus' 'trailer' 'motorcycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172214.395914
+start to min_points_in_gt: 4.57763671875e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 4.5299530029296875e-06
+sample duration time: 0.030840396881103516
+rot&scal duration time: 0.0012464523315429688
+shape before: 13722
+shape after: 3157
+downsample duration time: 0.0008213520050048828
+shuffle duration time: 0.00741124153137207
+range crop duration time: 0.0012292861938476562
+data preprocess time: 0.04079413414001465 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297783049774.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['car' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'pedestrian']
+Publish!
+t_start: 1600172214.9000359
+start to min_points_in_gt: 7.05718994140625e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 0.0001747608184814453
+sample duration time: 0.01330113410949707
+rot&scal duration time: 0.0015573501586914062
+shape before: 20928
+shape after: 6144
+downsample duration time: 0.0012912750244140625
+shuffle duration time: 0.016557931900024414
+range crop duration time: 0.0024940967559814453
+data preprocess time: 0.03417372703552246 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535728837548264.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car' 'bus' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172215.377258
+start to min_points_in_gt: 6.0558319091796875e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 5.984306335449219e-05
+sample duration time: 0.029532432556152344
+rot&scal duration time: 0.0013027191162109375
+shape before: 21062
+shape after: 6133
+downsample duration time: 0.0011069774627685547
+shuffle duration time: 0.014146089553833008
+range crop duration time: 0.0016283988952636719
+data preprocess time: 0.04674649238586426 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535657213398704.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'car' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172215.8775256
+start to min_points_in_gt: 6.365776062011719e-05
+min_points_in_gt duration time: 2.1457672119140625e-05
+flip duration time: 0.00013208389282226562
+sample duration time: 0.02536916732788086
+rot&scal duration time: 0.00142669677734375
+shape before: 22272
+shape after: 6523
+downsample duration time: 0.001379251480102539
+shuffle duration time: 0.017577648162841797
+range crop duration time: 0.002279996871948242
+data preprocess time: 0.04687070846557617 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-15-26-58-0400__LIDAR_TOP__1537299487899035.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['trailer' 'truck' 'truck' 'car' 'car' 'trailer' 'trailer' 'trailer' 'car'
+ 'bus' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172216.4071171
+start to min_points_in_gt: 4.673004150390625e-05
+min_points_in_gt duration time: 1.8596649169921875e-05
+flip duration time: 8.440017700195312e-05
+sample duration time: 0.03224349021911621
+rot&scal duration time: 0.0014808177947998047
+shape before: 20700
+shape after: 6169
+downsample duration time: 0.001344919204711914
+shuffle duration time: 0.02976846694946289
+range crop duration time: 0.001934051513671875
+data preprocess time: 0.06557655334472656 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-11-29+0800__LIDAR_TOP__1542799060699007.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172216.8775713
+start to min_points_in_gt: 4.887580871582031e-05
+min_points_in_gt duration time: 5.817413330078125e-05
+flip duration time: 7.677078247070312e-05
+sample duration time: 0.01282358169555664
+rot&scal duration time: 0.0014028549194335938
+shape before: 16102
+shape after: 5046
+downsample duration time: 0.0009922981262207031
+shuffle duration time: 0.012125253677368164
+range crop duration time: 0.001734018325805664
+data preprocess time: 0.028269529342651367 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-24-11-22-45+0800__LIDAR_TOP__1532402818646231.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'truck' 'truck' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172217.3776782
+start to min_points_in_gt: 6.318092346191406e-05
+min_points_in_gt duration time: 2.5033950805664062e-05
+flip duration time: 9.465217590332031e-05
+sample duration time: 0.052602291107177734
+rot&scal duration time: 0.0016014575958251953
+shape before: 20050
+shape after: 6171
+downsample duration time: 0.0014472007751464844
+shuffle duration time: 0.01804208755493164
+range crop duration time: 0.0019121170043945312
+data preprocess time: 0.0743408203125 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-18-11-50-34+0800__LIDAR_TOP__1531886322549923.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'pedestrian' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172217.8931289
+start to min_points_in_gt: 6.151199340820312e-05
+min_points_in_gt duration time: 2.0265579223632812e-05
+flip duration time: 8.058547973632812e-05
+sample duration time: 0.048113107681274414
+rot&scal duration time: 0.0014925003051757812
+shape before: 16063
+shape after: 4559
+downsample duration time: 0.0011489391326904297
+shuffle duration time: 0.012759685516357422
+range crop duration time: 0.0019240379333496094
+data preprocess time: 0.06445169448852539 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-16-03-24+0800__LIDAR_TOP__1538986169796962.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'pedestrian' 'pedestrian' 'pedestrian' 'car' 'truck' 'bus'
+ 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172218.3781145
+start to min_points_in_gt: 4.267692565917969e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 0.0001785755157470703
+sample duration time: 0.05086064338684082
+rot&scal duration time: 0.012310504913330078
+shape before: 58870
+shape after: 8540
+downsample duration time: 0.003841400146484375
+shuffle duration time: 0.06519675254821777
+range crop duration time: 0.001703023910522461
+data preprocess time: 0.1303095817565918 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/004018.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'truck' 'car' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172218.87759
+start to min_points_in_gt: 0.00010418891906738281
+min_points_in_gt duration time: 3.337860107421875e-05
+flip duration time: 6.413459777832031e-05
+sample duration time: 0.021015644073486328
+rot&scal duration time: 0.009403467178344727
+shape before: 15230
+shape after: 4282
+downsample duration time: 0.0011355876922607422
+shuffle duration time: 0.01181483268737793
+range crop duration time: 0.001959085464477539
+data preprocess time: 0.044394731521606445 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-27-12-07-38-0400__LIDAR_TOP__1532707813948288.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'pedestrian' 'car' 'car' 'car' 'bicycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172219.3991141
+start to min_points_in_gt: 5.4836273193359375e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.0067901611328125e-06
+sample duration time: 0.03091120719909668
+rot&scal duration time: 0.009497404098510742
+shape before: 13493
+shape after: 2906
+downsample duration time: 0.0010285377502441406
+shuffle duration time: 0.008052587509155273
+range crop duration time: 0.001958608627319336
+data preprocess time: 0.05049562454223633 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537296946399746.pcd.bin
+bbox3d_after_sample: 21
+bbox3d_label_after_sample: ['truck' 'pedestrian' 'pedestrian' 'car' 'car' 'car' 'pedestrian' 'car'
+ 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian'
+ 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172219.9026644
+start to min_points_in_gt: 5.8650970458984375e-05
+min_points_in_gt duration time: 1.9550323486328125e-05
+flip duration time: 5.91278076171875e-05
+sample duration time: 0.027271509170532227
+rot&scal duration time: 0.0027627944946289062
+shape before: 20617
+shape after: 5926
+downsample duration time: 0.0012879371643066406
+shuffle duration time: 0.01696944236755371
+range crop duration time: 0.001971006393432617
+data preprocess time: 0.04911208152770996 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535729510047026.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['bus' 'traffic_cone' 'trailer' 'traffic_cone' 'truck' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172220.3967948
+start to min_points_in_gt: 4.649162292480469e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 5.698204040527344e-05
+sample duration time: 0.03787660598754883
+rot&scal duration time: 0.001435995101928711
+shape before: 20501
+shape after: 6135
+downsample duration time: 0.0012526512145996094
+shuffle duration time: 0.017167091369628906
+range crop duration time: 0.0019783973693847656
+data preprocess time: 0.0585780143737793 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-01-15-52-19-0400__LIDAR_TOP__1533153759947396.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['motorcycle' 'car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172220.8782904
+start to min_points_in_gt: 5.817413330078125e-05
+min_points_in_gt duration time: 2.0503997802734375e-05
+flip duration time: 5.7220458984375e-06
+sample duration time: 0.028653860092163086
+rot&scal duration time: 0.004147529602050781
+shape before: 52016
+shape after: 7754
+downsample duration time: 0.0034720897674560547
+shuffle duration time: 0.023442506790161133
+range crop duration time: 0.0024976730346679688
+data preprocess time: 0.05882596969604492 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/001676.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'bus'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172221.3774476
+start to min_points_in_gt: 5.8650970458984375e-05
+min_points_in_gt duration time: 1.8835067749023438e-05
+flip duration time: 6.723403930664062e-05
+sample duration time: 0.19064593315124512
+rot&scal duration time: 0.002389669418334961
+shape before: 19724
+shape after: 5744
+downsample duration time: 0.002019643783569336
+shuffle duration time: 0.021548748016357422
+range crop duration time: 0.0023016929626464844
+data preprocess time: 0.21703076362609863 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573071897163.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['car' 'truck' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'bus'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172221.9196074
+start to min_points_in_gt: 0.00010251998901367188
+min_points_in_gt duration time: 4.1961669921875e-05
+flip duration time: 0.0001456737518310547
+sample duration time: 0.13481664657592773
+rot&scal duration time: 0.0012505054473876953
+shape before: 22887
+shape after: 6538
+downsample duration time: 0.0011322498321533203
+shuffle duration time: 0.01619243621826172
+range crop duration time: 0.005133628845214844
+data preprocess time: 0.1576833724975586 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535574051547786.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'bus' 'car' 'car' 'trailer' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172222.4469543
+start to min_points_in_gt: 4.57763671875e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 9.72747802734375e-05
+sample duration time: 0.4445195198059082
+rot&scal duration time: 0.0012543201446533203
+shape before: 14823
+shape after: 4089
+downsample duration time: 0.000888824462890625
+shuffle duration time: 0.009978294372558594
+range crop duration time: 0.0013239383697509766
+data preprocess time: 0.45723509788513184 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-16-16-48-0400__LIDAR_TOP__1535487686797126.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172222.9892576
+start to min_points_in_gt: 4.57763671875e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 6.198883056640625e-05
+sample duration time: 0.08132815361022949
+rot&scal duration time: 0.0012540817260742188
+shape before: 19208
+shape after: 5464
+downsample duration time: 0.001035928726196289
+shuffle duration time: 0.013648271560668945
+range crop duration time: 0.0017027854919433594
+data preprocess time: 0.09805679321289062 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535658944896717.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'truck' 'car' 'truck' 'car' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172223.572836
+start to min_points_in_gt: 4.410743713378906e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 4.76837158203125e-06
+sample duration time: 0.09579777717590332
+rot&scal duration time: 0.0014412403106689453
+shape before: 16446
+shape after: 4642
+downsample duration time: 0.001117706298828125
+shuffle duration time: 0.012536764144897461
+range crop duration time: 0.0016362667083740234
+data preprocess time: 0.11147665977478027 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535657488697709.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['truck' 'car' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172224.131344
+start to min_points_in_gt: 5.14984130859375e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 6.365776062011719e-05
+sample duration time: 0.20173120498657227
+rot&scal duration time: 0.0015015602111816406
+shape before: 20683
+shape after: 6035
+downsample duration time: 0.0013227462768554688
+shuffle duration time: 0.017401695251464844
+range crop duration time: 0.0018775463104248047
+data preprocess time: 0.22264385223388672 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573161549175.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'bus' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172224.3862367
+start to min_points_in_gt: 7.581710815429688e-05
+min_points_in_gt duration time: 2.7179718017578125e-05
+flip duration time: 9.5367431640625e-06
+sample duration time: 0.03692054748535156
+rot&scal duration time: 0.0022377967834472656
+shape before: 15651
+shape after: 4628
+downsample duration time: 0.001074075698852539
+shuffle duration time: 0.013219118118286133
+range crop duration time: 0.001577138900756836
+data preprocess time: 0.054067134857177734 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-27-11-36-48+0800__LIDAR_TOP__1532662701947915.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'motorcycle' 'car' 'motorcycle' 'truck' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172224.900494
+start to min_points_in_gt: 4.1961669921875e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 6.127357482910156e-05
+sample duration time: 0.0325927734375
+rot&scal duration time: 0.0012209415435791016
+shape before: 19559
+shape after: 5651
+downsample duration time: 0.0010292530059814453
+shuffle duration time: 0.013145208358764648
+range crop duration time: 0.0014719963073730469
+data preprocess time: 0.04854989051818848 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-02-17-28-51+0800__LIDAR_TOP__1533202375649132.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172225.3781188
+start to min_points_in_gt: 4.792213439941406e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 0.0001659393310546875
+sample duration time: 0.03323864936828613
+rot&scal duration time: 0.0044438838958740234
+shape before: 61871
+shape after: 9113
+downsample duration time: 0.00410008430480957
+shuffle duration time: 0.026820898056030273
+range crop duration time: 0.0026586055755615234
+data preprocess time: 0.06739401817321777 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/001921.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'car' 'bicycle' 'bicycle' 'car' 'car' 'truck' 'car' 'car' 'truck'
+ 'trailer' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian'
+ 'traffic_cone']
+Publish!
+t_start: 1600172225.900721
+start to min_points_in_gt: 4.5299530029296875e-05
+min_points_in_gt duration time: 1.8835067749023438e-05
+flip duration time: 6.198883056640625e-06
+sample duration time: 0.0723419189453125
+rot&scal duration time: 0.005118846893310547
+shape before: 62694
+shape after: 11151
+downsample duration time: 0.004302501678466797
+shuffle duration time: 0.0319364070892334
+range crop duration time: 0.0024003982543945312
+data preprocess time: 0.11186790466308594 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/004453.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'pedestrian']
+Publish!
+t_start: 1600172226.377292
+start to min_points_in_gt: 5.412101745605469e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 0.00010085105895996094
+sample duration time: 0.025222063064575195
+rot&scal duration time: 0.0017037391662597656
+shape before: 22604
+shape after: 7928
+downsample duration time: 0.0014085769653320312
+shuffle duration time: 0.020491838455200195
+range crop duration time: 0.003049612045288086
+data preprocess time: 0.05063915252685547 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-41-50-0400__LIDAR_TOP__1537293210149468.pcd.bin
+bbox3d_after_sample: 21
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'pedestrian' 'pedestrian' 'truck' 'motorcycle'
+ 'car' 'pedestrian' 'car' 'pedestrian' 'car' 'truck' 'car' 'car' 'trailer'
+ 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172226.8773518
+start to min_points_in_gt: 4.601478576660156e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 5.7220458984375e-06
+sample duration time: 0.01609635353088379
+rot&scal duration time: 0.001455545425415039
+shape before: 16377
+shape after: 4731
+downsample duration time: 0.0011143684387207031
+shuffle duration time: 0.01303553581237793
+range crop duration time: 0.001481771469116211
+data preprocess time: 0.03213763236999512 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033808447760.pcd.bin
+bbox3d_after_sample: 7
+bbox3d_label_after_sample: ['car' 'truck' 'bus' 'bicycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172227.3773475
+start to min_points_in_gt: 4.506111145019531e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 0.00010704994201660156
+sample duration time: 0.011490583419799805
+rot&scal duration time: 0.001512765884399414
+shape before: 21188
+shape after: 6647
+downsample duration time: 0.0013425350189208984
+shuffle duration time: 0.022565364837646484
+range crop duration time: 0.0020029544830322266
+data preprocess time: 0.03773999214172363 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033675797520.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['bus' 'car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172227.8957098
+start to min_points_in_gt: 6.0558319091796875e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 5.316734313964844e-05
+sample duration time: 0.015938758850097656
+rot&scal duration time: 0.0014867782592773438
+shape before: 20099
+shape after: 5496
+downsample duration time: 0.0012409687042236328
+shuffle duration time: 0.01600050926208496
+range crop duration time: 0.00220489501953125
+data preprocess time: 0.03576254844665527 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535729148049316.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['truck' 'pedestrian' 'truck' 'truck' 'car' 'traffic_cone' 'trailer'
+ 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172228.3994496
+start to min_points_in_gt: 4.553794860839844e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 0.000286102294921875
+sample duration time: 0.038808345794677734
+rot&scal duration time: 0.011490583419799805
+shape before: 64071
+shape after: 10586
+downsample duration time: 0.008606672286987305
+shuffle duration time: 0.06274533271789551
+range crop duration time: 0.0027780532836914062
+data preprocess time: 0.11617207527160645 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/000227.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172228.8772602
+start to min_points_in_gt: 5.340576171875e-05
+min_points_in_gt duration time: 3.337860107421875e-05
+flip duration time: 7.462501525878906e-05
+sample duration time: 0.02908945083618164
+rot&scal duration time: 0.0014376640319824219
+shape before: 20017
+shape after: 5930
+downsample duration time: 0.0012028217315673828
+shuffle duration time: 0.016170740127563477
+range crop duration time: 0.0021102428436279297
+data preprocess time: 0.04896950721740723 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535574131698847.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'truck' 'car' 'truck' 'truck' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172229.3775697
+start to min_points_in_gt: 8.273124694824219e-05
+min_points_in_gt duration time: 2.4318695068359375e-05
+flip duration time: 6.9141387939453125e-06
+sample duration time: 0.016961336135864258
+rot&scal duration time: 0.0019576549530029297
+shape before: 17224
+shape after: 4856
+downsample duration time: 0.0016331672668457031
+shuffle duration time: 0.017983436584472656
+range crop duration time: 0.0028192996978759766
+data preprocess time: 0.03983569145202637 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-24-11-03-52+0800__LIDAR_TOP__1532401626397551.pcd.bin
+bbox3d_after_sample: 22
+bbox3d_label_after_sample: ['car' 'pedestrian' 'car' 'truck' 'pedestrian' 'pedestrian' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian' 'car'
+ 'pedestrian' 'truck' 'car' 'car' 'truck' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172229.8775136
+start to min_points_in_gt: 6.604194641113281e-05
+min_points_in_gt duration time: 2.384185791015625e-05
+flip duration time: 0.00010704994201660156
+sample duration time: 0.019811153411865234
+rot&scal duration time: 0.0034332275390625
+shape before: 22017
+shape after: 6238
+downsample duration time: 0.0015573501586914062
+shuffle duration time: 0.017873525619506836
+range crop duration time: 0.0021975040435791016
+data preprocess time: 0.04351234436035156 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-05-21-11-06-59-0400__LIDAR_TOP__1526915673796488.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'bus' 'car' 'car' 'truck' 'trailer' 'car' 'car' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172230.3781815
+start to min_points_in_gt: 4.506111145019531e-05
+min_points_in_gt duration time: 2.7418136596679688e-05
+flip duration time: 0.0001842975616455078
+sample duration time: 0.06372499465942383
+rot&scal duration time: 0.004530429840087891
+shape before: 60639
+shape after: 9561
+downsample duration time: 0.004026889801025391
+shuffle duration time: 0.027122974395751953
+range crop duration time: 0.0022687911987304688
+data preprocess time: 0.09790396690368652 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/003168.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172230.8773324
+start to min_points_in_gt: 5.626678466796875e-05
+min_points_in_gt duration time: 1.8358230590820312e-05
+flip duration time: 0.00010156631469726562
+sample duration time: 0.022083044052124023
+rot&scal duration time: 0.0014348030090332031
+shape before: 22169
+shape after: 6491
+downsample duration time: 0.0013360977172851562
+shuffle duration time: 0.017334938049316406
+range crop duration time: 0.0023102760314941406
+data preprocess time: 0.04333925247192383 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535728807398113.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['truck' 'car' 'truck' 'car' 'pedestrian' 'car' 'bus' 'trailer' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172231.3774376
+start to min_points_in_gt: 5.459785461425781e-05
+min_points_in_gt duration time: 2.0742416381835938e-05
+flip duration time: 7.510185241699219e-05
+sample duration time: 0.014174699783325195
+rot&scal duration time: 0.0010678768157958984
+shape before: 16132
+shape after: 4793
+downsample duration time: 0.0008208751678466797
+shuffle duration time: 0.009140253067016602
+range crop duration time: 0.0014042854309082031
+data preprocess time: 0.025937557220458984 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-24-11-03-52+0800__LIDAR_TOP__1532401772449256.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'car' 'car' 'bicycle' 'car' 'car' 'bicycle' 'bus' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172231.89914
+start to min_points_in_gt: 4.601478576660156e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 5.9604644775390625e-05
+sample duration time: 0.02819347381591797
+rot&scal duration time: 0.0013027191162109375
+shape before: 19358
+shape after: 5941
+downsample duration time: 0.0010678768157958984
+shuffle duration time: 0.02005171775817871
+range crop duration time: 0.001630544662475586
+data preprocess time: 0.0513002872467041 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-18-11-50-34+0800__LIDAR_TOP__1531885911698674.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172232.377282
+start to min_points_in_gt: 6.079673767089844e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 9.72747802734375e-05
+sample duration time: 0.016813278198242188
+rot&scal duration time: 0.0014290809631347656
+shape before: 20683
+shape after: 5958
+downsample duration time: 0.0012822151184082031
+shuffle duration time: 0.01617741584777832
+range crop duration time: 0.0036859512329101562
+data preprocess time: 0.03828144073486328 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-16-41-59+0800__LIDAR_TOP__1533112999896628.pcd.bin
+bbox3d_after_sample: 33
+bbox3d_label_after_sample: ['car' 'car' 'car' 'motorcycle' 'car' 'car' 'motorcycle' 'motorcycle'
+ 'car' 'car' 'bus' 'car' 'car' 'car' 'motorcycle' 'car' 'car' 'car' 'car'
+ 'car' 'car' 'car' 'car' 'car' 'motorcycle' 'car' 'car' 'car' 'car'
+ 'bicycle' 'bicycle' 'bicycle' 'traffic_cone']
+Publish!
+t_start: 1600172232.9041932
+start to min_points_in_gt: 5.125999450683594e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 6.341934204101562e-05
+sample duration time: 0.030799150466918945
+rot&scal duration time: 0.007305622100830078
+shape before: 15553
+shape after: 4371
+downsample duration time: 0.0011014938354492188
+shuffle duration time: 0.012516498565673828
+range crop duration time: 0.0015101432800292969
+data preprocess time: 0.05226254463195801 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-15-52-24+0800__LIDAR_TOP__1538985730147635.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['car' 'traffic_cone' 'car' 'bus' 'trailer' 'motorcycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172233.3983455
+start to min_points_in_gt: 6.008148193359375e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 6.222724914550781e-05
+sample duration time: 0.015003681182861328
+rot&scal duration time: 0.0014293193817138672
+shape before: 14311
+shape after: 3144
+downsample duration time: 0.0007603168487548828
+shuffle duration time: 0.00624394416809082
+range crop duration time: 0.0015995502471923828
+data preprocess time: 0.024416208267211914 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-03-15-00-36+0800__LIDAR_TOP__1533280316200240.pcd.bin
+bbox3d_after_sample: 18
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car'
+ 'car' 'car' 'car' 'car' 'car' 'bus']
+Publish!
+t_start: 1600172233.8984337
+start to min_points_in_gt: 4.7206878662109375e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 0.00017571449279785156
+sample duration time: 0.09487128257751465
+rot&scal duration time: 0.004456996917724609
+shape before: 61568
+shape after: 9098
+downsample duration time: 0.0039730072021484375
+shuffle duration time: 0.027089357376098633
+range crop duration time: 0.0028934478759765625
+data preprocess time: 0.12955141067504883 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/004975.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172234.4018283
+start to min_points_in_gt: 0.0002551078796386719
+min_points_in_gt duration time: 7.700920104980469e-05
+flip duration time: 0.0002961158752441406
+sample duration time: 0.050640106201171875
+rot&scal duration time: 0.0015361309051513672
+shape before: 20654
+shape after: 6042
+downsample duration time: 0.0013878345489501953
+shuffle duration time: 0.01566767692565918
+range crop duration time: 0.001659393310546875
+data preprocess time: 0.07013154029846191 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535729292898971.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'car'
+ 'pedestrian' 'car' 'bus' 'pedestrian' 'pedestrian' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172234.8924189
+start to min_points_in_gt: 4.4345855712890625e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 0.00010585784912109375
+sample duration time: 0.048059940338134766
+rot&scal duration time: 0.0012574195861816406
+shape before: 16950
+shape after: 4917
+downsample duration time: 0.0009572505950927734
+shuffle duration time: 0.011463403701782227
+range crop duration time: 0.0013256072998046875
+data preprocess time: 0.06227278709411621 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-26-11-17-24+0800__LIDAR_TOP__1537932336696757.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'pedestrian' 'truck' 'car' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172235.4018626
+start to min_points_in_gt: 5.078315734863281e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 6.031990051269531e-05
+sample duration time: 0.03928494453430176
+rot&scal duration time: 0.0015063285827636719
+shape before: 14415
+shape after: 3437
+downsample duration time: 0.0010225772857666016
+shuffle duration time: 0.01009225845336914
+range crop duration time: 0.0016217231750488281
+data preprocess time: 0.05263352394104004 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297188298886.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'truck' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172235.8773968
+start to min_points_in_gt: 6.4849853515625e-05
+min_points_in_gt duration time: 2.0265579223632812e-05
+flip duration time: 0.00011372566223144531
+sample duration time: 0.02366781234741211
+rot&scal duration time: 0.0014696121215820312
+shape before: 21564
+shape after: 6035
+downsample duration time: 0.0013158321380615234
+shuffle duration time: 0.01640033721923828
+range crop duration time: 0.0029222965240478516
+data preprocess time: 0.04465889930725098 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-27-12-07-38-0400__LIDAR_TOP__1532708596699626.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'car' 'car' 'car' 'pedestrian' 'pedestrian'
+ 'trailer' 'car' 'car' 'car' 'pedestrian' 'car' 'truck' 'bus' 'bicycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172236.4010174
+start to min_points_in_gt: 4.863739013671875e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 5.841255187988281e-05
+sample duration time: 0.05572915077209473
+rot&scal duration time: 0.001514434814453125
+shape before: 14819
+shape after: 4046
+downsample duration time: 0.0010514259338378906
+shuffle duration time: 0.010807037353515625
+range crop duration time: 0.0018949508666992188
+data preprocess time: 0.070068359375 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-11-29+0800__LIDAR_TOP__1542798702448212.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['truck' 'car' 'truck' 'car' 'car' 'car' 'car' 'bus' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172236.9043121
+start to min_points_in_gt: 4.482269287109375e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 0.00010585784912109375
+sample duration time: 0.059171199798583984
+rot&scal duration time: 0.0015387535095214844
+shape before: 22528
+shape after: 6202
+downsample duration time: 0.0013611316680908203
+shuffle duration time: 0.016961097717285156
+range crop duration time: 0.0018320083618164062
+data preprocess time: 0.07966995239257812 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-16-32-59+0800__LIDAR_TOP__1533112533696908.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['pedestrian' 'car' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172237.4059908
+start to min_points_in_gt: 5.841255187988281e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 6.651878356933594e-05
+sample duration time: 0.03334975242614746
+rot&scal duration time: 0.001428365707397461
+shape before: 20332
+shape after: 6211
+downsample duration time: 0.0012733936309814453
+shuffle duration time: 0.016636371612548828
+range crop duration time: 0.0030655860900878906
+data preprocess time: 0.05462217330932617 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-25-11-10-38+0800__LIDAR_TOP__1537845623797950.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'pedestrian' 'car' 'car'
+ 'car' 'car' 'car' 'car' 'truck' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172237.8791614
+start to min_points_in_gt: 7.271766662597656e-05
+min_points_in_gt duration time: 2.4557113647460938e-05
+flip duration time: 6.198883056640625e-06
+sample duration time: 0.054354190826416016
+rot&scal duration time: 0.004541635513305664
+shape before: 61104
+shape after: 9327
+downsample duration time: 0.003997325897216797
+shuffle duration time: 0.027846813201904297
+range crop duration time: 0.0021893978118896484
+data preprocess time: 0.0890355110168457 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/000514.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['bicycle' 'car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172238.3775036
+start to min_points_in_gt: 7.414817810058594e-05
+min_points_in_gt duration time: 2.5272369384765625e-05
+flip duration time: 0.00014328956604003906
+sample duration time: 0.03345823287963867
+rot&scal duration time: 0.0015361309051513672
+shape before: 20735
+shape after: 6312
+downsample duration time: 0.00147247314453125
+shuffle duration time: 0.01849842071533203
+range crop duration time: 0.002256631851196289
+data preprocess time: 0.05599212646484375 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-25-11-10-38+0800__LIDAR_TOP__1537845613296681.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['pedestrian' 'car' 'bus' 'car' 'car' 'truck' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172238.877402
+start to min_points_in_gt: 6.0558319091796875e-05
+min_points_in_gt duration time: 1.7642974853515625e-05
+flip duration time: 5.4836273193359375e-06
+sample duration time: 0.01964092254638672
+rot&scal duration time: 0.0014677047729492188
+shape before: 15275
+shape after: 4156
+downsample duration time: 0.001050710678100586
+shuffle duration time: 0.011444807052612305
+range crop duration time: 0.0018754005432128906
+data preprocess time: 0.03451251983642578 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-13-40-50-0400__LIDAR_TOP__1535478789198108.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172239.3935246
+start to min_points_in_gt: 5.340576171875e-05
+min_points_in_gt duration time: 2.4080276489257812e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.03491926193237305
+rot&scal duration time: 0.0016677379608154297
+shape before: 19237
+shape after: 5779
+downsample duration time: 0.0011937618255615234
+shuffle duration time: 0.02758312225341797
+range crop duration time: 0.0024595260620117188
+data preprocess time: 0.0667123794555664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800984447476.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'car' 'bus' 'bicycle' 'car' 'car' 'car' 'car'
+ 'truck' 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172239.8774514
+start to min_points_in_gt: 7.581710815429688e-05
+min_points_in_gt duration time: 2.0742416381835938e-05
+flip duration time: 5.9604644775390625e-06
+sample duration time: 0.01889657974243164
+rot&scal duration time: 0.001684427261352539
+shape before: 14849
+shape after: 3915
+downsample duration time: 0.0010204315185546875
+shuffle duration time: 0.010716438293457031
+range crop duration time: 0.002645254135131836
+data preprocess time: 0.03404521942138672 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-21-11-53-44-0400__LIDAR_TOP__1534867417448713.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['car' 'car' 'car' 'pedestrian' 'car' 'car' 'car' 'car' 'car' 'pedestrian'
+ 'car' 'car' 'car' 'pedestrian' 'truck' 'bicycle' 'trailer' 'bicycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172240.407645
+start to min_points_in_gt: 5.1975250244140625e-05
+min_points_in_gt duration time: 1.6689300537109375e-05
+flip duration time: 4.76837158203125e-06
+sample duration time: 0.03328275680541992
+rot&scal duration time: 0.0014798641204833984
+shape before: 15758
+shape after: 4449
+downsample duration time: 0.0010776519775390625
+shuffle duration time: 0.020334243774414062
+range crop duration time: 0.00146484375
+data preprocess time: 0.056635141372680664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033789447989.pcd.bin
+bbox3d_after_sample: 7
+bbox3d_label_after_sample: ['truck' 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'pedestrian']
+Publish!
+t_start: 1600172240.9059918
+start to min_points_in_gt: 9.5367431640625e-05
+min_points_in_gt duration time: 4.267692565917969e-05
+flip duration time: 7.581710815429688e-05
+sample duration time: 0.009958982467651367
+rot&scal duration time: 0.010526657104492188
+shape before: 15026
+shape after: 4110
+downsample duration time: 0.0007264614105224609
+shuffle duration time: 0.00889444351196289
+range crop duration time: 0.0017778873443603516
+data preprocess time: 0.0313718318939209 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-01-17-04-15+0800__LIDAR_TOP__1533114322698125.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'pedestrian' 'truck' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172241.3945088
+start to min_points_in_gt: 4.8160552978515625e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.507469177246094e-05
+sample duration time: 0.046243906021118164
+rot&scal duration time: 0.0012862682342529297
+shape before: 23057
+shape after: 7206
+downsample duration time: 0.0011584758758544922
+shuffle duration time: 0.016817092895507812
+range crop duration time: 0.0018489360809326172
+data preprocess time: 0.0663154125213623 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-53-31-0400__LIDAR_TOP__1537289882547419.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'truck' 'car' 'car' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172241.877326
+start to min_points_in_gt: 5.555152893066406e-05
+min_points_in_gt duration time: 1.9311904907226562e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.01903843879699707
+rot&scal duration time: 0.0014636516571044922
+shape before: 15312
+shape after: 4088
+downsample duration time: 0.0010390281677246094
+shuffle duration time: 0.01114511489868164
+range crop duration time: 0.001775503158569336
+data preprocess time: 0.033502817153930664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385051950056.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'truck' 'car' 'trailer' 'truck' 'trailer' 'bicycle'
+ 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172242.4011707
+start to min_points_in_gt: 5.936622619628906e-05
+min_points_in_gt duration time: 1.9550323486328125e-05
+flip duration time: 6.771087646484375e-05
+sample duration time: 0.013290166854858398
+rot&scal duration time: 0.0017042160034179688
+shape before: 21367
+shape after: 6850
+downsample duration time: 0.0015921592712402344
+shuffle duration time: 0.020466089248657227
+range crop duration time: 0.0018029212951660156
+data preprocess time: 0.03741002082824707 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-10-39-0400__LIDAR_TOP__1537290913398235.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'pedestrian' 'car' 'car' 'pedestrian' 'car' 'car' 'truck' 'bus'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172242.8962572
+start to min_points_in_gt: 7.224082946777344e-05
+min_points_in_gt duration time: 2.384185791015625e-05
+flip duration time: 8.20159912109375e-05
+sample duration time: 0.030876874923706055
+rot&scal duration time: 0.001659393310546875
+shape before: 16109
+shape after: 4521
+downsample duration time: 0.0012507438659667969
+shuffle duration time: 0.013115644454956055
+range crop duration time: 0.0020172595977783203
+data preprocess time: 0.04784727096557617 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535656924299149.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'car' 'car' 'car' 'trailer' 'bicycle' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172243.4069395
+start to min_points_in_gt: 7.462501525878906e-05
+min_points_in_gt duration time: 1.9311904907226562e-05
+flip duration time: 7.748603820800781e-05
+sample duration time: 0.014829635620117188
+rot&scal duration time: 0.0014545917510986328
+shape before: 20267
+shape after: 5839
+downsample duration time: 0.001260995864868164
+shuffle duration time: 0.01575469970703125
+range crop duration time: 0.0019550323486328125
+data preprocess time: 0.034165382385253906 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-13-40-50-0400__LIDAR_TOP__1535478782146763.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172243.8775082
+start to min_points_in_gt: 5.054473876953125e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 7.843971252441406e-05
+sample duration time: 0.03805232048034668
+rot&scal duration time: 0.0014543533325195312
+shape before: 14245
+shape after: 3997
+downsample duration time: 0.0010190010070800781
+shuffle duration time: 0.010842323303222656
+range crop duration time: 0.0019118785858154297
+data preprocess time: 0.05240678787231445 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-16-16-48-0400__LIDAR_TOP__1535487650047916.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172244.3773313
+start to min_points_in_gt: 4.267692565917969e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 6.246566772460938e-05
+sample duration time: 0.04665708541870117
+rot&scal duration time: 0.0016472339630126953
+shape before: 15069
+shape after: 3976
+downsample duration time: 0.001043558120727539
+shuffle duration time: 0.011090993881225586
+range crop duration time: 0.0014548301696777344
+data preprocess time: 0.060971736907958984 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-10-08-16-03-24+0800__LIDAR_TOP__1538986246797794.pcd.bin
+bbox3d_after_sample: 7
+bbox3d_label_after_sample: ['bus' 'truck' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172244.9044974
+start to min_points_in_gt: 6.985664367675781e-05
+min_points_in_gt duration time: 2.3126602172851562e-05
+flip duration time: 7.700920104980469e-05
+sample duration time: 0.05997467041015625
+rot&scal duration time: 0.0010852813720703125
+shape before: 15960
+shape after: 4736
+downsample duration time: 0.0008375644683837891
+shuffle duration time: 0.008998870849609375
+range crop duration time: 0.0015714168548583984
+data preprocess time: 0.07180023193359375 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573875949128.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['truck' 'car' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'car' 'car'
+ 'bus' 'trailer' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle'
+ 'traffic_cone']
+Publish!
+t_start: 1600172245.40565
+start to min_points_in_gt: 7.200241088867188e-05
+min_points_in_gt duration time: 3.075599670410156e-05
+flip duration time: 6.365776062011719e-05
+sample duration time: 0.04365873336791992
+rot&scal duration time: 0.001439809799194336
+shape before: 19606
+shape after: 5698
+downsample duration time: 0.001220703125
+shuffle duration time: 0.015601873397827148
+range crop duration time: 0.0017976760864257812
+data preprocess time: 0.06266450881958008 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-11-29+0800__LIDAR_TOP__1542799146547803.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172245.877672
+start to min_points_in_gt: 7.605552673339844e-05
+min_points_in_gt duration time: 1.6927719116210938e-05
+flip duration time: 6.604194641113281e-05
+sample duration time: 0.011055946350097656
+rot&scal duration time: 0.0014390945434570312
+shape before: 20400
+shape after: 6017
+downsample duration time: 0.0012764930725097656
+shuffle duration time: 0.015970706939697266
+range crop duration time: 0.001678466796875
+data preprocess time: 0.030303239822387695 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-03-15-31-50+0800__LIDAR_TOP__1533281879201080.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'bus' 'truck' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172246.4069386
+start to min_points_in_gt: 5.1975250244140625e-05
+min_points_in_gt duration time: 2.002716064453125e-05
+flip duration time: 7.677078247070312e-05
+sample duration time: 0.03848910331726074
+rot&scal duration time: 0.0018842220306396484
+shape before: 14697
+shape after: 3936
+downsample duration time: 0.0013456344604492188
+shuffle duration time: 0.011864900588989258
+range crop duration time: 0.0013697147369384766
+data preprocess time: 0.0537567138671875 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-18-11-50-34+0800__LIDAR_TOP__1531886246048383.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['truck' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172246.8774025
+start to min_points_in_gt: 5.698204040527344e-05
+min_points_in_gt duration time: 1.9073486328125e-05
+flip duration time: 6.651878356933594e-05
+sample duration time: 0.019281387329101562
+rot&scal duration time: 0.0015764236450195312
+shape before: 16469
+shape after: 4178
+downsample duration time: 0.0011546611785888672
+shuffle duration time: 0.012626409530639648
+range crop duration time: 0.0020694732666015625
+data preprocess time: 0.03569626808166504 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-07-26-0400__LIDAR_TOP__1537287054150733.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['truck' 'car' 'truck' 'car' 'motorcycle' 'car' 'truck' 'car' 'car' 'bus'
+ 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172247.4052126
+start to min_points_in_gt: 7.486343383789062e-05
+min_points_in_gt duration time: 2.4318695068359375e-05
+flip duration time: 8.368492126464844e-05
+sample duration time: 0.03569507598876953
+rot&scal duration time: 0.001058340072631836
+shape before: 14585
+shape after: 3977
+downsample duration time: 0.0007424354553222656
+shuffle duration time: 0.007868289947509766
+range crop duration time: 0.0016629695892333984
+data preprocess time: 0.04646754264831543 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-11-21-19-38-26+0800__LIDAR_TOP__1542800860947086.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'pedestrian' 'car' 'pedestrian' 'pedestrian'
+ 'car' 'truck' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172247.8779936
+start to min_points_in_gt: 7.295608520507812e-05
+min_points_in_gt duration time: 2.288818359375e-05
+flip duration time: 0.00015091896057128906
+sample duration time: 0.011542320251464844
+rot&scal duration time: 0.0015358924865722656
+shape before: 21117
+shape after: 5698
+downsample duration time: 0.0012977123260498047
+shuffle duration time: 0.015579938888549805
+range crop duration time: 0.002000093460083008
+data preprocess time: 0.03090500831604004 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-21-11-53-44-0400__LIDAR_TOP__1534867152452469.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['truck' 'car' 'pedestrian' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172248.3941364
+start to min_points_in_gt: 4.863739013671875e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 0.00018334388732910156
+sample duration time: 0.027635812759399414
+rot&scal duration time: 0.011982440948486328
+shape before: 61151
+shape after: 9698
+downsample duration time: 0.004048585891723633
+shuffle duration time: 0.03973650932312012
+range crop duration time: 0.0021843910217285156
+data preprocess time: 0.08178901672363281 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/000924.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['car' 'bicycle' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172248.8772793
+start to min_points_in_gt: 5.412101745605469e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 5.4836273193359375e-06
+sample duration time: 0.019249677658081055
+rot&scal duration time: 0.0015156269073486328
+shape before: 13694
+shape after: 3104
+downsample duration time: 0.0009877681732177734
+shuffle duration time: 0.008575201034545898
+range crop duration time: 0.0016970634460449219
+data preprocess time: 0.031113386154174805 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297844400715.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'bus' 'car' 'car' 'car' 'car' 'trailer' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172249.3980405
+start to min_points_in_gt: 5.030632019042969e-05
+min_points_in_gt duration time: 1.6450881958007812e-05
+flip duration time: 5.91278076171875e-05
+sample duration time: 0.028483867645263672
+rot&scal duration time: 0.0014598369598388672
+shape before: 23634
+shape after: 7557
+downsample duration time: 0.0014259815216064453
+shuffle duration time: 0.020389318466186523
+range crop duration time: 0.002409696578979492
+data preprocess time: 0.05286860466003418 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-53-31-0400__LIDAR_TOP__1537289829149706.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car' 'bus' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172249.8955019
+start to min_points_in_gt: 5.173683166503906e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 6.985664367675781e-05
+sample duration time: 0.03261160850524902
+rot&scal duration time: 0.0014851093292236328
+shape before: 20221
+shape after: 5783
+downsample duration time: 0.0013301372528076172
+shuffle duration time: 0.015447616577148438
+range crop duration time: 0.00247955322265625
+data preprocess time: 0.052162885665893555 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385058696689.pcd.bin
+bbox3d_after_sample: 19
+bbox3d_label_after_sample: ['pedestrian' 'truck' 'trailer' 'car' 'truck' 'trailer' 'truck' 'car'
+ 'truck' 'truck' 'trailer' 'pedestrian' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172250.4004307
+start to min_points_in_gt: 0.00023436546325683594
+min_points_in_gt duration time: 0.00012373924255371094
+flip duration time: 0.0005571842193603516
+sample duration time: 0.043856143951416016
+rot&scal duration time: 0.0020966529846191406
+shape before: 15324
+shape after: 4011
+downsample duration time: 0.0013506412506103516
+shuffle duration time: 0.012593746185302734
+range crop duration time: 0.0022885799407958984
+data preprocess time: 0.06175041198730469 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-08-02-17-28-51+0800__LIDAR_TOP__1533202610648970.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'pedestrian' 'car'
+ 'car' 'truck' 'pedestrian' 'pedestrian' 'car' 'trailer' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172250.8774571
+start to min_points_in_gt: 5.984306335449219e-05
+min_points_in_gt duration time: 2.193450927734375e-05
+flip duration time: 1.049041748046875e-05
+sample duration time: 0.01658344268798828
+rot&scal duration time: 0.0016603469848632812
+shape before: 13715
+shape after: 4183
+downsample duration time: 0.0011856555938720703
+shuffle duration time: 0.012976884841918945
+range crop duration time: 0.001873016357421875
+data preprocess time: 0.03318595886230469 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-06-15-06-32-0400__LIDAR_TOP__1533583275196450.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'pedestrian']
+Publish!
+t_start: 1600172251.3773353
+start to min_points_in_gt: 6.628036499023438e-05
+min_points_in_gt duration time: 1.9550323486328125e-05
+flip duration time: 5.245208740234375e-06
+sample duration time: 0.026713132858276367
+rot&scal duration time: 0.0014345645904541016
+shape before: 18900
+shape after: 5492
+downsample duration time: 0.0012278556823730469
+shuffle duration time: 0.014623880386352539
+range crop duration time: 0.004202365875244141
+data preprocess time: 0.047065019607543945 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-27-12-07-38-0400__LIDAR_TOP__1532708686048834.pcd.bin
+bbox3d_after_sample: 29
+bbox3d_label_after_sample: ['pedestrian' 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'pedestrian' 'car'
+ 'pedestrian' 'pedestrian' 'car' 'truck' 'car' 'car' 'pedestrian'
+ 'pedestrian' 'pedestrian' 'pedestrian' 'pedestrian' 'bus' 'trailer'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172251.9001882
+start to min_points_in_gt: 5.91278076171875e-05
+min_points_in_gt duration time: 1.7404556274414062e-05
+flip duration time: 0.00010943412780761719
+sample duration time: 0.013450384140014648
+rot&scal duration time: 0.0014376640319824219
+shape before: 14912
+shape after: 3858
+downsample duration time: 0.0010039806365966797
+shuffle duration time: 0.010569095611572266
+range crop duration time: 0.002058267593383789
+data preprocess time: 0.027701377868652344 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-43-59-0400__LIDAR_TOP__1537296693699073.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'pedestrian'
+ 'truck' 'bus' 'bicycle' 'bicycle' 'bicycle' 'motorcycle']
+Publish!
+t_start: 1600172252.3777144
+start to min_points_in_gt: 4.9591064453125e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 5.0067901611328125e-06
+sample duration time: 0.039028167724609375
+rot&scal duration time: 0.0015153884887695312
+shape before: 15750
+shape after: 4440
+downsample duration time: 0.0011093616485595703
+shuffle duration time: 0.010409355163574219
+range crop duration time: 0.0017931461334228516
+data preprocess time: 0.05281877517700195 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535659412650259.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['trailer' 'truck' 'truck' 'car' 'car' 'car' 'car' 'car' 'bus' 'bicycle'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172252.8773804
+start to min_points_in_gt: 4.76837158203125e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 6.413459777832031e-05
+sample duration time: 0.013277053833007812
+rot&scal duration time: 0.0014944076538085938
+shape before: 18970
+shape after: 5768
+downsample duration time: 0.0012416839599609375
+shuffle duration time: 0.015314579010009766
+range crop duration time: 0.0018239021301269531
+data preprocess time: 0.032037973403930664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-13-41-50-0400__LIDAR_TOP__1537293201798108.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['pedestrian' 'car' 'car' 'pedestrian' 'car' 'truck' 'trailer' 'bicycle'
+ 'bicycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172253.397869
+start to min_points_in_gt: 6.532669067382812e-05
+min_points_in_gt duration time: 1.7881393432617188e-05
+flip duration time: 0.00010991096496582031
+sample duration time: 0.03571319580078125
+rot&scal duration time: 0.0014715194702148438
+shape before: 21865
+shape after: 6642
+downsample duration time: 0.001333475112915039
+shuffle duration time: 0.014963150024414062
+range crop duration time: 0.002908945083618164
+data preprocess time: 0.055249929428100586 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-28-13-40-50-0400__LIDAR_TOP__1535478122697831.pcd.bin
+bbox3d_after_sample: 21
+bbox3d_label_after_sample: ['car' 'car' 'car' 'truck' 'car' 'pedestrian' 'car' 'car' 'car' 'car'
+ 'truck' 'car' 'car' 'car' 'car' 'truck' 'bus' 'bicycle' 'bicycle'
+ 'bicycle' 'traffic_cone']
+Publish!
+t_start: 1600172253.8781872
+start to min_points_in_gt: 7.534027099609375e-05
+min_points_in_gt duration time: 2.765655517578125e-05
+flip duration time: 7.3909759521484375e-06
+sample duration time: 0.037583351135253906
+rot&scal duration time: 0.003987312316894531
+shape before: 60451
+shape after: 8673
+downsample duration time: 0.00391077995300293
+shuffle duration time: 0.02515101432800293
+range crop duration time: 0.0022706985473632812
+data preprocess time: 0.06910276412963867 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/000749.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'truck' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172254.3937154
+start to min_points_in_gt: 7.939338684082031e-05
+min_points_in_gt duration time: 2.4557113647460938e-05
+flip duration time: 8.96453857421875e-05
+sample duration time: 0.04648089408874512
+rot&scal duration time: 0.0014934539794921875
+shape before: 13560
+shape after: 4010
+downsample duration time: 0.0010190010070800781
+shuffle duration time: 0.010905742645263672
+range crop duration time: 0.0021224021911621094
+data preprocess time: 0.061196088790893555 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-52-26-0400__LIDAR_TOP__1535658868049598.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'truck' 'bus'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172254.898432
+start to min_points_in_gt: 5.221366882324219e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 0.00010514259338378906
+sample duration time: 0.03316211700439453
+rot&scal duration time: 0.0012791156768798828
+shape before: 19353
+shape after: 5573
+downsample duration time: 0.00106048583984375
+shuffle duration time: 0.012997865676879883
+range crop duration time: 0.0019774436950683594
+data preprocess time: 0.049590110778808594 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-27-11-36-48+0800__LIDAR_TOP__1532662740898946.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['car' 'car' 'car' 'pedestrian' 'pedestrian' 'car' 'car' 'car' 'bus'
+ 'bicycle' 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172255.3922672
+start to min_points_in_gt: 5.817413330078125e-05
+min_points_in_gt duration time: 1.8358230590820312e-05
+flip duration time: 6.413459777832031e-05
+sample duration time: 0.01228475570678711
+rot&scal duration time: 0.0012423992156982422
+shape before: 14719
+shape after: 4402
+downsample duration time: 0.0008912086486816406
+shuffle duration time: 0.010198593139648438
+range crop duration time: 0.0016999244689941406
+data preprocess time: 0.02556633949279785 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-27-11-48-51-0400__LIDAR_TOP__1535385272150684.pcd.bin
+bbox3d_after_sample: 13
+bbox3d_label_after_sample: ['trailer' 'trailer' 'car' 'car' 'trailer' 'truck' 'car' 'bus' 'bicycle'
+ 'bicycle' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172255.9075828
+start to min_points_in_gt: 4.506111145019531e-05
+min_points_in_gt duration time: 1.5735626220703125e-05
+flip duration time: 6.246566772460938e-05
+sample duration time: 0.03126096725463867
+rot&scal duration time: 0.0013065338134765625
+shape before: 19473
+shape after: 5827
+downsample duration time: 0.0010800361633300781
+shuffle duration time: 0.013469219207763672
+range crop duration time: 0.0014634132385253906
+data preprocess time: 0.047623395919799805 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033996798151.pcd.bin
+bbox3d_after_sample: 9
+bbox3d_label_after_sample: ['pedestrian' 'car' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172256.3781831
+start to min_points_in_gt: 4.458427429199219e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 0.00022935867309570312
+sample duration time: 0.07046175003051758
+rot&scal duration time: 0.012404918670654297
+shape before: 61527
+shape after: 9353
+downsample duration time: 0.00424647331237793
+shuffle duration time: 0.05924797058105469
+range crop duration time: 0.001959562301635742
+data preprocess time: 0.14436626434326172 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/007197.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+t_start: 1600172256.8772528
+start to min_points_in_gt: 5.602836608886719e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 5.0067901611328125e-06
+sample duration time: 0.017393112182617188
+rot&scal duration time: 0.0014696121215820312
+shape before: 14050
+shape after: 3477
+downsample duration time: 0.0009918212890625
+shuffle duration time: 0.008783102035522461
+range crop duration time: 0.0022237300872802734
+data preprocess time: 0.029947757720947266 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-12-53-31-0400__LIDAR_TOP__1537290250298695.pcd.bin
+bbox3d_after_sample: 20
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'pedestrian' 'car' 'pedestrian' 'car'
+ 'traffic_cone' 'car' 'car' 'pedestrian' 'car' 'pedestrian' 'bus'
+ 'trailer' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172257.377348
+start to min_points_in_gt: 6.103515625e-05
+min_points_in_gt duration time: 2.3126602172851562e-05
+flip duration time: 0.00010538101196289062
+sample duration time: 0.013923883438110352
+rot&scal duration time: 0.0014452934265136719
+shape before: 21191
+shape after: 6437
+downsample duration time: 0.0012798309326171875
+shuffle duration time: 0.016779422760009766
+range crop duration time: 0.002274036407470703
+data preprocess time: 0.034612178802490234 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-29-16-04-13-0400__LIDAR_TOP__1535573581949473.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['car' 'bus' 'pedestrian' 'pedestrian' 'pedestrian' 'car' 'pedestrian'
+ 'pedestrian' 'bicycle' 'bicycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172258.574682
+start to min_points_in_gt: 9.775161743164062e-05
+min_points_in_gt duration time: 3.7670135498046875e-05
+flip duration time: 0.00013303756713867188
+sample duration time: 0.015751361846923828
+rot&scal duration time: 0.0009641647338867188
+shape before: 11694
+shape after: 2959
+downsample duration time: 0.000560760498046875
+shuffle duration time: 0.004477739334106445
+range crop duration time: 0.0009739398956298828
+data preprocess time: 0.022435665130615234 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-31-11-19-57-0400__LIDAR_TOP__1535729103047223.pcd.bin
+bbox3d_after_sample: 15
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'car' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172258.7134047
+start to min_points_in_gt: 4.8160552978515625e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 5.316734313964844e-05
+sample duration time: 0.013590574264526367
+rot&scal duration time: 0.0012471675872802734
+shape before: 19516
+shape after: 5618
+downsample duration time: 0.0009551048278808594
+shuffle duration time: 0.011598825454711914
+range crop duration time: 0.001485586166381836
+data preprocess time: 0.02803945541381836 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-07-26-12-13-50-0400__LIDAR_TOP__1532622152197712.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'pedestrian' 'pedestrian' 'pedestrian' 'car' 'pedestrian' 'bus'
+ 'bicycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172258.9578032
+start to min_points_in_gt: 9.107589721679688e-05
+min_points_in_gt duration time: 2.4557113647460938e-05
+flip duration time: 9.34600830078125e-05
+sample duration time: 0.07680511474609375
+rot&scal duration time: 0.0014488697052001953
+shape before: 21729
+shape after: 6375
+downsample duration time: 0.0012514591217041016
+shuffle duration time: 0.017479658126831055
+range crop duration time: 0.0017197132110595703
+data preprocess time: 0.09766244888305664 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-54-39-0400__LIDAR_TOP__1537297177649988.pcd.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'traffic_cone' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172259.3772175
+start to min_points_in_gt: 5.435943603515625e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 9.918212890625e-05
+sample duration time: 0.012545347213745117
+rot&scal duration time: 0.0014913082122802734
+shape before: 24948
+shape after: 7533
+downsample duration time: 0.00148773193359375
+shuffle duration time: 0.021007776260375977
+range crop duration time: 0.0025327205657958984
+data preprocess time: 0.03774690628051758 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-09-18-14-43-59-0400__LIDAR_TOP__1537296424150226.pcd.bin
+bbox3d_after_sample: 17
+bbox3d_label_after_sample: ['car' 'car' 'traffic_cone' 'trailer' 'car' 'traffic_cone' 'pedestrian'
+ 'pedestrian' 'car' 'traffic_cone' 'car' 'bus' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172259.8773289
+start to min_points_in_gt: 4.673004150390625e-05
+min_points_in_gt duration time: 1.621246337890625e-05
+flip duration time: 6.437301635742188e-05
+sample duration time: 0.021465778350830078
+rot&scal duration time: 0.001447439193725586
+shape before: 19479
+shape after: 5608
+downsample duration time: 0.0012264251708984375
+shuffle duration time: 0.015150308609008789
+range crop duration time: 0.0017464160919189453
+data preprocess time: 0.03993725776672363 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-08-30-15-16-55-0400__LIDAR_TOP__1535657146948893.pcd.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['truck' 'car' 'car' 'car' 'car' 'pedestrian' 'car' 'car' 'trailer'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172260.3774254
+start to min_points_in_gt: 5.698204040527344e-05
+min_points_in_gt duration time: 1.71661376953125e-05
+flip duration time: 5.0067901611328125e-06
+sample duration time: 0.03324317932128906
+rot&scal duration time: 0.0014679431915283203
+shape before: 14451
+shape after: 3928
+downsample duration time: 0.0010442733764648438
+shuffle duration time: 0.011062383651733398
+range crop duration time: 0.002201557159423828
+data preprocess time: 0.04805421829223633 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n008-2018-05-21-11-06-59-0400__LIDAR_TOP__1526915462447476.pcd.bin
+bbox3d_after_sample: 16
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'car' 'car' 'car' 'truck' 'car' 'car' 'car'
+ 'truck' 'bus' 'motorcycle' 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172260.8923087
+start to min_points_in_gt: 4.839897155761719e-05
+min_points_in_gt duration time: 2.3603439331054688e-05
+flip duration time: 0.00010943412780761719
+sample duration time: 0.010196924209594727
+rot&scal duration time: 0.0037457942962646484
+shape before: 20384
+shape after: 5954
+downsample duration time: 0.0011181831359863281
+shuffle duration time: 0.01571059226989746
+range crop duration time: 0.0016181468963623047
+data preprocess time: 0.03145289421081543 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-07-24-11-03-52+0800__LIDAR_TOP__1532401565446382.pcd.bin
+bbox3d_after_sample: 8
+bbox3d_label_after_sample: ['pedestrian' 'bus' 'bicycle' 'bicycle' 'motorcycle' 'motorcycle'
+ 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172261.392774
+start to min_points_in_gt: 4.1961669921875e-05
+min_points_in_gt duration time: 1.5974044799804688e-05
+flip duration time: 0.00010800361633300781
+sample duration time: 0.054891109466552734
+rot&scal duration time: 0.0014576911926269531
+shape before: 19773
+shape after: 5702
+downsample duration time: 0.0012471675872802734
+shuffle duration time: 0.015533685684204102
+range crop duration time: 0.0017266273498535156
+data preprocess time: 0.07377505302429199 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-27-15-33-17+0800__LIDAR_TOP__1538033714297367.pcd.bin
+bbox3d_after_sample: 12
+bbox3d_label_after_sample: ['pedestrian' 'bicycle' 'car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172261.879384
+start to min_points_in_gt: 9.036064147949219e-05
+min_points_in_gt duration time: 3.3855438232421875e-05
+flip duration time: 0.0004296302795410156
+sample duration time: 0.055988311767578125
+rot&scal duration time: 0.004334688186645508
+shape before: 55706
+shape after: 10140
+downsample duration time: 0.003784656524658203
+shuffle duration time: 0.029055118560791016
+range crop duration time: 0.0025708675384521484
+data preprocess time: 0.09250283241271973 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/007444.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'car' 'car' 'car' 'truck' 'trailer' 'bicycle' 'bicycle'
+ 'motorcycle' 'motorcycle']
+Publish!
+t_start: 1600172262.4023573
+start to min_points_in_gt: 0.000247955322265625
+min_points_in_gt duration time: 7.987022399902344e-05
+flip duration time: 0.00029349327087402344
+sample duration time: 0.038912057876586914
+rot&scal duration time: 0.002299070358276367
+shape before: 19161
+shape after: 5593
+downsample duration time: 0.0019807815551757812
+shuffle duration time: 0.019156217575073242
+range crop duration time: 0.0023119449615478516
+data preprocess time: 0.06330060958862305 
+===
+
+/home/dataset/nuScenes_DATASET/samples/LIDAR_TOP/n015-2018-09-25-11-10-38+0800__LIDAR_TOP__1537845421198278.pcd.bin
+bbox3d_after_sample: 14
+bbox3d_label_after_sample: ['motorcycle' 'pedestrian' 'pedestrian' 'car' 'truck' 'car' 'car'
+ 'pedestrian' 'bus' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle']
+Publish!
+t_start: 1600172262.91103
+start to min_points_in_gt: 5.793571472167969e-05
+min_points_in_gt duration time: 2.2172927856445312e-05
+flip duration time: 6.198883056640625e-06
+sample duration time: 0.038259267807006836
+rot&scal duration time: 0.004323720932006836
+shape before: 62573
+shape after: 11139
+downsample duration time: 0.0040874481201171875
+shuffle duration time: 0.03141331672668457
+range crop duration time: 0.002129077911376953
+data preprocess time: 0.07621169090270996 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/000758.bin
+bbox3d_after_sample: 10
+bbox3d_label_after_sample: ['car' 'truck' 'bus' 'trailer' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'pedestrian']
+Publish!
+t_start: 1600172263.406648
+start to min_points_in_gt: 5.364418029785156e-05
+min_points_in_gt duration time: 1.811981201171875e-05
+flip duration time: 0.00022339820861816406
+sample duration time: 0.02786111831665039
+rot&scal duration time: 0.011266469955444336
+shape before: 62844
+shape after: 9293
+downsample duration time: 0.005338907241821289
+shuffle duration time: 0.03465890884399414
+range crop duration time: 0.003356456756591797
+data preprocess time: 0.0774381160736084 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/004965.bin
+bbox3d_after_sample: 21
+bbox3d_label_after_sample: ['car' 'car' 'bicycle' 'truck' 'pedestrian' 'truck' 'car' 'car' 'car'
+ 'car' 'car' 'car' 'car' 'car' 'trailer' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'traffic_cone']
+Publish!
+t_start: 1600172263.8782423
+start to min_points_in_gt: 5.125999450683594e-05
+min_points_in_gt duration time: 1.9788742065429688e-05
+flip duration time: 0.0002281665802001953
+sample duration time: 0.0493464469909668
+rot&scal duration time: 0.007127046585083008
+shape before: 64150
+shape after: 10926
+downsample duration time: 0.0041959285736083984
+shuffle duration time: 0.028269529342651367
+range crop duration time: 0.0020737648010253906
+data preprocess time: 0.08711600303649902 
+===
+
+/home/dataset/KITTI_DATASET_NEW/object/training/velodyne/000406.bin
+bbox3d_after_sample: 11
+bbox3d_label_after_sample: ['car' 'car' 'truck' 'bicycle' 'bicycle' 'bicycle' 'motorcycle'
+ 'motorcycle' 'motorcycle' 'pedestrian' 'traffic_cone']
+Publish!
+... logging to /root/.ros/log/cc923ad2-f417-11ea-adc0-b42e99a9b026/roslaunch-2ada5494020f-7802.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/elodie/det3d_ros/src/det3d_pcl/launch/dispay_data_pipeline.launch
+[1mstarted roslaunch server http://172.17.0.2:42181/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+ * /view_data_pipeline/config_file: 0904Nuscenes_all_...
+ * /view_data_pipeline/config_root: /home/elodie/Det3...
+ * /view_data_pipeline/rate: 2.0
+ * /view_data_pipeline/view_voxel: False
+ * /view_data_pipeline/view_voxel_points: False
+ * /view_data_pipeline/voxel_features: False
+
+NODES
+  /
+    view_data_pipeline (det3d_pcl/view_data_pipeline.py)
+
+[1mROS_MASTER_URI=http://192.168.1.101:11311[0m
+]2;/home/elodie/det3d_ros/src/det3d_pcl/launch/dispay_data_pipeline.launch http://192.168.1.101:11311
+[1mprocess[view_data_pipeline-1]: started with pid [7811][0m
+[view_data_pipeline-1] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

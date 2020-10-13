@@ -16,7 +16,9 @@ from det3d.core.anchor.target_assigner import TargetAssigner
 
 from ..registry import PIPELINES
 
+from det3d.datasets.utils.pointcloud_sample_utils import *
 
+import time #elodie time
 def _dict_select(dict_, inds):
     for k, v in dict_.items():
         if isinstance(v, dict):
@@ -27,17 +29,21 @@ def _dict_select(dict_, inds):
 
 @PIPELINES.register_module
 class Preprocess(object):
-    def __init__(self, cfg=None, view_sampled_points=False, random_flip_switch=False, **kwargs):
+    def __init__(self, cfg=None, view_sampled_points=False, pc_range=None, **kwargs):
         self.view_sampled_points = view_sampled_points #elodie - change for sampled points visualization
         self.remove_environment = cfg.remove_environment
         self.shuffle_points = cfg.shuffle_points
         self.remove_unknown = cfg.remove_unknown_examples
+        self.pc_range = np.array(pc_range, dtype=np.float32)
+
+        self.downsample_to_16lines = cfg.get("downsample_to_16lines", True)
+        self.noise_per_object = cfg.get("noise_per_object", True)
         self.min_points_in_gt = cfg.get("min_points_in_gt", -1)
         self.add_rgb_to_points = cfg.get("add_rgb_to_points", False)
         self.reference_detections = cfg.get("reference_detections", None)
         self.remove_outside_points = cfg.get("remove_outside_points", False)
         self.random_crop = cfg.get("random_crop", False)
-        self.random_flip_switch = random_flip_switch
+        self.global_rotation_noise_kitti = cfg.get("global_rotation_noise_kitti", [0,0])
 
         self.mode = cfg.mode
         if self.mode == "train":
@@ -57,13 +63,20 @@ class Preprocess(object):
         self.symmetry_intensity = cfg.get("symmetry_intensity", False)
 
     def __call__(self, res, info):
+        # t_start = time.time() #elodie time
+        # print("t_start:",t_start) 
 
         res["mode"] = self.mode
 
         if res["type"] in ["KittiDataset", "LyftDataset"]:
             points = res["lidar"]["points"]
         elif res["type"] == "NuScenesDataset":
-            points = res["lidar"]["combined"]
+            if res["lidar"]["nsweeps"]>1:
+                points = res["lidar"]["combined"]
+            else:
+                points = res["lidar"]["points"]
+        else: # elodie 
+            points = res["lidar"]["points"]
 
         if self.mode == "train":
             anno_dict = res["lidar"]["annotations"]
@@ -72,6 +85,8 @@ class Preprocess(object):
                 "gt_boxes": anno_dict["boxes"],
                 "gt_names": np.array(anno_dict["names"]).reshape(-1),
             }
+            if "num_points_in_gt" in anno_dict: #elodie
+                gt_dict["num_points_in_gt"] = anno_dict["num_points_in_gt"].reshape(-1)
 
             if "difficulty" not in anno_dict:
                 difficulty = np.zeros([anno_dict["boxes"].shape[0]], dtype=np.int32)
@@ -84,7 +99,7 @@ class Preprocess(object):
         else:
             calib = None
 
-        if self.add_rgb_to_points:
+        if self.add_rgb_to_points: #False
             assert calib is not None and "image" in res
             image_path = res["image"]["image_path"]
             image = (
@@ -99,7 +114,7 @@ class Preprocess(object):
             points = np.concatenate([points, points_rgb], axis=1)
             num_point_features += 3
 
-        if self.reference_detections is not None:
+        if self.reference_detections is not None: #False
             assert calib is not None and "image" in res
             C, R, T = box_np_ops.projection_matrix_to_CRT_kitti(P2)
             frustums = box_np_ops.get_frustum_v2(reference_detections, C)
@@ -110,13 +125,13 @@ class Preprocess(object):
             masks = points_in_convex_polygon_3d_jit(points, surfaces)
             points = points[masks.any(-1)]
 
-        if self.remove_outside_points:
+        if self.remove_outside_points: #False 
             assert calib is not None
             image_shape = res["image"]["image_shape"]
             points = box_np_ops.remove_outside_points(
                 points, calib["rect"], calib["Trv2c"], calib["P2"], image_shape
             )
-        if self.remove_environment is True and self.mode == "train":
+        if self.remove_environment is True and self.mode == "train": #False
             selected = kitti.keep_arrays_by_name(gt_names, target_assigner.classes)
             _dict_select(gt_dict, selected)
             masks = box_np_ops.points_in_rbbox(points, gt_dict["gt_boxes"])
@@ -128,7 +143,7 @@ class Preprocess(object):
             ) #elodie change - add dontcare 20200803
 
             _dict_select(gt_dict, selected)
-            if self.remove_unknown:
+            if self.remove_unknown:  #False 
                 remove_mask = gt_dict["difficulty"] == -1
                 """
                 gt_boxes_remove = gt_boxes[remove_mask]
@@ -138,15 +153,48 @@ class Preprocess(object):
                 keep_mask = np.logical_not(remove_mask)
                 _dict_select(gt_dict, keep_mask)
             gt_dict.pop("difficulty")
+            
+            # t_min_points_in_gt_start = time.time() #elodie time 
+            # print("start to min_points_in_gt:",t_min_points_in_gt_start - t_start)
 
+            # ------------------------------MIN POINTS BOX FILTER1
             if self.min_points_in_gt > 0:
-                # points_count_rbbox takes 10ms with 10 sweeps nuscenes data
-                point_counts = box_np_ops.points_count_rbbox(
-                    points, gt_dict["gt_boxes"]
-                )
-                mask = point_counts >= min_points_in_gt
+                if "num_points_in_gt" in gt_dict: #elodie
+                    point_counts = gt_dict["num_points_in_gt"]
+                    gt_dict.pop("num_points_in_gt")
+                else:
+                    # points_count_rbbox takes 10ms with 10 sweeps nuscenes data
+                    point_counts = box_np_ops.points_count_rbbox(
+                        points, gt_dict["gt_boxes"]
+                    )
+                mask = point_counts >= self.min_points_in_gt
                 _dict_select(gt_dict, mask)
+            else:
+                gt_dict.pop("num_points_in_gt")
 
+            # t_flip_start = time.time() #elodie time 
+            # print("min_points_in_gt duration time:",t_flip_start - t_min_points_in_gt_start)
+
+            # ------------------------------X/Y AXIS FLIP
+            if "preprocess_type" in info: # elodie -change for data aug of data 20200905
+                if "x_flip" in info["preprocess_type"]:
+                    if "y_flip" in info["preprocess_type"]:
+                        gt_dict["gt_boxes"], points = prep.flip_XY(gt_dict["gt_boxes"], points,\
+                            x_filp_switch=info["preprocess_type"]["x_flip"], y_filp_switch=info["preprocess_type"]["y_flip"])
+                    else:
+                        gt_dict["gt_boxes"], points = prep.flip_XY(gt_dict["gt_boxes"], points,\
+                            x_filp_switch=info["preprocess_type"]["x_flip"], random_y_filp=True)   
+            else:
+                if res["type"] in ["NuScenesDataset"]:
+                    # double flip gives 3 map improvement for pointppillars on nuScenes 
+                    gt_dict["gt_boxes"], points = prep.random_flip_both(gt_dict["gt_boxes"], points)
+                else:
+                    gt_dict["gt_boxes"], points = prep.random_flip(gt_dict["gt_boxes"], points)
+
+            # t_gtsample_start = time.time() #elodie time 
+            # print("flip duration time:",t_gtsample_start - t_flip_start)
+
+            # ------------------------------GT SMPLER 
             gt_boxes_mask = np.array(
                 [n in self.class_names for n in gt_dict["gt_names"]], dtype=np.bool_
             )
@@ -179,21 +227,26 @@ class Preprocess(object):
                         [gt_boxes_mask, sampled_gt_masks], axis=0
                     )
 
-                    if self.remove_points_after_sample:
+                    if self.remove_points_after_sample: #滤除与sampled标注框位置想重的点
                         masks = box_np_ops.points_in_rbbox(points, sampled_gt_boxes)
                         points = points[np.logical_not(masks.any(-1))]
 
                     points = np.concatenate([sampled_points, points], axis=0)
-            prep.noise_per_object_v3_(
-                gt_dict["gt_boxes"],
-                points,
-                gt_boxes_mask,
-                rotation_perturb=self.gt_rotation_noise,
-                center_noise_std=self.gt_loc_noise_std,
-                global_random_rot_range=self.global_random_rot_range,
-                group_ids=None,
-                num_try=100,
-            )
+
+            # t_noiseobject_start = time.time() #elodie time 
+            # print("gt sample duration time:",t_noiseobject_start - t_gtsample_start)
+            # ------------------------------NOISE PER OBJECT 
+            if self.noise_per_object:
+                prep.noise_per_object_v3_(
+                    gt_dict["gt_boxes"],
+                    points,
+                    gt_boxes_mask,
+                    rotation_perturb=self.gt_rotation_noise,
+                    center_noise_std=self.gt_loc_noise_std,
+                    global_random_rot_range=self.global_random_rot_range,
+                    group_ids=None,
+                    num_try=100,
+                )
 
             _dict_select(gt_dict, gt_boxes_mask)
 
@@ -203,20 +256,76 @@ class Preprocess(object):
             )
             gt_dict["gt_classes"] = gt_classes
 
-            if self.random_flip_switch: # elodie -change for keeping front side of data 20200805
-                gt_dict["gt_boxes"], points = prep.random_flip(gt_dict["gt_boxes"], points)
-            
-            gt_dict["gt_boxes"], points = prep.global_rotation(
-                gt_dict["gt_boxes"], points, rotation=self.global_rotation_noise
-            )
+            # t_rotscal_start = time.time() #elodie time 
+            # print("noiseobject duration time:",t_rotscal_start - t_noiseobject_start)
+
+            # ------------------------------GLOBAL ROTATION & SCALING
+            if "data_type" in info and info["data_type"] == "kitti": #elodie
+                gt_dict["gt_boxes"], points = prep.global_rotation(
+                    gt_dict["gt_boxes"], points, rotation=self.global_rotation_noise_kitti
+                )
+            else:
+                gt_dict["gt_boxes"], points = prep.global_rotation(
+                    gt_dict["gt_boxes"], points, rotation=self.global_rotation_noise
+                )
+
             gt_dict["gt_boxes"], points = prep.global_scaling_v2(
                 gt_dict["gt_boxes"], points, *self.global_scaling_noise
             )
 
-        if self.shuffle_points:
-            # shuffle is a little slow.
-            np.random.shuffle(points)
+            # t_frontfilter_start = time.time() #elodie time 
+            # print("rot&scal duration time:",t_frontfilter_start - t_rotscal_start)
+            if self.pc_range[1] == 0:
+                points = points[points[:,1]>0]
 
+            # t_downsample_start = time.time() #elodie time 
+            # print("front range filter duration time:",t_downsample_start - t_frontfilter_start)
+
+        # ------------------------------DOWNSAMPLE/UPSAMPLE POINTCLOUD
+        if self.downsample_to_16lines and "preprocess_type" in info and info["preprocess_type"]["sample"]: # elodie -change for data aug of data 20200905
+            # print("shape before:",points.shape[0])
+            if info["data_type"] == "kitti":
+                points = downsample_kitti(points, verticle_switch=True, horizontal_switch=True)
+            if info["data_type"] == "nuscenes":
+                points = downsample_nusc_v2(points)
+                points = upsample_nusc_v1(points)
+            # print("shape after:",points.shape[0])
+
+        # t_filter_outrange_start = time.time() #elodie time 
+        # print("downsample duration time:",t_filter_outrange_start - t_downsample_start)
+
+        # ------------------------------FILTER POINT & BOX OUTSIDE RANGE
+        points = prep.filter_points_outside_range(points, self.pc_range)
+
+        if self.mode == "train" :
+            assert self.pc_range is not None, 'Preprocess: pc_range is None. \nRemove gtbox outside training range.'    
+
+            bv_range = self.pc_range[[0, 1, 3, 4]]
+
+            if bv_range[1] == 0: # elodie - only use front points
+                mask = prep.filter_gt_box_on_edge(gt_dict["gt_boxes"], bv_range)
+            else:
+                mask = prep.filter_gt_box_outside_range(gt_dict["gt_boxes"], bv_range)
+            _dict_select(gt_dict, mask)
+
+            # ------------------------------MIN POINTS BOX FILTER2
+            if bv_range[1] == 0:
+                point_counts = box_np_ops.points_count_rbbox(
+                        points, gt_dict["gt_boxes"]
+                    )
+
+                mask = point_counts >= self.min_points_in_gt
+                _dict_select(gt_dict, mask)
+        # t_shuffle_start = time.time() #elodie time 
+        # print("filter_outrange duration time:",t_shuffle_start - t_filter_outrange_start)
+
+        # ------------------------------SHUFFLE POINTS
+        if self.shuffle_points: # shuffle is a little slow.
+            np.random.shuffle(points)
+        # t_random_select_start = time.time() #elodie time 
+        # print("shuffle duration time:",t_random_select_start - t_shuffle_start)
+
+        # ------------------------------RANDOM SELECT
         if self.mode == "train" and self.random_select:
             if self.npoints < points.shape[0]:
                 pts_depth = points[:, 2]
@@ -246,15 +355,15 @@ class Preprocess(object):
 
         if self.symmetry_intensity:
             points[:, -1] -= 0.5  # translate intensity to [-0.5, 0.5]
-            # points[:, -1] *= 2
+
+        # t_end = time.time() #elodie time 
+        # print("random_select duration time:",t_end - t_random_select_start)
+        # print("data preprocess time:",t_end - t_start,"\n===\n")
+  
 
         res["lidar"]["points"] = points
 
         if self.mode == "train":
-            # if self.view_sampled_points: #elodie - change for sample box visualization
-            #     gt_dict["anno_boxes"] = np.array(anno_dict["boxes"])
-            #     gt_dict["anno_names"] = np.array(anno_dict["names"]).reshape(-1)
-            
             res["lidar"]["annotations"] = gt_dict
 
         return res, info
@@ -277,29 +386,29 @@ class Voxelization(object):
         )
 
     def __call__(self, res, info):
-        # [0, -40, -3, 70.4, 40, 1]
         voxel_size = self.voxel_generator.voxel_size
         pc_range = self.voxel_generator.point_cloud_range
         grid_size = self.voxel_generator.grid_size
-        # [352, 400]
 
         if res["mode"] == "train":
             gt_dict = res["lidar"]["annotations"]
-            bv_range = pc_range[[0, 1, 3, 4]]
-            mask = prep.filter_gt_box_outside_range(gt_dict["gt_boxes"], bv_range)
-            _dict_select(gt_dict, mask)
+            #  Remove gtbox outside training range. Part is remove to Preprocess.
+            # bv_range = pc_range[[0, 1, 3, 4]]
+            # if bv_range[1] == 0: # elodie - only use front points
+            #     mask = prep.filter_gt_box_on_edge(gt_dict["gt_boxes"], bv_range)
+            # else:
+            #     mask = prep.filter_gt_box_outside_range(gt_dict["gt_boxes"], bv_range)
+            # _dict_select(gt_dict, mask)
 
-            res["lidar"]["annotations"] = gt_dict
+            # res["lidar"]["annotations"] = gt_dict
 
-        # points = points[:int(points.shape[0] * 0.1), :]
+
         voxels, coordinates, num_points = self.voxel_generator.generate(
             res["lidar"]["points"]
         )
-#         print("\n\nvoxels:",voxels)
-#         print("voxels.shape[0]",voxels.shape[0],"\n\n\n\n\n\n")
+
         num_voxels = np.array([voxels.shape[0]], dtype=np.int64)
         
-#         print("num_voxels:",num_voxels)
         res["lidar"]["voxels"] = dict(
             voxels=voxels,
             coordinates=coordinates,

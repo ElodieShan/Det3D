@@ -4,16 +4,38 @@ import logging
 from det3d.builder import build_box_coder
 from det3d.utils.config_tool import get_downsample_factor
 
+# ------------ 20200930 ------------
+#   1. voxel size = [0.1m,0.1m,0.2m],range of z axis is [-5m, 3m].
+#   2. RPN filters num 128, num_input_features 256
+#   3. use yaw encode direction, use sin_loss+direction_offset
+#   4. train_preprocessor : shuffle_points=False
+# ------------------------------------
+
 # norm_cfg = dict(type='SyncBN', eps=1e-3, momentum=0.01)
 norm_cfg = None
 
+# dataset settings
+nsweeps = 1
+db_info_path = "/home/elodie/nuScenes_DATASET/pkl_mix/dbinfos_train_v2.pkl"
+train_anno = "/home/elodie/nuScenes_DATASET/pkl_mix/infos_train_v3.pkl"
+test_anno = None
+
+dataset_type = "NuScenesDataset"
+data_root = "/home/dataset/nuScenes_DATASET"
+val_anno = "/home/dataset/nuScenes_DATASET/pkl/infos_val_10sweeps_withvelo.pkl"
+
+kitti_dataset_type = "KittiDataset"
+kitti_data_root = "/home/dataset/KITTI_DATASET_NEW/object"
+kitti_val_anno = "/home/dataset/KITTI_DATASET_NEW/object/pkl/kitti_infos_val_formatnusc_feature5.pkl"
+kitti_train_anno = "/home/dataset/KITTI_DATASET_NEW/object/pkl/kitti_infos_train_formatnusc_feature5_v3.pkl"
+# db_info_path = "/home/dataset/KITTI_DATASET_NEW/object/pkl/dbinfos_train_axisnusc_feature5.pkl"
+
 tasks = [
     dict(num_class=1, class_names=["car"]),
-    dict(num_class=2, class_names=["truck", "construction_vehicle"]),
+    dict(num_class=1, class_names=["truck"]),
     dict(num_class=2, class_names=["bus", "trailer"]),
-    dict(num_class=1, class_names=["barrier"]),
-    dict(num_class=2, class_names=["motorcycle", "bicycle"]),
-    dict(num_class=2, class_names=["pedestrian", "traffic_cone"]),
+    dict(num_class=2, class_names=["bicycle", "motorcycle"]),
+    dict(num_class=2, class_names=["pedestrian","traffic_cone"]),
 ]
 
 class_names = list(itertools.chain(*[t["class_names"] for t in tasks]))
@@ -24,90 +46,63 @@ target_assigner = dict(
     anchor_generators=[
         dict(
             type="anchor_generator_range",
-            sizes=[1.97, 4.63, 1.74],
-            anchor_ranges=[-50.4, -50.4, -0.95, 50.4, 50.4, -0.95],
+            sizes=[1.96, 4.62, 1.73],
+            anchor_ranges=[-51.2, 0, -0.95, 51.2, 51.2, -0.95],
             rotations=[0, 1.57],
-            velocities=[0, 0],
             matched_threshold=0.6,
             unmatched_threshold=0.45,
             class_name="car",
         ),
         dict(
             type="anchor_generator_range",
-            sizes=[2.51, 6.93, 2.84],
-            anchor_ranges=[-50.4, -50.4, -0.40, 50.4, 50.4, -0.40],
+            sizes=[2.10,5.80,2.02],
+            anchor_ranges=[-51.2, 0, -0.40, 51.2, 51.2, -0.40],
             rotations=[0, 1.57],
-            velocities=[0, 0],
             matched_threshold=0.55,
             unmatched_threshold=0.4,
             class_name="truck",
         ),
         dict(
             type="anchor_generator_range",
-            sizes=[2.85, 6.37, 3.19],
-            anchor_ranges=[-50.4, -50.4, -0.225, 50.4, 50.4, -0.225],
+            sizes=[2.98,12.18,3.59],
+            anchor_ranges=[-51.2, 0, -0.085, 51.2, 51.2, -0.085],
             rotations=[0, 1.57],
-            velocities=[0, 0],
-            matched_threshold=0.5,
-            unmatched_threshold=0.35,
-            class_name="construction_vehicle",
-        ),
-        dict(
-            type="anchor_generator_range",
-            sizes=[2.94, 10.5, 3.47],
-            anchor_ranges=[-50.4, -50.4, -0.085, 50.4, 50.4, -0.085],
-            rotations=[0, 1.57],
-            velocities=[0, 0],
             matched_threshold=0.55,
             unmatched_threshold=0.4,
             class_name="bus",
         ),
         dict(
             type="anchor_generator_range",
-            sizes=[2.90, 12.29, 3.87],
-            anchor_ranges=[-50.4, -50.4, 0.115, 50.4, 50.4, 0.115],
+            sizes=[2.92,12.27,4.14],
+            anchor_ranges=[-51.2, 0, 0.115, 51.2, 51.2, 0.115],
             rotations=[0, 1.57],
-            velocities=[0, 0],
             matched_threshold=0.5,
             unmatched_threshold=0.35,
             class_name="trailer",
         ),
         dict(
             type="anchor_generator_range",
-            sizes=[2.53, 0.50, 0.98],
-            anchor_ranges=[-50.4, -50.4, -1.33, 50.4, 50.4, -1.33],
+            sizes=[0.70,1.59,1.11],
+            anchor_ranges=[-51.2, 0, -1.18, 51.2, 51.2, -1.18],
             rotations=[0, 1.57],
-            velocities=[0, 0],
-            matched_threshold=0.55,
-            unmatched_threshold=0.4,
-            class_name="barrier",
-        ),
-        dict(
-            type="anchor_generator_range",
-            sizes=[0.77, 2.11, 1.47],
-            anchor_ranges=[-50.4, -50.4, -1.085, 50.4, 50.4, -1.085],
-            rotations=[0, 1.57],
-            velocities=[0, 0],
-            matched_threshold=0.5,
-            unmatched_threshold=0.3,
-            class_name="motorcycle",
-        ),
-        dict(
-            type="anchor_generator_range",
-            sizes=[0.60, 1.70, 1.28],
-            anchor_ranges=[-50.4, -50.4, -1.18, 50.4, 50.4, -1.18],
-            rotations=[0, 1.57],
-            velocities=[0, 0],
             matched_threshold=0.5,
             unmatched_threshold=0.35,
             class_name="bicycle",
         ),
         dict(
             type="anchor_generator_range",
-            sizes=[0.67, 0.73, 1.77],
-            anchor_ranges=[-50.4, -50.4, -0.935, 50.4, 50.4, -0.935],
+            sizes=[0.80,1.96,1.31],
+            anchor_ranges=[-51.2, 0, -1.085, 51.2, 51.2, -1.085],
             rotations=[0, 1.57],
-            velocities=[0, 0],
+            matched_threshold=0.5,
+            unmatched_threshold=0.3,
+            class_name="motorcycle",
+        ),
+        dict(
+            type="anchor_generator_range",
+            sizes=[0.61,0.63,1.77],
+            anchor_ranges=[-51.2, 0, -0.935, 51.2, 51.2, -0.935],
+            rotations=[0, 1.57],
             matched_threshold=0.6,
             unmatched_threshold=0.4,
             class_name="pedestrian",
@@ -115,9 +110,8 @@ target_assigner = dict(
         dict(
             type="anchor_generator_range",
             sizes=[0.41, 0.41, 1.07],
-            anchor_ranges=[-50.4, -50.4, -1.285, 50.4, 50.4, -1.285],
+            anchor_ranges=[-51.2, 0, -1.285, 51.2, 51.2, -1.285],
             rotations=[0, 1.57],
-            velocities=[0, 0],
             matched_threshold=0.6,
             unmatched_threshold=0.4,
             class_name="traffic_cone",
@@ -131,7 +125,7 @@ target_assigner = dict(
 )
 
 box_coder = dict(
-    type="ground_box3d_coder", n_dim=9, linear_dim=False, encode_angle_vector=False,
+    type="ground_box3d_coder", n_dim=7, linear_dim=False, encode_angle_vector=False,
 )
 
 # model settings
@@ -140,18 +134,17 @@ model = dict(
     pretrained=None,
     reader=dict(
         type="VoxelFeatureExtractorV3",
-        # type='SimpleVoxel',
-        num_input_features=5,
+        num_input_features=3,
         norm_cfg=norm_cfg,
     ),
     backbone=dict(
-        type="SpMiddleResNetFHD", num_input_features=5, ds_factor=8, norm_cfg=norm_cfg,
+        type="SpMiddleResNetFHD", num_input_features=3, ds_factor=8, norm_cfg=norm_cfg,
     ),
     neck=dict(
         type="RPN",
         layer_nums=[5, 5],
         ds_layer_strides=[1, 2],
-        ds_num_filters=[128, 256],
+        ds_num_filters=[128, 256], 
         us_layer_strides=[1, 2],
         us_num_filters=[256, 256],
         num_input_features=256,
@@ -176,9 +169,9 @@ model = dict(
         loss_bbox=dict(
             type="WeightedSmoothL1Loss",
             sigma=3.0,
-            code_weights=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.2, 0.2, 1.0],
+            code_weights=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5],
             codewise=True,
-            loss_weight=1.0,
+            loss_weight=0.25,
         ),
         encode_rad_error_by_sin=True,
         loss_aux=dict(
@@ -197,7 +190,6 @@ assigner = dict(
     debug=False,
 )
 
-
 train_cfg = dict(assigner=assigner)
 
 test_cfg = dict(
@@ -205,48 +197,38 @@ test_cfg = dict(
         use_rotate_nms=True,
         use_multi_class_nms=False,
         nms_pre_max_size=1000,
-        nms_post_max_size=80,
+        nms_post_max_size=83,
         nms_iou_threshold=0.2,
     ),
     score_threshold=0.1,
-    post_center_limit_range=[-61.2, -61.2, -10.0, 61.2, 61.2, 10.0],
-    max_per_img=500,
+    post_center_limit_range=[-61.2, 0, -10.0, 61.2, 61.2, 10.0],
+    max_per_img=200,
 )
-
-# dataset settings
-dataset_type = "NuScenesDataset"
-n_sweeps = 10
-data_root = "/data/Datasets/nuScenes"
-
 db_sampler = dict(
     type="GT-AUG",
     enable=False,
-    db_info_path="/data/Datasets/nuScenes/dbinfos_train_10sweeps_withvelo.pkl",
+    db_info_path=db_info_path,
     sample_groups=[
         dict(car=2),
-        dict(truck=3),
-        dict(construction_vehicle=7),
-        dict(bus=4),
-        dict(trailer=6),
-        dict(barrier=2),
-        dict(motorcycle=6),
-        dict(bicycle=6),
-        dict(pedestrian=2),
-        dict(traffic_cone=2),
+        dict(truck=1),
+        dict(bus=1),
+        dict(trailer=1),
+        dict(bicycle=2),
+        dict(motorcycle=1),
+        dict(pedestrian=1),
+        dict(traffic_cone=1),
     ],
     db_prep_steps=[
         dict(
             filter_by_min_num_points=dict(
-                car=5,
-                truck=5,
-                bus=5,
-                trailer=5,
-                construction_vehicle=5,
-                traffic_cone=5,
-                barrier=5,
-                motorcycle=5,
-                bicycle=5,
+                car=8,
+                truck=10,
+                bus=10,
+                trailer=10,
+                bicycle=10,
+                motorcycle=10,
                 pedestrian=5,
+                traffic_cone=5,
             )
         ),
         dict(filter_by_difficulty=[-1],),
@@ -254,16 +236,20 @@ db_sampler = dict(
     global_random_rotation_range_per_object=[0, 0],
     rate=1.0,
 )
+
 train_preprocessor = dict(
     mode="train",
-    shuffle_points=True,
+    noise_per_object=False, #notice elodie
+    shuffle_points=False, #notice elodie - voxel size
+    min_points_in_gt=3, # notice elodie
     gt_loc_noise=[0.0, 0.0, 0.0],
     gt_rot_noise=[0.0, 0.0],
     global_rot_noise=[-0.3925, 0.3925],
+    global_rotation_noise_kitti = [-0.1745,0.1745],
     global_scale_noise=[0.95, 1.05],
     global_rot_per_obj_range=[0, 0],
     global_trans_noise=[0.2, 0.2, 0.2],
-    remove_points_after_sample=False,
+    remove_points_after_sample=True,
     gt_drop_percentage=0.0,
     gt_drop_max_keep_points=15,
     remove_unknown_examples=False,
@@ -280,7 +266,7 @@ val_preprocessor = dict(
 )
 
 voxel_generator = dict(
-    range=[-50.4, -50.4, -5.0, 50.4, 50.4, 3.0],
+    range=[-51.2, 0, -5.0, 51.2, 51.2, 3.0],
     voxel_size=[0.1, 0.1, 0.2],
     max_points_in_voxel=10,
     max_voxel_num=60000,
@@ -289,7 +275,7 @@ voxel_generator = dict(
 train_pipeline = [
     dict(type="LoadPointCloudFromFile", dataset=dataset_type),
     dict(type="LoadPointCloudAnnotations", with_bbox=True),
-    dict(type="Preprocess", cfg=train_preprocessor),
+    dict(type="Preprocess", cfg=train_preprocessor, pc_range=voxel_generator["range"]),
     dict(type="Voxelization", cfg=voxel_generator),
     dict(type="AssignTarget", cfg=train_cfg["assigner"]),
     dict(type="Reformat"),
@@ -298,25 +284,21 @@ train_pipeline = [
 test_pipeline = [
     dict(type="LoadPointCloudFromFile", dataset=dataset_type),
     dict(type="LoadPointCloudAnnotations", with_bbox=True),
-    dict(type="Preprocess", cfg=val_preprocessor),
+    dict(type="Preprocess", cfg=val_preprocessor, pc_range=voxel_generator["range"]),
     dict(type="Voxelization", cfg=voxel_generator),
     dict(type="AssignTarget", cfg=train_cfg["assigner"]),
     dict(type="Reformat"),
 ]
 
-train_anno = "/data/Datasets/nuScenes/infos_train_10sweeps_withvelo.pkl"
-val_anno = "/data/Datasets/nuScenes/infos_val_10sweeps_withvelo.pkl"
-test_anno = None
-
 data = dict(
-    samples_per_gpu=4,
-    workers_per_gpu=2,
+    samples_per_gpu=8,
+    workers_per_gpu=4,
     train=dict(
         type=dataset_type,
         root_path=data_root,
         info_path=train_anno,
         ann_file=train_anno,
-        n_sweeps=n_sweeps,
+        nsweeps=nsweeps,
         class_names=class_names,
         pipeline=train_pipeline,
     ),
@@ -326,7 +308,7 @@ data = dict(
         info_path=val_anno,
         test_mode=True,
         ann_file=val_anno,
-        n_sweeps=n_sweeps,
+        nsweeps=nsweeps,
         class_names=class_names,
         pipeline=test_pipeline,
     ),
@@ -335,7 +317,7 @@ data = dict(
         root_path=data_root,
         info_path=test_anno,
         ann_file=test_anno,
-        n_sweeps=n_sweeps,
+        nsweeps=nsweeps,
         class_names=class_names,
         pipeline=test_pipeline,
     ),
@@ -343,16 +325,17 @@ data = dict(
 
 # optimizer
 optimizer = dict(
-    type="adam", amsgrad=0.0, wd=0.01, fixed_wd=True, moving_average=False,
+    TYPE="adam",
+    VALUE=dict(amsgrad=0.0, wd=0.01),
+    FIXED_WD=True,
+    MOVING_AVERAGE=False,
 )
-
 """training hooks """
 optimizer_config = dict(grad_clip=dict(max_norm=35, norm_type=2))
 # learning policy in training hooks
 lr_config = dict(
-    type="one_cycle", lr_max=0.001, moms=[0.95, 0.85], div_factor=10.0, pct_start=0.4,
+    type="one_cycle", lr_max=0.002, moms=[0.95, 0.85], div_factor=10.0, pct_start=0.4,
 )
-
 checkpoint_config = dict(interval=1)
 # yapf:disable
 log_config = dict(
@@ -368,7 +351,7 @@ total_epochs = 20
 device_ids = range(8)
 dist_params = dict(backend="nccl", init_method="env://")
 log_level = "INFO"
-work_dir = "/data/Outputs/MegDet3D_Outputs/SECOND_NUSC"
+work_dir = "/home/elodie/det3D_Output/SECOND_NUSC"
 load_from = None
 resume_from = None
 workflow = [("train", 1), ("val", 1)]

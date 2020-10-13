@@ -75,7 +75,7 @@ class DataBaseSamplerV2:
                             info_dict[group_name] += 1
                         else:
                             info_dict[group_name] = 1
-                print(info_dict)
+                # print(info_dict)
 
         self._sampler_dict = {}
         for k, v in self._group_db_infos.items():
@@ -104,10 +104,6 @@ class DataBaseSamplerV2:
         gt_group_ids=None,
         calib=None,
     ):
-        if gt_boxes.shape[1] == 9:#elodie
-            gt_boxes = np.delete(gt_boxes,6,axis=1)#elodie
-            gt_boxes = np.delete(gt_boxes,6,axis=1)#elodie
-
         sampled_num_dict = {}
         sample_num_per_class = []
         for class_name, max_sample_num in zip(
@@ -138,11 +134,12 @@ class DataBaseSamplerV2:
 
         for class_name, sampled_num in zip(sampled_groups, sample_num_per_class):
             if sampled_num > 0:
+
                 if self._use_group_sampling:
                     sampled_cls = self.sample_group(
                         class_name, sampled_num, avoid_coll_boxes, total_group_ids
                     )
-                else:
+                else: # elodie 20200915 add gt_names
                     sampled_cls = self.sample_class_v2(
                         class_name, sampled_num, avoid_coll_boxes
                     )
@@ -276,9 +273,10 @@ class DataBaseSamplerV2:
             ret = self._sampler_dict[name].sample(num)
             return ret, np.ones((len(ret),), dtype=np.int64)
 
-    def sample_class_v2(self, name, num, gt_boxes):
+    def sample_class_v2(self, name, num, gt_boxes, gt_names=None): #elodie add gt_name
         sampled = self._sampler_dict[name].sample(num)
         sampled = copy.deepcopy(sampled)
+
         num_gt = gt_boxes.shape[0]
         num_sampled = len(sampled)
         gt_boxes_bv = box_np_ops.center_to_corner_box2d(
@@ -309,6 +307,7 @@ class DataBaseSamplerV2:
         diag = np.arange(total_bv.shape[0])
         coll_mat[diag, diag] = False
 
+        # gt_box_z_center = np.mean(gt_boxes[gt_names==name][:,2]) #elodie
         valid_samples = []
         for i in range(num_gt, num_gt + num_sampled):
             if coll_mat[i].any():
@@ -321,6 +320,7 @@ class DataBaseSamplerV2:
                     sampled[i - num_gt]["rot_transform"] = (
                         boxes[i, -1] - sp_boxes[i - num_gt, -1]
                     )
+                # if abs(sampled[i - num_gt]['box3d_lidar'][2] - gt_box_z_center)<0.3: #elodie
                 valid_samples.append(sampled[i - num_gt])
         return valid_samples
 

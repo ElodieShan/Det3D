@@ -50,6 +50,7 @@ def clean_data(gt_anno, dt_anno, current_class, difficulty):
         "barrier",
         "traffic_cone",
         "cyclist",
+        "van",
     ]
     MIN_HEIGHT = [40, 25, 25]
     MAX_OCCLUSION = [0, 1, 2]

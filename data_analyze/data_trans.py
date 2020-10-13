@@ -756,6 +756,21 @@ if __name__ == '__main__':
     # print("len nusc_infos",len(nusc_infos))
     # create_flip_image_dataset(nusc_infos, new_dataset_root, new_info_path, sample_switch=True, create_pcd=True)
 
+    #-----------------------NUSC Val Back Sample
+    # nusc_val_path = "/home/elodie/nuScenes_DATASET/pkl/infos_val_10sweeps_withvelo.pkl"
+    # back_token_path = "/home/dataset/nuScenes_DATASET/pkl/val_back_box_token.pkl"
+    # with open(nusc_val_path, "rb") as f:
+    #     nusc_infos = pickle.load(f)
+    # back_box_sample =[] 
+    # for info in nusc_infos:
+    #     gt_boxes = info["gt_boxes"]
+    #     gt_boxes_token = info["gt_boxes_token"]
+    #     back_box_mask = filter_boxes(gt_boxes, filter_back=True)
+    #     back_box_sample += gt_boxes_token[~back_box_mask].tolist()
+    # with open(back_token_path,"wb") as f:
+    #     pickle.dump(back_box_sample, f)
+
+
     #-----------------------NUSC GT Sample
     # nusc_db_root = "/home/elodie/nuScenes_DATASET/"
     # nusc_db_infos_path = "/home/elodie/nuScenes_DATASET/pkl/dbinfos_train_1sweeps_withvelo.pkl"
@@ -791,35 +806,35 @@ if __name__ == '__main__':
     #     pickle.dump(kitti_infos, f)
     #-----------------------KITTI Val
     # kitti_path = "/home/elodie/KITTI_DATASET/object/kitti_infos_val.pkl"
-    new_info_path = "/home/elodie/KITTI_DATASET_NEW/object/kitti_infos_val_kitti.pkl"
+    # new_info_path = "/home/elodie/KITTI_DATASET_NEW/object/kitti_infos_val_kitti.pkl"
     # with open(kitti_path, "rb") as f:
     #     kitti_infos = pickle.load(f)
     # print("len kitti_infos",len(kitti_infos))
     # create_dataset_kitti2nusc_format(kitti_infos, new_info_path,
     #     point_feature_num=4, sample_switch=True, image_switch=False, create_pcd=False)
 
-    with open(new_info_path, "rb") as f:
-        kitti_infos = pickle.load(f)
-    kitti_infos_new = []
-    for i in tqdm(range(len(kitti_infos))):
-        info = kitti_infos[i]
+    # with open(new_info_path, "rb") as f:
+    #     kitti_infos = pickle.load(f)
+    # kitti_infos_new = []
+    # for i in tqdm(range(len(kitti_infos))):
+    #     info = kitti_infos[i]
         
-        nonezero_points_inbox_mask = np.where(info["num_points_in_gt"]>0)
-        if np.array(nonezero_points_inbox_mask).shape[1]<info["num_points_in_gt"].shape[0]:
-            print(np.array(nonezero_points_inbox_mask).shape[0])
-            print(info["num_points_in_gt"].shape[0])
-            print("index:",i)
-            print("Find Zeros")
-            print(info["num_points_in_gt"])
-            # print("annos:",info["annos"])
-            for k,v in info["annos"].items():
-                info["annos"][k] = info["annos"][k][nonezero_points_inbox_mask]
-            info["gt_boxes"] = info["gt_boxes"][nonezero_points_inbox_mask]
-            info["gt_names"] = info["gt_names"][nonezero_points_inbox_mask]
-            info["num_points_in_gt"] = info["num_points_in_gt"][nonezero_points_inbox_mask]
-        kitti_infos_new.append(info)
-    with open(new_info_path, "wb") as f:
-        pickle.dump(kitti_infos, f)
+    #     nonezero_points_inbox_mask = np.where(info["num_points_in_gt"]>0)
+    #     if np.array(nonezero_points_inbox_mask).shape[1]<info["num_points_in_gt"].shape[0]:
+    #         print(np.array(nonezero_points_inbox_mask).shape[0])
+    #         print(info["num_points_in_gt"].shape[0])
+    #         print("index:",i)
+    #         print("Find Zeros")
+    #         print(info["num_points_in_gt"])
+    #         # print("annos:",info["annos"])
+    #         for k,v in info["annos"].items():
+    #             info["annos"][k] = info["annos"][k][nonezero_points_inbox_mask]
+    #         info["gt_boxes"] = info["gt_boxes"][nonezero_points_inbox_mask]
+    #         info["gt_names"] = info["gt_names"][nonezero_points_inbox_mask]
+    #         info["num_points_in_gt"] = info["num_points_in_gt"][nonezero_points_inbox_mask]
+    #     kitti_infos_new.append(info)
+    # with open(new_info_path, "wb") as f:
+    #     pickle.dump(kitti_infos, f)
     #-----------------------KITTI Ground Truth DataBase
     # kitti_db_infos_path = "/home/elodie/KITTI_DATASET/object/dbinfos_train.pkl"
     # new_info_path =  "/home/elodie/KITTI_DATASET_NEW/object/dbinfos_train_sample_20200825.pkl"

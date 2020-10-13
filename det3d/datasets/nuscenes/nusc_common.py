@@ -225,10 +225,15 @@ def _second_det_to_nusc_box(detection):
     labels = detection["label_preds"].detach().cpu().numpy()
     box3d[:, -1] = -box3d[:, -1] - np.pi / 2
     box_list = []
+    use_velo = True #elodie 202020916
+    if box3d.shape[1] != 9:
+        use_velo = False
     for i in range(box3d.shape[0]):
         quat = Quaternion(axis=[0, 0, 1], radians=box3d[i, -1])
-#         velocity = (*box3d[i, 6:8], 0.0)
-        velocity = (np.nan, np.nan, np.nan) #elodie
+        if use_velo: #elodie 202020916
+            velocity = (*box3d[i, 6:8], 0.0)
+        else:
+            velocity = (0.0, 0.0, 0.0)
         box = Box(
             box3d[i, :3],
             box3d[i, 3:6],
@@ -481,35 +486,14 @@ def _fill_trainval_infos(nusc, train_scenes, val_scenes, test=False, nsweeps=10)
             len(info["sweeps"]) == nsweeps - 1
         ), f"sweep {curr_sd_rec['token']} only has {len(info['sweeps'])} sweeps, you should duplicate to sweep num {nsweeps-1}"
         """ read from api """
-        # sd_record = nusc.get('sample_data', sample['data']['LIDAR_TOP'])
-        #
-        # # Get boxes in lidar frame.
-        # lidar_path, boxes, cam_intrinsic = nusc.get_sample_data(
-        #     sample['data']['LIDAR_TOP'])
-        #
-        # # Get aggregated point cloud in lidar frame.
-        # sample_rec = nusc.get('sample', sd_record['sample_token'])
-        # chan = sd_record['channel']
-        # ref_chan = 'LIDAR_TOP'
-        # pc, times = LidarPointCloud.from_file_multisweep(nusc,
-        #                                                  sample_rec,
-        #                                                  chan,
-        #                                                  ref_chan,
-        #                                                  nsweeps=nsweeps)
-        # lidar_path = osp.join(nusc.dataroot, "sample_10sweeps/LIDAR_TOP",
-        #                       sample['data']['LIDAR_TOP'] + ".bin")
-        # pc.points.astype('float32').tofile(open(lidar_path, "wb"))
-        #
-        # info = {
-        #     "lidar_path": lidar_path,
-        #     "token": sample["token"],
-        #     # "timestamp": times,
-        # }
 
         if not test:
             annotations = [
                 nusc.get("sample_annotation", token) for token in sample["anns"]
             ]
+
+            # the filtering gives 0.5~1 map improvement
+            mask = np.array([(anno['num_lidar_pts'] + anno['num_radar_pts'])>0 for anno in annotations], dtype=bool).reshape(-1)
 
             locs = np.array([b.center for b in ref_boxes]).reshape(-1, 3)
             dims = np.array([b.wlh for b in ref_boxes]).reshape(-1, 3)
@@ -527,10 +511,13 @@ def _fill_trainval_infos(nusc, train_scenes, val_scenes, test=False, nsweeps=10)
 
             assert len(annotations) == len(gt_boxes) == len(velocity)
 
-            info["gt_boxes"] = gt_boxes
-            info["gt_boxes_velocity"] = velocity
-            info["gt_names"] = np.array([general_to_detection[name] for name in names])
-            info["gt_boxes_token"] = tokens
+            info["gt_boxes"] = gt_boxes[mask, :]
+            info["gt_boxes_velocity"] = velocity[mask, :]
+            info["gt_names"] = np.array([general_to_detection[name] for name in names])[mask]
+            info["gt_boxes_token"] = tokens[mask]
+
+            info['num_lidar_pts'] = num_lidar_pts[mask] # elode 20200925 - refer openpcdet
+            info['num_radar_pts'] = num_radar_pts[mask] # elode 20200925 - refer openpcdet
 
         if sample["scene_token"] in train_scenes:
             train_nusc_infos.append(info)
@@ -694,10 +681,12 @@ def get_box_mean(info_path, class_name="vehicle.car"):
     print(gt_boxes_list.mean(0))
 
 
-def eval_main(nusc, eval_version, res_path, eval_set, output_dir):
+def eval_main(nusc, eval_version, res_path, eval_set, output_dir, use_velo=True, only_front=False, unused_token_path=None): # add use_velo - elodie 20200905
     # nusc = NuScenes(version=version, dataroot=str(root_path), verbose=True)
     cfg = config_factory(eval_version)
-
+    unused_token_path = "/home/dataset/nuScenes_DATASET/pkl/val_back_box_token.pkl"
+    use_velo=False
+    only_front=True
     nusc_eval = NuScenesEval(
         nusc,
         config=cfg,
@@ -705,5 +694,8 @@ def eval_main(nusc, eval_version, res_path, eval_set, output_dir):
         eval_set=eval_set,
         output_dir=output_dir,
         verbose=True,
+        use_velo=use_velo,
+        only_front=only_front,
+        unused_token_path=unused_token_path,
     )
     metrics_summary = nusc_eval.main(plot_examples=10,)

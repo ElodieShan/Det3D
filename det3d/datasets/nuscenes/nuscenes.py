@@ -32,7 +32,7 @@ class NuScenesDataset(PointCloudDataset):
         self,
         info_path,
         root_path,
-        nsweeps=1,
+        nsweeps=0,  # catch sweep mistake 
         cfg=None,
         pipeline=None,
         class_names=None,
@@ -79,7 +79,8 @@ class NuScenesDataset(PointCloudDataset):
 
             duplicated_samples = sum([len(v) for _, v in _cls_infos.items()])
             _cls_dist = {k: len(v) / duplicated_samples for k, v in _cls_infos.items()}
-
+            print("duplicated_samples:",duplicated_samples)
+            print("_cls_dist:",_cls_dist)
             self._nusc_infos = []
 
             frac = 1.0 / len(self._class_names)
@@ -99,6 +100,7 @@ class NuScenesDataset(PointCloudDataset):
             _cls_dist = {
                 k: len(v) / len(self._nusc_infos) for k, v in _cls_infos.items()
             }
+            # print("_cls_dist:",_cls_dist)
         else:
             if isinstance(_nusc_infos_all, dict):
                 self._nusc_infos = []
@@ -124,8 +126,8 @@ class NuScenesDataset(PointCloudDataset):
             gt_names = np.array(info["gt_names"])
             gt_boxes = info["gt_boxes"]
             # mask_used = ['car', 'pedestrian', 'bicycle'] #elodie
-            mask = np.array([n != "ignore" for n in gt_names], dtype=np.bool_) #elodie
             # mask = np.array([n in mask_used for n in gt_names], dtype=np.bool_)#elodie
+            mask = np.array([n != "ignore" for n in gt_names], dtype=np.bool_) #elodie
             gt_names = gt_names[mask]
             gt_boxes = gt_boxes[mask]
             # det_range = np.array([cls_range_map[n] for n in gt_names_mapped])
@@ -134,6 +136,7 @@ class NuScenesDataset(PointCloudDataset):
             mask = (gt_boxes[:, :2] >= det_range[:, :2]).all(1)
             mask &= (gt_boxes[:, :2] <= det_range[:, 2:]).all(1)
             N = int(np.sum(mask))
+
             gt_annos.append(
                 {
                     "bbox": np.tile(np.array([[0, 0, 50, 50]]), [N, 1]),
@@ -179,7 +182,7 @@ class NuScenesDataset(PointCloudDataset):
     def __getitem__(self, idx):
         return self.get_sensor_data(idx)
 
-    def evaluation(self, detections, output_dir=None, testset=False):
+    def evaluation(self, detections, output_dir=None, testset=False, use_velo=True, only_front=False): # add use_velo - elodie 20200905
         version = self.version
         eval_set_map = {
             "v1.0-mini": "mini_val",
@@ -198,6 +201,8 @@ class NuScenesDataset(PointCloudDataset):
                     dets.append(detections[gt["token"]])
                 except Exception:
                     miss += 1
+                # print("gt:",gt["token"])
+                # print(dets[-1])    
 
             assert miss == 0
         else:
@@ -284,6 +289,7 @@ class NuScenesDataset(PointCloudDataset):
                 res_path,
                 eval_set_map[self.version],
                 output_dir,
+                use_velo, #elodie
             )
 
             with open(Path(output_dir) / "metrics_summary.json", "r") as f:

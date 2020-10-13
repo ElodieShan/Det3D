@@ -1,7 +1,7 @@
 import numpy as np
 from pointcloud_utils import *
 
-def downsample_kitti(points):
+def add_ring_feature_kitti(points):
     if points.shape[1] == 4: # add feature ring
         horizontal_angles = get_horizontal_angle(points[:,0],points[:,1])
         ring = 1
@@ -11,6 +11,10 @@ def downsample_kitti(points):
                 ring += 1
             ring_list.append(ring)
         points = np.hstack((points, np.array(ring_list).reshape(-1,1)))
+    return points
+
+def downsample_kitti(points):
+    points = add_ring_feature_kitti(points)
     if points.shape[1] == 5:
         ring_remained = [33, 32, 29, 27, 25, 23, 21, 19, 16, 14, 12, 10, 8, 6, 4, 2]
         points_mask = np.array([point[-1] in ring_remained for point in points], dtype=np.bool_)

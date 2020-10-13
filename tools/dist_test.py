@@ -166,44 +166,38 @@ def main():
 
     predictions = {}
     for p in all_predictions:
-        for k,v in p.items():
-            new_box3d_lidar = lidar_box_nusc2kitti(v['box3d_lidar'])
-            p[k]['box3d_lidar']=new_box3d_lidar
+        # if cfg.dataset_type == "KittiDataset": # change for new kitti dataset elodie
+        #     for k,v in p.items():
+        #         new_box3d_lidar = lidar_box_nusc2kitti(v['box3d_lidar'])
+        #         p[k]['box3d_lidar']=new_box3d_lidar
+        if cfg.dataset_type == "NuScenesDataset":
+            if cfg.box_coder["n_dim"] == 7:
+                for k,v in p.items():
+                    p[k]['box3d_lidar'] = np.insert(p[k]['box3d_lidar'],6,np.zeros(p[k]['box3d_lidar'].shape[0]),1)
+                    p[k]['box3d_lidar'] = np.insert(p[k]['box3d_lidar'],6,np.zeros(p[k]['box3d_lidar'].shape[0]),1)
+                    # p[k]['box3d_lidar']=new_box3d_lidar
         predictions.update(p)
-
-    result_dict, dt_annos = dataset.evaluation(predictions, output_dir=args.work_dir)
-
+    if cfg.dataset_type == "NuScenesDataset":
+        result_dict, dt_annos = dataset.evaluation(predictions, output_dir=args.work_dir, use_velo=False, only_front=True)
+    else:
+        result_dict, dt_annos = dataset.evaluation(predictions, output_dir=args.work_dir)
     for k, v in result_dict["results"].items():
         print(f"Evaluation {k}: {v}")
 
     # if args.txt_result:
-    #     # res_dir = os.path.join(os.getcwd(), "predictions")
     #     res_dir = "/home/elodie/Dataset_Pred/" + cfg.dataset_type + "-" + args.work_dir.split('/')[-1].strip()
     #     if not os.path.exists(res_dir):
     #         os.makedirs(res_dir)
     #         print("Create dir: ", res_dir)
-    #     for k, dt in predictions.items():
+    #     for i in range(len(dt_annos)): #elodie
+    #         dt = dt_annos[i]
     #         with open(
     #             os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
     #         ) as fout:
-    #             print("k:",k,"\ndt:",dt)
+    #             # print(dt)
     #             lines = kitti.annos_to_kitti_label(dt)
     #             for line in lines:
     #                 fout.write(line + "\n")
-    if args.txt_result:
-        res_dir = "/home/elodie/Dataset_Pred/" + cfg.dataset_type + "-" + args.work_dir.split('/')[-1].strip()
-        if not os.path.exists(res_dir):
-            os.makedirs(res_dir)
-            print("Create dir: ", res_dir)
-        for i in range(len(dt_annos)): #elodie
-            dt = dt_annos[i]
-            with open(
-                os.path.join(res_dir, "%06d.txt" % int(dt["metadata"]["token"])), "w"
-            ) as fout:
-                # print(dt)
-                lines = kitti.annos_to_kitti_label(dt)
-                for line in lines:
-                    fout.write(line + "\n")
         # ap_result_str, ap_dict = kitti_evaluate(
         #     "/home/elodie/KITTI_DATASET/object/training/label_2",
         #     res_dir,

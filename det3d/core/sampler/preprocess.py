@@ -39,7 +39,6 @@ class BatchSampler:
         else:
             ret = self._indices[self._idx : self._idx + num]
             self._idx += num
-
         return ret
 
     def _reset(self):
@@ -130,6 +129,38 @@ def random_crop_frustum(
 
     return frustums
 
+####    
+# @function:filter_points_outside_range() - elodie
+###
+def filter_points_outside_range(points, limit_range):
+    mask = (points[:, 0] >= limit_range[0]) & (points[:, 0] <= limit_range[3]) \
+           & (points[:, 1] >= limit_range[1]) & (points[:, 1] <= limit_range[4])
+    # mask = np.all((points[:,0]>bv_range[0],points[:,0]<bv_range[2],points[:,1]>bv_range[1],points[:,1]<bv_range[3]),axis=0)
+    return points[mask]
+
+####    
+# @function:filter_boxes() - elodie
+# @brief: 根据box中心点的y轴坐标是否大于0或是否露出1/3的物体或框的边界点最大y值是否大于1m来保留标注框
+###
+def filter_gt_box_on_edge(gt_boxes, limit_range):
+    gt_boxes_bv = box_np_ops.center_to_corner_box2d(
+        gt_boxes[:, [0, 1]], gt_boxes[:, [3, 3 + 1]], gt_boxes[:, -1]
+    )
+    bounding_box = box_np_ops.minmax_to_corner_2d(
+        np.asarray(limit_range)[np.newaxis, ...]
+    )
+    ret = points_in_convex_polygon_jit(gt_boxes_bv.reshape(-1, 2), bounding_box)
+    ret = np.any(ret.reshape(-1, 4), axis=1)
+    
+    gt_box_centers = gt_boxes[:, :2]
+    gt_boxes_corner_max_y = [np.max(corner[:,1])for corner in gt_boxes_bv]
+    box_mask = np.array([gt_box_centers[i][1] > 0 or \
+        (gt_boxes_corner_max_y[i]>1 or\
+        (gt_boxes_corner_max_y[i]>0 and gt_boxes_corner_max_y[i]/(gt_box_centers[i][1] + gt_boxes_corner_max_y[i])>1/3)) \
+        for i in range(len(gt_boxes_bv))], dtype=np.bool_) #y轴点大于0
+
+    box_mask = np.all(np.vstack((box_mask,ret)), axis=0)
+    return box_mask
 
 def filter_gt_box_outside_range(gt_boxes, limit_range):
     """remove gtbox outside training range.
@@ -146,7 +177,6 @@ def filter_gt_box_outside_range(gt_boxes, limit_range):
     )
     ret = points_in_convex_polygon_jit(gt_boxes_bv.reshape(-1, 2), bounding_box)
     return np.any(ret.reshape(-1, 4), axis=1)
-
 
 def filter_gt_box_outside_range_by_center(gt_boxes, limit_range):
     """remove gtbox outside training range.
@@ -826,6 +856,61 @@ def random_flip(gt_boxes, points, probability=0.5):
             gt_boxes[:, 7] = -gt_boxes[:, 7]
     return gt_boxes, points
 
+
+def random_flip_both(gt_boxes, points, probability=0.5):
+    # x flip 
+    enable = np.random.choice(
+        [False, True], replace=False, p=[1 - probability, probability]
+    )
+    if enable:
+        gt_boxes[:, 1] = -gt_boxes[:, 1]
+        gt_boxes[:, -1] = -gt_boxes[:, -1] + np.pi
+        points[:, 1] = -points[:, 1]
+        if gt_boxes.shape[1] > 7:  
+            gt_boxes[:, 7] = -gt_boxes[:, 7]
+
+    # y flip 
+    enable = np.random.choice(
+        [False, True], replace=False, p=[1 - probability, probability]
+    )
+    if enable:
+        gt_boxes[:, 0] = -gt_boxes[:, 0]
+        points[:, 0] = -points[:, 0]
+
+        gt_boxes[:, -1] = -gt_boxes[:, -1] + 2*np.pi  
+
+        if gt_boxes.shape[1] > 7: 
+            gt_boxes[:, 6] = -gt_boxes[:, 6]
+
+    return gt_boxes, points
+
+# @brief aug data.. switch is set in info, elodie
+
+def flip_XY(gt_boxes, points, x_filp_switch=False, y_filp_switch=False, random_y_filp=False, probability=0.5):
+    # x flip 
+    if x_filp_switch:
+        gt_boxes[:, 1] = -gt_boxes[:, 1]
+        gt_boxes[:, -1] = -gt_boxes[:, -1] + np.pi
+        points[:, 1] = -points[:, 1]
+        if gt_boxes.shape[1] > 7:  
+            gt_boxes[:, 7] = -gt_boxes[:, 7]
+
+    # if random_y_filp==True will ignore y_filp_switch
+    if random_y_filp:
+        y_filp_switch = np.random.choice(
+        [False, True], replace=False, p=[1 - probability, probability]
+    )
+
+    if y_filp_switch:
+        gt_boxes[:, 0] = -gt_boxes[:, 0]
+        points[:, 0] = -points[:, 0]
+
+        gt_boxes[:, -1] = -gt_boxes[:, -1] + 2*np.pi  
+
+        if gt_boxes.shape[1] > 7: 
+            gt_boxes[:, 6] = -gt_boxes[:, 6]
+
+    return gt_boxes, points
 
 def global_scaling_v2(gt_boxes, points, min_scale=0.95, max_scale=1.05):
     noise_scale = np.random.uniform(min_scale, max_scale)
